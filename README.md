@@ -67,14 +67,25 @@ The site is automatically deployed via GitHub Actions when changes are pushed to
 ## Migration Status
 
 - ✅ Phase 0: Current Website Documentation
-- 🚧 Phase 0.5: Repository Setup & Organization (in progress)
-- ⏳ Phase 1: Content Extraction & Organization
-- ⏳ Phase 2: Database Migration from Airtable
-- ⏳ Phase 3: Feature Implementation
+- ✅ Phase 0.5: Repository Setup & Organization
+- ✅ Phase 1: Webflow Fix (Complete)
+- 🚧 Phase 2: Content Extraction & Organization (In Progress)
+- ⏳ Phase 3: Feature Implementation (RSS, Newsletter)
 - ⏳ Phase 4: Design & Styling
 - ⏳ Phase 5: Deployment
 - ⏳ Phase 6: Content Migration
 - ⏳ Phase 7: SEO & Performance
+
+## Infrastructure Migrations
+
+This repository includes comprehensive migration guides and documentation for ReFi DAO's infrastructure consolidation:
+
+- **Website Migration:** Softr/Webflow → Quartz (in progress)
+- **Ghost Migration:** Managed → Railway/Render (guides ready)
+- **Airtable Migration:** Paid → NocoDB (guides and scripts ready)
+- **Notion Migration:** Regen Coordination → ReFi DAO workspace ✅ Complete
+
+See `docs/migrations/` for complete migration guides and `docs/migrations/migration-checklist.md` for progress tracking.
 
 ## Contributing
 

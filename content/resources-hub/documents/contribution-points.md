@@ -14,6 +14,67 @@ This framework is designed to evolve, with the flexibility to add new categories
 
 A key innovation linked to this system is its integration with the **Prosperity Pass**, an on-chain identity and reputation platform launching in January 2025. The Prosperity Pass will feature badges linked with the Celo and ReFi ecosystem, including the ReFi DAO Badge, which recognizes key contributors based on the data from the Contribution Points system and enabling contributors to "level up" their badge as they continue to engage with ReFi DAO. This integration provides an on-chain credential that highlights an individual's contribution to ReFi DAO.
 
+## Contribution Points System Flow
+
+```mermaid
+flowchart TD
+    Start([Contributor Activity])
+    
+    subgraph "Contribution Categories"
+        Financial["Financial<br/>Donations via Gitcoin/Giveth"]
+        Labor["Labor<br/>Core Steward, Operations"]
+        Expertise["Expertise<br/>Advisor, Strategic Input"]
+        Participation["Participation<br/>Events, Cohorts, POAPs"]
+    end
+    
+    subgraph "Point Allocation"
+        Points["Points Assigned<br/>25-2500 points"]
+        Review["Season Review<br/>& Community Input"]
+        Final["Final Allocation"]
+    end
+    
+    subgraph "Recognition System"
+        Levels["Contributor Levels<br/>Based on Cumulative Points"]
+        Badge["ReFi DAO Badge<br/>On-Chain Credential"]
+        Pass["Prosperity Pass<br/>Identity & Reputation"]
+    end
+    
+    subgraph "Future Applications"
+        Gov["Governance Participation"]
+        Access["Role & Access Management"]
+        Resources["Resource Coordination"]
+    end
+    
+    Start --> Financial
+    Start --> Labor
+    Start --> Expertise
+    Start --> Participation
+    
+    Financial --> Points
+    Labor --> Points
+    Expertise --> Points
+    Participation --> Points
+    
+    Points --> Review
+    Review --> Final
+    Final --> Levels
+    Levels --> Badge
+    Badge --> Pass
+    
+    Pass --> Gov
+    Pass --> Access
+    Pass --> Resources
+    
+    style Start fill:#3B82F6,stroke:#1E40AF,stroke-width:2px,color:#fff
+    style Financial fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style Labor fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style Expertise fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style Participation fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style Points fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+    style Badge fill:#10B981,stroke:#059669,stroke-width:2px,color:#fff
+    style Pass fill:#10B981,stroke:#059669,stroke-width:3px,color:#fff
+```
+
 Beyond tracking and recognition, this system holds potential to support ReFi DAO 2.0 governance, role and access management, and the coordination of people and resources. Co-creating the future development of **Prosperity Pass,** we envision the potential of expanding the system for Local Node communities, offering a comprehensive view of global reach and impact. By leveraging the Prosperity Pass’s high-quality on-chain data, we can create a robust and transparent mechanism for capturing, celebrating, and scaling the incredible contributions of our community.
 
 ## 👇                                          👇                                             👇

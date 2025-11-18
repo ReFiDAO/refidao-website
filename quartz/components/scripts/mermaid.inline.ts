@@ -178,20 +178,33 @@ document.addEventListener("nav", async () => {
     )
 
     const darkMode = document.documentElement.getAttribute("saved-theme") === "dark"
+    
+    // ReFi-DAO color scheme
+    const refiBlue = "#3B82F6"
+    const refiPurple = "#8B5CF6"
+    const refiBlueLight = "#60A5FA"
+    
     mermaid.initialize({
       startOnLoad: false,
       securityLevel: "loose",
       theme: darkMode ? "dark" : "base",
       themeVariables: {
         fontFamily: computedStyleMap["--codeFont"],
-        primaryColor: computedStyleMap["--light"],
+        // Use ReFi-DAO colors
+        primaryColor: darkMode ? refiBlue : refiBlue,
         primaryTextColor: computedStyleMap["--darkgray"],
-        primaryBorderColor: computedStyleMap["--tertiary"],
-        lineColor: computedStyleMap["--darkgray"],
-        secondaryColor: computedStyleMap["--secondary"],
-        tertiaryColor: computedStyleMap["--tertiary"],
-        clusterBkg: computedStyleMap["--light"],
-        edgeLabelBackground: computedStyleMap["--highlight"],
+        primaryBorderColor: refiBlue,
+        lineColor: refiBlue,
+        secondaryColor: refiPurple,
+        tertiaryColor: refiBlueLight,
+        clusterBkg: computedStyleMap["--lightgray"],
+        edgeLabelBackground: computedStyleMap["--light"],
+        // Additional theme variables for better diagram appearance
+        mainBkgColor: computedStyleMap["--lightgray"],
+        secondBkgColor: computedStyleMap["--light"],
+        textColor: computedStyleMap["--darkgray"],
+        secondaryTextColor: computedStyleMap["--gray"],
+        tertiaryTextColor: computedStyleMap["--darkgray"],
       },
     })
 

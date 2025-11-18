@@ -2,6 +2,46 @@
 
 ![ReFi DAO Network Structure.jpg](ReFi%20DAO%20Network%20-%20Structure,%20Roles,%20&%20Governance/ReFi_DAO_Network_Structure.jpg)
 
+## Network Structure Overview
+
+```mermaid
+graph TB
+    subgraph "ReFi DAO Network"
+        Global["ReFi DAO Global<br/>Governance & Operations"]
+        
+        subgraph "Local Nodes"
+            LN1["Local Node 1"]
+            LN2["Local Node 2"]
+            LN3["Local Node N"]
+        end
+        
+        subgraph "Network Initiatives"
+            NI1["ReFi Podcast"]
+            NI2["Prosperity Passport"]
+            NI3["Other Initiatives"]
+        end
+        
+        Global -->|"Oversight & Support"| LN1
+        Global -->|"Oversight & Support"| LN2
+        Global -->|"Oversight & Support"| LN3
+        Global -->|"Guidance & Resources"| NI1
+        Global -->|"Guidance & Resources"| NI2
+        Global -->|"Guidance & Resources"| NI3
+        
+        LN1 -.->|"Knowledge Sharing"| LN2
+        LN2 -.->|"Knowledge Sharing"| LN3
+        NI1 -.->|"Collaboration"| NI2
+    end
+    
+    style Global fill:#3B82F6,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style LN1 fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style LN2 fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style LN3 fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style NI1 fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+    style NI2 fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+    style NI3 fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+```
+
 # 1. Network Structure & Roles
 
 ReFi DAO operates with a decentralized yet coordinated structure, balancing autonomy with alignment to the network’s broader mission, vision, and values. At the core, ReFi DAO Global serves as the governance and operational body, overseeing strategic planning, financial management, and network-wide coordination. Meanwhile, Local Nodes and Network Initiatives maintain their autonomy, while aligned and contributing to the overarching vision and mission of the DAO. Each role within the DAO, from Core Stewards to Contributors and Supporting Members, has clearly defined responsibilities and active participation in governance when necessary. This structure allows for diverse initiatives to flourish while ensuring cohesive progress towards ReFi DAO’s collective vision and mission.
@@ -36,6 +76,50 @@ ReFi DAO operates with a decentralized yet coordinated structure, balancing auto
     - **Coordination of Core Operations:** Ensure the seamless execution of core network operations, including communication, project management, and strategic execution, to maintain cohesion across the DAO.
 
 ### Roles
+
+## Roles and Responsibilities Hierarchy
+
+```mermaid
+flowchart TD
+    Source["Source Lead<br/>Vision & Strategic Direction"]
+    
+    subgraph "ReFi DAO Global"
+        CS["Core Stewards<br/>Governance & Operations"]
+        CC["Core Contributors<br/>Expertise & Execution"]
+        Adv["Advisors<br/>Strategic Guidance"]
+    end
+    
+    subgraph "Local Nodes"
+        LNL["Local Node Leads<br/>Local Coordination"]
+        LNC["Local Contributors<br/>Local Support"]
+    end
+    
+    subgraph "Network Initiatives"
+        NIL["Initiative Leads<br/>Initiative Coordination"]
+        NIC["Initiative Contributors<br/>Initiative Support"]
+    end
+    
+    NM["Network Members<br/>Community Participation"]
+    
+    Source -->|"Leads"| CS
+    CS -->|"Manages"| CC
+    CS -->|"Consults"| Adv
+    CS -->|"Oversees"| LNL
+    CS -->|"Oversees"| NIL
+    LNL -->|"Coordinates"| LNC
+    NIL -->|"Coordinates"| NIC
+    NM -.->|"Can become"| CC
+    NM -.->|"Can become"| LNC
+    NM -.->|"Can become"| NIC
+    
+    style Source fill:#3B82F6,stroke:#1E40AF,stroke-width:3px,color:#fff
+    style CS fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style CC fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+    style Adv fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
+    style LNL fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style NIL fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
+    style NM fill:#A5B4FC,stroke:#6366F1,stroke-width:1px,color:#fff
+```
 
 ### 1.2**.1 Core Stewards**
 
@@ -204,7 +288,61 @@ Learn more here: [ReFi DAO Contribution Points Documentation](https://www.regenc
 
 # 2. Governance
 
-ReFi DAO’s governance framework aims to balance decentralized autonomy with coordinated oversight, empowering **ReFi Local Nodes** and **Network Initiatives** to operate independently while ensuring alignment with the DAO’s mission, vision, and values. The **Biannual Retrospective & Strategic Plan** guide the next six months, outlining key objectives, priorities, resource allocations, and roles, ensuring accountability and adaptability as the DAO evolves. To enable agile decision-making, ReFi DAO uses an **optimistic and consent-based governance system**, allowing proposals to move forward unless significant objections arise. Smaller initiatives can proceed autonomously through a **do-ocracy** approach, while larger proposals follow a structured review process, with accountability measures tracking milestones and ensuring transparency. This regenerative governance model aims to foster active participation, shared learning, and alignment with long-term goals, keeping ReFi DAO dynamic, transparent, and mission-driven.
+ReFi DAO's governance framework aims to balance decentralized autonomy with coordinated oversight, empowering **ReFi Local Nodes** and **Network Initiatives** to operate independently while ensuring alignment with the DAO's mission, vision, and values. The **Biannual Retrospective & Strategic Plan** guide the next six months, outlining key objectives, priorities, resource allocations, and roles, ensuring accountability and adaptability as the DAO evolves. To enable agile decision-making, ReFi DAO uses an **optimistic and consent-based governance system**, allowing proposals to move forward unless significant objections arise. Smaller initiatives can proceed autonomously through a **do-ocracy** approach, while larger proposals follow a structured review process, with accountability measures tracking milestones and ensuring transparency. This regenerative governance model aims to foster active participation, shared learning, and alignment with long-term goals, keeping ReFi DAO dynamic, transparent, and mission-driven.
+
+## Governance Flow
+
+```mermaid
+flowchart TD
+    Start([Proposal Created])
+    
+    subgraph "Decision Type"
+        Small["Small Initiative<br/>Do-ocracy"]
+        Large["Large Proposal<br/>Structured Review"]
+    end
+    
+    subgraph "Structured Review Process"
+        Review["Proposal Review<br/>& Refinement"]
+        Vote["Consent-Based Voting"]
+        Object{"Objections<br/>Raised?"}
+        Block{"Blocking<br/>Threshold?"}
+    end
+    
+    subgraph "Biannual Strategic Plan"
+        Draft["Draft Strategic Plan"]
+        Feedback["DAO Voting Members<br/>Review & Feedback"]
+        PlanVote["Vote on Plan"]
+        Ratify["Plan Ratified"]
+    end
+    
+    Start --> Decision{Decision<br/>Type?}
+    Decision -->|"Small"| Small
+    Decision -->|"Large"| Large
+    Decision -->|"Strategic"| Draft
+    
+    Large --> Review
+    Review --> Vote
+    Vote --> Object
+    Object -->|"Yes"| Block
+    Object -->|"No"| Execute["Execute Proposal"]
+    Block -->|"< 10-30%"| Execute
+    Block -->|">= 10-30%"| Revise["Revise Proposal"]
+    Revise --> Review
+    
+    Draft --> Feedback
+    Feedback --> PlanVote
+    PlanVote --> Ratify
+    Ratify --> Execute
+    
+    Small --> Execute
+    Execute --> Monitor["Monitor & Report"]
+    Monitor --> ReviewCycle["Biannual Review"]
+    
+    style Start fill:#3B82F6,stroke:#1E40AF,stroke-width:2px,color:#fff
+    style Execute fill:#10B981,stroke:#059669,stroke-width:2px,color:#fff
+    style Block fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff
+    style Ratify fill:#10B981,stroke:#059669,stroke-width:2px,color:#fff
+```
 
 ### **2.1 ReFi Local Nodes & Network Initiatives**
 

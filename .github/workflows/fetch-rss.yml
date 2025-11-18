@@ -1,0 +1,43 @@
+name: Fetch RSS Feed
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  fetch-rss:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Fetch RSS feed
+        env:
+          GHOST_RSS_URL: ${{ secrets.GHOST_RSS_URL || 'https://blog.refidao.com/rss/' }}
+        run: node scripts/fetch-rss.js
+        continue-on-error: true  # Don't fail if RSS feed is not available yet
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/media/latest-posts/
+          git diff --staged --quiet || git commit -m "chore: Update latest blog posts from RSS feed [skip ci]"
+          git push
+

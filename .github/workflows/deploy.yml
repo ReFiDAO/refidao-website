@@ -29,6 +29,13 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
+      - name: Fetch RSS Feed (if available)
+        env:
+          GHOST_RSS_URL: ${{ secrets.GHOST_RSS_URL || 'https://blog.refidao.com/rss/' }}
+        run: |
+          node scripts/fetch-rss.js || echo "RSS feed not available yet, continuing build"
+        continue-on-error: true
+      
       - name: Build Quartz
         run: npx quartz build
       
