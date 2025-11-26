@@ -4,6 +4,7 @@ import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
 import ArticleTitle from "./ArticleTitle"
 import Darkmode from "./Darkmode"
+import Profile from "./Profile"
 import ReaderMode from "./ReaderMode"
 import Head from "./Head"
 import PageTitle from "./PageTitle"
@@ -52,4 +53,5 @@ export {
   Flex,
   ConditionalRender,
   Navigation,
+  Profile,
 }

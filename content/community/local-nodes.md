@@ -67,10 +67,7 @@ Complete node data is available in [[local-nodes.json|JSON format]] for map inte
 
 ## Starting a Local Node
 
-Interested in starting a Local Node in your region? Check out our [[../resources-hub/index|Resources Hub]] for guides and resources.
-
-See: [[../resources-hub/index#🌳 Stage 3: Lead & Build|Starting a ReFi Local Node - Onboarding Guide]]
-- ReFi Phangan (Thailand)
+Interested in starting a Local Node in your region? Follow the onboarding process:
 
 ## Featured Nodes
 
@@ -97,15 +94,28 @@ Active local node in Asia promoting regenerative finance in the region.
 
 ## Start Your Own Node
 
-Interested in starting a local node in your area? Check out our [[Resources Hub|../resources-hub/index]] for guides and resources.
+Interested in starting a local node in your area? Follow this process:
 
-**Quick Start:**
-1. Review prerequisites and sign the Community Covenant
-2. Submit funding proposal on Gardens.fund (up to 500 USDGLO)
-3. Complete the Membership Agreement
-4. Start building your local regenerative economy!
+**Quick Start Process:**
 
-**Complete guide:** [[Resources Hub|../resources-hub/index#start-a-local-node]]
+1. **Review prerequisites**
+   - Sign the [[../resources-hub/documents/community-covenant|Community Covenant]] as a Network Member
+   - Understand [what a Local Node is](https://www.notion.so/What-is-a-ReFi-Local-Node-6c829adc3cfc4a0388efc5238bac15d2?pvs=21)
+   - Read the [[../resources-hub/documents/local-node-membership-agreement|Local Node Membership Agreement]]
+
+2. **Submit funding proposal** on [Gardens.fund](https://gardens.fund/)
+   - Request up to **500 USDGLO** from the Local Node Kickstarter Pool
+   - Include team info, deliverables, and timeline
+   - Access the pool: [ReFi Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)
+
+3. **If approved**
+   - Sign the Membership Agreement to become official
+   - Develop your brand and social channels
+   - Join the Local Node Leaders Telegram group
+   - Set up project tracking on [KarmaGAP](https://gap.karmahq.xyz/)
+   - Start building your local regenerative economy!
+
+**Complete guide:** [[../resources-hub/onboarding/local-node|Starting a ReFi Local Node - Onboarding Guide]]
 
 ## Federated Structure
 

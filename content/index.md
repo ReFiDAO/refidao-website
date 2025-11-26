@@ -87,7 +87,7 @@ description: "A network society to regenerate the earth"
     </div>
     <div class="event-item">
       <h3>🌐 Community</h3>
-      <p>Find local nodes, join guilds, participate in working groups, and connect with regenerative finance communities around the world.</p>
+      <p>Find local nodes, explore network initiatives, and connect with regenerative finance communities around the world.</p>
       <p><a href="community/local-nodes">→ Find Communities</a></p>
     </div>
     <div class="event-item">
@@ -108,10 +108,14 @@ description: "A network society to regenerate the earth"
     <h2>Join Us</h2>
     <p>
       Ready to get involved? Join the ReFi DAO community and start contributing to regenerative finance. 
-      Whether you're interested in starting a local node, contributing to initiatives, or simply learning more, 
+      Whether you're interested in starting a local node, launching an initiative, or becoming a network member, 
       there's a place for you in our network.
     </p>
-    <a href="https://guild.xyz/refidao" class="cta-button">Join the Community</a>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+      <a href="resources-hub/onboarding/local-node" class="cta-button">Start a Local Node</a>
+      <a href="resources-hub/onboarding/network-initiative" class="cta-button">Launch an Initiative</a>
+      <a href="resources-hub/onboarding/network-member" class="cta-button">Become a Member</a>
+    </div>
   </div>
 </div>
 

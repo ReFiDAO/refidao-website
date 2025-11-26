@@ -161,6 +161,23 @@ The Quartz ReFi Template is fully functional and ready for use. Local nodes can 
 
 ---
 
+## ReFi DAO 3.0 Planning
+
+**Status:** In Progress  
+**Location:** `docs/refi-dao-3.0/`
+
+ReFi DAO 3.0 planning documentation is now available, consolidating current state assessment, closure checklists, strategic models, and implementation plans.
+
+**Key Documents:**
+- [Current State Assessment](docs/refi-dao-3.0/current-state.md) - Comprehensive ReFi DAO 2.0 status
+- [Closure Checklist](docs/refi-dao-3.0/closure-checklist.md) - Tasks to complete ReFi DAO 2.0
+- [Vision & Strategic Models](docs/refi-dao-3.0/vision-strategic-models.md) - 5 alternative strategic models for network validation
+- [Implementation Plan](docs/refi-dao-3.0/implementation-plan.md) - Step-by-step roadmap
+
+**See:** [ReFi DAO 3.0 Planning Overview](docs/refi-dao-3.0/README.md)
+
+---
+
 **Last Updated:** January 27, 2025  
 **Version:** v1.0.0  
 **Status:** ✅ Complete and Ready

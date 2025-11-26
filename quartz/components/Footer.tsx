@@ -15,14 +15,20 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
+          <a href="https://quartz.jzhao.xyz/">Quartz v{version} <span class="external-arrow">↗</span></a> © {year}
         </p>
         <ul>
-          {Object.entries(links).map(([text, link]) => (
-            <li>
-              <a href={link}>{text}</a>
-            </li>
-          ))}
+          {Object.entries(links).map(([text, link]) => {
+            const isExternal = link.startsWith("http://") || link.startsWith("https://")
+            return (
+              <li>
+                <a href={link}>
+                  {text}
+                  {isExternal && <span class="external-arrow">↗</span>}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </footer>
     )

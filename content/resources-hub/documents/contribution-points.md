@@ -1,3 +1,8 @@
+---
+title: "ReFi DAO Reputation - Contribution Points Documentation"
+description: "Framework for tracking and recognizing contributions to ReFi DAO across financial, labor, expertise, and participation domains"
+---
+
 # ReFi DAO Reputation - Contribution Points Documentation
 
 # Overview
@@ -6,7 +11,7 @@
 
 The ReFi DAO Contribution Points system is a flexible framework for tracking contributions to ReFi DAO over time, providing a broad understanding of who contributes, in what ways, and when. Contributions can take many forms, such as serving as a ReFi DAO Core Steward, writing for the ReFi DAO blog, hosting or appearing on the ReFi Podcast, participating in Founders Circles, making financial donations, and much more. 
 
-At its core, the system is about recognizing and celebrating those who actively advance ReFi DAO’s mission and core activities. While the system assigns points to each contributor, the goal is not to focus on the exact number of points but to ensure a broadly fair representation of meaningful engagement and active participation. By assigning **Contributor Levels** based on cumulative contributions, the system provides a simple yet effective way to highlight and recognise efforts across roles and initiatives.
+At its core, the system is about recognizing and celebrating those who actively advance ReFi DAO's mission and core activities. While the system assigns points to each contributor, the goal is not to focus on the exact number of points but to ensure a broadly fair representation of meaningful engagement and active participation. By assigning **Contributor Levels** based on cumulative contributions, the system provides a simple yet effective way to highlight and recognise efforts across roles and initiatives.
 
 This framework is designed to evolve, with the flexibility to add new categories, refine metrics, and capture a broader spectrum of contributions. Ultimately, it enables ReFi DAO to track and celebrate contributions while focusing on the larger vision: building a thriving, collaborative, and impactful global community to advance the ReFi movement.
 
@@ -14,70 +19,9 @@ This framework is designed to evolve, with the flexibility to add new categories
 
 A key innovation linked to this system is its integration with the **Prosperity Pass**, an on-chain identity and reputation platform launching in January 2025. The Prosperity Pass will feature badges linked with the Celo and ReFi ecosystem, including the ReFi DAO Badge, which recognizes key contributors based on the data from the Contribution Points system and enabling contributors to "level up" their badge as they continue to engage with ReFi DAO. This integration provides an on-chain credential that highlights an individual's contribution to ReFi DAO.
 
-## Contribution Points System Flow
+Beyond tracking and recognition, this system holds potential to support ReFi DAO 2.0 governance, role and access management, and the coordination of people and resources. Co-creating the future development of **Prosperity Pass,** we envision the potential of expanding the system for Local Node communities, offering a comprehensive view of global reach and impact. By leveraging the Prosperity Pass's high-quality on-chain data, we can create a robust and transparent mechanism for capturing, celebrating, and scaling the incredible contributions of our community.
 
-```mermaid
-flowchart TD
-    Start([Contributor Activity])
-    
-    subgraph "Contribution Categories"
-        Financial["Financial<br/>Donations via Gitcoin/Giveth"]
-        Labor["Labor<br/>Core Steward, Operations"]
-        Expertise["Expertise<br/>Advisor, Strategic Input"]
-        Participation["Participation<br/>Events, Cohorts, POAPs"]
-    end
-    
-    subgraph "Point Allocation"
-        Points["Points Assigned<br/>25-2500 points"]
-        Review["Season Review<br/>& Community Input"]
-        Final["Final Allocation"]
-    end
-    
-    subgraph "Recognition System"
-        Levels["Contributor Levels<br/>Based on Cumulative Points"]
-        Badge["ReFi DAO Badge<br/>On-Chain Credential"]
-        Pass["Prosperity Pass<br/>Identity & Reputation"]
-    end
-    
-    subgraph "Future Applications"
-        Gov["Governance Participation"]
-        Access["Role & Access Management"]
-        Resources["Resource Coordination"]
-    end
-    
-    Start --> Financial
-    Start --> Labor
-    Start --> Expertise
-    Start --> Participation
-    
-    Financial --> Points
-    Labor --> Points
-    Expertise --> Points
-    Participation --> Points
-    
-    Points --> Review
-    Review --> Final
-    Final --> Levels
-    Levels --> Badge
-    Badge --> Pass
-    
-    Pass --> Gov
-    Pass --> Access
-    Pass --> Resources
-    
-    style Start fill:#3B82F6,stroke:#1E40AF,stroke-width:2px,color:#fff
-    style Financial fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
-    style Labor fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
-    style Expertise fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
-    style Participation fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#fff
-    style Points fill:#60A5FA,stroke:#3B82F6,stroke-width:2px,color:#fff
-    style Badge fill:#10B981,stroke:#059669,stroke-width:2px,color:#fff
-    style Pass fill:#10B981,stroke:#059669,stroke-width:3px,color:#fff
-```
-
-Beyond tracking and recognition, this system holds potential to support ReFi DAO 2.0 governance, role and access management, and the coordination of people and resources. Co-creating the future development of **Prosperity Pass,** we envision the potential of expanding the system for Local Node communities, offering a comprehensive view of global reach and impact. By leveraging the Prosperity Pass’s high-quality on-chain data, we can create a robust and transparent mechanism for capturing, celebrating, and scaling the incredible contributions of our community.
-
-## 👇                                          👇                                             👇
+## 👇                                         👇                                            👇
 
 # Technical Details & Documentation
 
@@ -98,7 +42,7 @@ Contributions are categorized into four main types, reflecting the diverse ways 
 
 ## **Seasons**
 
-Seasons are used to organize and review contributions over time, creating a clear framework for tracking efforts across specific periods. Each season captures a distinct phase of ReFi DAO’s evolution, whether foundational, ongoing, or future-focused.
+Seasons are used to organize and review contributions over time, creating a clear framework for tracking efforts across specific periods. Each season captures a distinct phase of ReFi DAO's evolution, whether foundational, ongoing, or future-focused.
 
 1. **Legacy Season:** Covers the foundational phase of ReFi DAO (pre-2024) up to the [Leadership Transition](https://blog.refidao.com/a-leadership-transition-at-refi-dao-paving-the-way-for-new-growth/) during ReFi Week. Contributions during this phase have been retrospectively reviewed and categorized.
 2. **Annual Seasons (2024, 2025, etc.):** Each calendar year represents a distinct season for tracking and reviewing contributions made within that timeframe.
@@ -133,6 +77,7 @@ To ensure fair and transparent contribution tracking, each season follows a revi
 
 ## **Conclusion**
 
-The ReFi DAO Contribution Points system is a vital tool for recognizing, celebrating, and tracking the diverse contributions that drive our mission forward. By fostering transparency, collaboration, and inclusivity, this system aims to ensure that every contributor’s efforts are valued and reflected in meaningful ways.
+The ReFi DAO Contribution Points system is a vital tool for recognizing, celebrating, and tracking the diverse contributions that drive our mission forward. By fostering transparency, collaboration, and inclusivity, this system aims to ensure that every contributor's efforts are valued and reflected in meaningful ways.
 
-As we continue to iterate and refine this framework, we invite the community to engage actively—sharing feedback, proposing improvements, and shaping its evolution. Together, we can build a robust, adaptive system that not only supports ReFi DAO’s growth but also strengthens the global ReFi movement.
+As we continue to iterate and refine this framework, we invite the community to engage actively—sharing feedback, proposing improvements, and shaping its evolution. Together, we can build a robust, adaptive system that not only supports ReFi DAO's growth but also strengthens the global ReFi movement.
+

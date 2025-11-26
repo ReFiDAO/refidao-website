@@ -1,1 +1,0 @@
-# New ReFi Local Node Proposal TEMPLATE

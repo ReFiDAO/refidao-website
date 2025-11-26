@@ -85,7 +85,26 @@ This repository includes comprehensive migration guides and documentation for Re
 - **Airtable Migration:** Paid → NocoDB (guides and scripts ready)
 - **Notion Migration:** Regen Coordination → ReFi DAO workspace ✅ Complete
 
-See `docs/migrations/` for complete migration guides and `docs/migrations/migration-checklist.md` for progress tracking.
+See `docs/ReFi-DAO-Infrastructure-Migration/` for complete migration guides and `MIGRATION-STATUS.md` for progress tracking.
+
+## ReFi DAO 3.0 Planning
+
+**Status:** In Progress  
+**Location:** `docs/refi-dao-3.0/`
+
+Comprehensive planning and documentation for ReFi DAO's transition from 2.0 to 3.0, including:
+
+- **Current State Assessment:** Complete status of ReFi DAO 2.0 achievements and infrastructure
+- **Closure Checklist:** Tasks needed to complete ReFi DAO 2.0 transition
+- **Vision & Strategic Models:** Five alternative strategic models for network validation
+- **Implementation Plan:** Step-by-step roadmap with network validation process
+
+**Key Documents:**
+- [Planning Overview](docs/refi-dao-3.0/README.md)
+- [Current State](docs/refi-dao-3.0/current-state.md)
+- [Closure Checklist](docs/refi-dao-3.0/closure-checklist.md)
+- [Vision & Strategic Models](docs/refi-dao-3.0/vision-strategic-models.md)
+- [Implementation Plan](docs/refi-dao-3.0/implementation-plan.md)
 
 ## Contributing
 

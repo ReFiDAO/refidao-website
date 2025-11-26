@@ -7,7 +7,7 @@ description: "Local nodes, guilds, and working groups in the ReFi DAO network"
 
 Welcome to the ReFi DAO Community - the home of the regenerative-finance ecosystem and a "network state for people & planet".
 
-ReFi DAO brings together regenerative finance communities, builders, and practitioners from around the world. Whether you're interested in starting a local node, joining a guild, or participating in working groups, there's a place for you in our network.
+ReFi DAO brings together regenerative finance communities, builders, and practitioners from around the world. Whether you're interested in starting a local node, launching a network initiative, or becoming a network member, there's a place for you in our network.
 
 ## Local Nodes
 
@@ -21,46 +21,44 @@ Place-based communities experimenting with regenerative finance in their local c
 - Network support and coordination
 - Shared tools and best practices
 
-## Online Guilds
+## Network Initiatives
 
-Connected communities of skilled professionals with shared disciplines. Guilds provide spaces for practitioners to collaborate, share knowledge, and advance their craft within the regenerative finance ecosystem.
+**Network Initiatives** are autonomous projects, guilds, or working groups that align with the mission, vision, values, and identity of ReFi DAO. These initiatives operate independently with their own teams, resources, and structures, while maintaining coherence with the broader network's goals and brand identity.
 
-[[Guilds|guilds/index]] - Join communities of practice
+Unlike Local Nodes which are place-based, Network Initiatives are **thematic or functional** - bringing specialized focus to specific areas like media, research, tooling, or community building.
 
-**Current Guilds:**
-- Community Managers
-- Event Organizers
-- Content Creators
-- Data Weavers
-- Founders
+[[Network Initiatives|network-initiatives]] - Explore autonomous projects and initiatives
 
-## Working Groups
+**Types of Network Initiatives:**
+- **Online Guilds** - Communities of skilled professionals (Community Managers, Event Organizers, Content Creators, etc.)
+- **Working Groups** - Multi-disciplinary groups tackling specific challenges (WEF Crypto Sustainability Coalition, Regen Renaissance Manifesters, etc.)
+- **Media Initiatives** - Like the ReFi Podcast
+- **Tooling Projects** - Like Prosperity Passport Development
 
-Multi-disciplinary groups working towards common goals. Working groups bring together diverse expertise to tackle specific challenges and opportunities in regenerative finance.
-
-[[Working Groups|working-groups/index]] - Participate in collaborative initiatives
-
-**Examples:**
-- WEF Crypto Sustainability Coalition
-- Regen Renaissance Manifesters
-- Research & Media initiatives
+**Key Features:**
+- Thematic focus rather than geographic
+- Access to funding pools (up to 3,000 USDGLO)
+- Network support and coordination
+- Shared tools and best practices
 
 ## Network Metrics
 
 *Note: Metrics will be updated periodically to reflect current network status*
 
 - **Local Nodes:** 30+ communities worldwide
-- **Online Guilds:** 5+ active guilds
-- **Working Groups:** Multiple active initiatives
+- **Network Initiatives:** Multiple active initiatives including guilds, working groups, and projects
 - **Events:** 100+ events supported globally
 
 ## Get Involved
 
 Ready to join the ReFi DAO community?
 
-- [[Join Community|../index]] - Become a network member through Guild.xyz
-- [[Local Nodes|local-nodes]] - Find or start a local node in your region
-- [[Resources Hub|../resources-hub/index]] - Access community resources and guides
+- [[Become a Network Member|../resources-hub/onboarding/network-member]] - Sign the Community Covenant and join the network
+- [[Start a Local Node|../resources-hub/onboarding/local-node]] - Launch a place-based community in your region
+- [[Launch a Network Initiative|../resources-hub/onboarding/network-initiative]] - Start an autonomous project aligned with ReFi DAO
+- [[Local Nodes|local-nodes]] - Find or explore local nodes worldwide
+- [[Network Initiatives|network-initiatives]] - Explore guilds, working groups, and projects
+- [[Resources Hub|../resources-hub/index]] - Access comprehensive documentation and guides
 - [[Media|../media/index]] - Stay updated with our content and stories
 
 ## Connect

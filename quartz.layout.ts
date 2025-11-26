@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.Navigation(),
     Component.Search(),
     Component.Darkmode(),
+    Component.Profile(),
   ],
   afterBody: [],
   footer: Component.Footer({

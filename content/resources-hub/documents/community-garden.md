@@ -1,15 +1,17 @@
+---
+title: "ReFi DAO Community Garden"
+description: "Guide to ReFi DAO's decentralized funding platform using Gardens-based conviction voting"
+---
+
 # ReFi DAO Community Garden
 
-<aside>
-🌱
-
-*Welcome to ReFi DAO's decentralized funding platform! This guide introduces our Gardens-based funding pools that support new Local Nodes and innovative network initiatives through democratic conviction voting.*
-
-</aside>
+> 🌱
+>
+> *Welcome to ReFi DAO's decentralized funding platform! This guide introduces our Gardens-based funding pools that support new Local Nodes and innovative network initiatives through democratic conviction voting.*
 
 # Introduction
 
-Gardens has been integrated as one of ReFi DAO’s core infrastructure tools, enabling our community to fund regenerative initiatives through democratic conviction-based voting. During GG23, we secured matching funds from the [Gitcoin Gardens round](https://gov.gitcoin.co/t/gitcoin-grants-garden-gg23-retrospective/20720) to boost our funding capacity.
+Gardens has been integrated as one of ReFi DAO's core infrastructure tools, enabling our community to fund regenerative initiatives through democratic conviction-based voting. During GG23, we secured matching funds from the [Gitcoin Gardens round](https://gov.gitcoin.co/t/gitcoin-grants-garden-gg23-retrospective/20720) to boost our funding capacity.
 
 **Access ReFi DAO's Gardens:** 👉 [https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
 
@@ -32,7 +34,7 @@ Gardens has been integrated as one of ReFi DAO’s core infrastructure tools, en
 **Pools details:**
 
 - **Voting System:** One person, one vote (fixed weight using USDGLO)
-- **Eligibility:** Open to **wallets lvl 3 and above** - see [ReFi DAO Contribution Points](https://www.regencoordination.xyz/ReFi-DAO-Reputation-Contribution-Points-Documentation-2082e7251f2f80a9be95f674baa25646) - on the allowlist. New addresses are added regularly; if you're a member and your wallet isn't yet included, please contact us to be added
+- **Eligibility:** Open to **wallets lvl 3 and above** - see [[contribution-points|ReFi DAO Contribution Points]] - on the allowlist. New addresses are added regularly; if you're a member and your wallet isn't yet included, please contact us to be added
 - **Covenant Alignment:** All proposals must align with our community values
 - **Total Funding:** 5.8k USDGLO (3k from ReFi DAO treasury + 2.8k matching from Gitcoin Gardens GG23 round)
 
@@ -40,16 +42,14 @@ Gardens has been integrated as one of ReFi DAO’s core infrastructure tools, en
 
 Providing initial funding for new ReFi Local Nodes to kickstart activities that bring regenerative finance (ReFi) principles to local communities. This might include organizing events, workshops, meetups, or other local touchpoints that deepen understanding and engagement with ReFi solutions.
 
-**Access the funding pool:** 👉 
+**Access the funding pool:** 👉 
 
-<aside>
-📖
-
-**Before You Apply:** Make sure you're familiar with:
-
-- [Starting a ReFi Local Node - Onboarding Guide](Starting%20a%20ReFi%20Local%20Node%20-%20Onboarding%20Guide%202032e7251f2f80d08a56fa2e65109a93.md)
-- [**ReFi DAO Local Node Membership Agreement v1**](ReFi%20DAO%20Local%20Node%20Membership%20Agreement%20v1%202082e7251f2f8007985df4ee979dcc32.md)
-</aside>
+> 📖
+>
+> **Before You Apply:** Make sure you're familiar with:
+>
+> - [[local-node|Starting a ReFi Local Node - Onboarding Guide]]
+> - [[local-node-membership-agreement|ReFi DAO Local Node Membership Agreement v1]]
 
 ### 🌱 Goals
 
@@ -61,7 +61,7 @@ Providing initial funding for new ReFi Local Nodes to kickstart activities that 
 
 - **Early-Stage Focus:** Proposals must be created by (or on behalf of) a newly formed or recently launched ReFi Local Node
 - **Clear Activity Plan:** Each request should specify which activities or events the funds will support (e.g., hosting events, workshops, or community building)
-- **Regenerative Alignment:** Efforts must align with [ReFi DAO's Community Covenant](https://www.notion.so/199bf304370a80babdb1cc3e0a6670ce?pvs=21) and mission of advancing ecological, social, and economic well-being through ReFi principles
+- **Regenerative Alignment:** Efforts must align with [[community-covenant|ReFi DAO's Community Covenant]] and mission of advancing ecological, social, and economic well-being through ReFi principles
 - **Maximum Funding Request:** Up to **500 USDGLO** (16.7% of the pool) per proposal
 - **Disputes:** Proposals that fail to demonstrate an authentic ReFi or community-building component may be disputed and rejected by the Tribunal
 
@@ -69,7 +69,7 @@ Providing initial funding for new ReFi Local Nodes to kickstart activities that 
 
 1. **Become a ReFi DAO Member**
     
-    If you're not already a member, sign the [ReFi DAO Community Covenant](https://www.notion.so/199bf304370a80babdb1cc3e0a6670ce?pvs=21) and hold any ReFi DAO Points to be recognized on the allowlist.
+    If you're not already a member, sign the [[community-covenant|ReFi DAO Community Covenant]] and hold any ReFi DAO Points to be recognized on the allowlist.
     
 2. **Access the Pool**
     
@@ -101,13 +101,11 @@ Providing initial funding for new ReFi Local Nodes to kickstart activities that 
 
 Designed to fund and reward **community-led proposals** that advance ReFi DAO's broader network goals. Initiatives could include new platforms, research, content production, collaborative gatherings, or other ventures that bring collective benefits to ReFi DAO's network.
 
-<aside>
-📖
-
-**Before You Apply:** Make sure you're familiar with:
-
-- [Starting a ReFi Network Initiative - Onboarding Guide](Starting%20a%20ReFi%20Network%20Initiative%20-%20Onboarding%20Gu%202062e7251f2f8049abb0c3a2599d98cd.md)
-</aside>
+> 📖
+>
+> **Before You Apply:** Make sure you're familiar with:
+>
+> - [[network-initiative|Starting a ReFi Network Initiative - Onboarding Guide]]
 
 ### 🌱 Goals
 
@@ -117,7 +115,7 @@ Designed to fund and reward **community-led proposals** that advance ReFi DAO's 
 
 ### ✅ Eligibility Requirements
 
-- **Direct benefit to ReFi DAO:** Each proposal must demonstrate how it will strengthen or expand the DAO's impact, tooling, or culture; and be aligned with [ReFi DAO's Community Covenant](https://www.notion.so/199bf304370a80babdb1cc3e0a6670ce?pvs=21)
+- **Direct benefit to ReFi DAO:** Each proposal must demonstrate how it will strengthen or expand the DAO's impact, tooling, or culture; and be aligned with [[community-covenant|ReFi DAO's Community Covenant]]
 - **Membership required:** Must be led by a **ReFi DAO Member** (Core Stewards, Contributors, Advisors, Local Node Leads, or Network Members)
 - **Maximum funding request:** Up to **3,000 USDGLO** (100% of the pool) per proposal - though proposals with higher funding requests require more (proportional) conviction to pass
 - **Collaboration focus (Optional):** If it's a group initiative, highlight how it fosters synergy between multiple ReFi DAO members or nodes
@@ -127,7 +125,7 @@ Designed to fund and reward **community-led proposals** that advance ReFi DAO's 
 
 1. **Join ReFi DAO**
     
-    Sign the [ReFi DAO Community Covenant](https://www.notion.so/199bf304370a80babdb1cc3e0a6670ce?pvs=21) and ensure you have ReFi DAO Points so you're recognized on the allowlist.
+    Sign the [[community-covenant|ReFi DAO Community Covenant]] and ensure you have ReFi DAO Points so you're recognized on the allowlist.
     
 2. **Visit the Network Initiatives Pool**
     
@@ -159,10 +157,10 @@ Designed to fund and reward **community-led proposals** that advance ReFi DAO's 
 
 ### Learn More
 
-- [ReFi DAO Community Covenant V1](ReFi%20DAO%20Community%20Covenant%20V1%202072e7251f2f801bafbcc06b48debc70.md)
-- [Starting a ReFi Local Node - Onboarding Guide](Starting%20a%20ReFi%20Local%20Node%20-%20Onboarding%20Guide%202032e7251f2f80d08a56fa2e65109a93.md)
-- [Starting a ReFi Network Initiative - Onboarding Guide](Starting%20a%20ReFi%20Network%20Initiative%20-%20Onboarding%20Gu%202062e7251f2f8049abb0c3a2599d98cd.md)
-- [ReFi DAO Network - Structure, Roles, & Governance](ReFi%20DAO%20Network%20-%20Structure,%20Roles,%20&%20Governance%202062e7251f2f80219df3d996d1a95ea1.md)
+- [[community-covenant|ReFi DAO Community Covenant V1]]
+- [[local-node|Starting a ReFi Local Node - Onboarding Guide]]
+- [[network-initiative|Starting a ReFi Network Initiative - Onboarding Guide]]
+- [[network-structure|ReFi DAO Network - Structure, Roles, & Governance]]
 
 ### Gardens Documentation
 
@@ -170,3 +168,4 @@ Designed to fund and reward **community-led proposals** that advance ReFi DAO's 
 - [Introduction to Gardens V2 and Documentation](https://docs.gardens.fund/)
 
 **Access ReFi DAO's Gardens:** 👉 [https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
+

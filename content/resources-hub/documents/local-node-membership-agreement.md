@@ -1,3 +1,8 @@
+---
+title: "ReFi DAO Local Node Membership Agreement v1"
+description: "Terms of membership for officially recognized ReFi Local Nodes within the ReFi DAO global network"
+---
+
 # ReFi DAO Local Node Membership Agreement v1
 
 ## **1. Purpose & Scope**
@@ -5,14 +10,14 @@
 This agreement establishes the terms of membership for being an officially recognized ReFi Local Node as part of the ReFi DAO global network. By signing this agreement onchain, the signer affirms their role as a Local Node Leader for a specific region or locality, and enters into this commitment on behalf of the Local Node they are representing. 
 
 - **This agreement serves to:**
-    - **Formally recognize the Local Node represented by the signer** as an official member of the ReFi DAO Network, affirming its alignment with ReFi DAO’s mission and vision (as outlined in the [Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1)).
-    - **Affirm alignment with ReFi DAO’s shared values and principles**, as outlined in the [ReFi DAO Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1), which guide the ethical and cultural foundations of our global network;
+    - **Formally recognize the Local Node represented by the signer** as an official member of the ReFi DAO Network, affirming its alignment with ReFi DAO's mission and vision (as outlined in the [Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1)).
+    - **Affirm alignment with ReFi DAO's shared values and principles**, as outlined in the [ReFi DAO Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1), which guide the ethical and cultural foundations of our global network;
     - **Establish the responsibilities and entitlements** of membership, including access to ReFi DAO resources, brand assets, coordination infrastructure, funding pathways, and peer collaboration;
     - **Enable transparent coordination and accountability**, while maintaining the sovereignty and contextual integrity of each Local Node.
 
 This agreement is a decentralized governance commitment and does not create a legal partnership, employment relationship, or joint venture. Rather, it provides a mutually agreed framework for collaboration, support, and alignment between ReFi DAO Global and ReFi Local Nodes.
 
-The signer acknowledges that future updates to the legal custodianship of ReFi DAO’s brand or coordination infrastructure — such as stewardship by a foundation or nonprofit entity — may lead to reasonable amendments of this agreement, as outlined in Section 9.
+The signer acknowledges that future updates to the legal custodianship of ReFi DAO's brand or coordination infrastructure — such as stewardship by a foundation or nonprofit entity — may lead to reasonable amendments of this agreement, as outlined in Section 9.
 
 - **By signing this onchain agreement on behalf of their local node, the Local Node Leader:**
     - Attests to their legitimate representation of the local node
@@ -49,11 +54,11 @@ The Local Node receives a **revocable, non-exclusive license** to use ReFi DAO b
 
 The Local Node will be **listed and promoted as an official member** of the ReFi DAO Network across:
 
-- The ReFi DAO website’s Local Node Directory
-- ReFi DAO’s social media and public communications (where appropriate)
+- The ReFi DAO website's Local Node Directory
+- ReFi DAO's social media and public communications (where appropriate)
 - Network-aligned platforms such as [Karma GAP](https://karmagap.org/) and other emerging ReFi DAO partner ecosystems
 
-This recognition amplifies the Local Node’s visibility and validates its alignment with the regenerative movement.
+This recognition amplifies the Local Node's visibility and validates its alignment with the regenerative movement.
 
 ### **3.3 Community Access & Coordination Channels**
 
@@ -86,14 +91,14 @@ Over time, this reputation may unlock:
 - **Increased governance power** within ReFi DAO (e.g. voting weight in funding rounds, proposals, or network-wide decisions);
 - **Delegate eligibility** for leadership or advisory roles across the ReFi ecosystem;
 - **Participation in reputation-based governance pilots** (e.g. with Karma GAP, DeepGov, Hats Protocol, or other ReFi-aligned platforms);
-- **Increased eligibility for airdrops, incentives, or exclusive campaigns** tied to ReFi DAO’s Prosperity Pass badge and related initiatives;
+- **Increased eligibility for airdrops, incentives, or exclusive campaigns** tied to ReFi DAO's Prosperity Pass badge and related initiatives;
 - **Access to gated opportunities**, such as paid contributor roles, protocol co-creation sprints, or delegate funding pools.
 
 This system aims to reward **long-term engagement, transparency, and alignment**, and is designed to empower Local Node Leaders to shape the future of the regenerative finance movement—locally and globally.
 
 ### **3.7 Additional Support from ReFi DAO Global**
 
-ReFi DAO Global may provide **customized support**, depending on the Local Node’s maturity and needs. This includes:
+ReFi DAO Global may provide **customized support**, depending on the Local Node's maturity and needs. This includes:
 
 - **Mentorship** from experienced contributors and aligned partners
 - **Media amplification** via the ReFi DAO Blog, Podcast, and social media
@@ -111,7 +116,7 @@ The following commitments are foundational to continued recognition as a ReFi DA
 
 - **Uphold ethical standards and cultural norms** as outlined in the [ReFi DAO Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1), including a commitment to regeneration, inclusion, transparency, and respectful collaboration.
 - **Use the ReFi DAO brand responsibly and in accordance with published Brand Guidelines**, as provided in the Local Node Toolkit. This includes using the logo, name, and related assets in a way that reflects positively on the network.
-- **Avoid public misrepresentation** of ReFi DAO’s mission, intentions, or relationships. Local Nodes are encouraged to speak in their own voice and context, while clearly distinguishing their local initiatives from official global coordination efforts when appropriate.
+- **Avoid public misrepresentation** of ReFi DAO's mission, intentions, or relationships. Local Nodes are encouraged to speak in their own voice and context, while clearly distinguishing their local initiatives from official global coordination efforts when appropriate.
 - **Maintain active visibility through regular updates** submitted via [Karma GAP](https://karmagap.org/) or another approved coordination platform. These updates should reflect key activities, impact, and community engagement.
     
     > If no meaningful update is submitted within a 12-month period, the Local Node may be marked as inactive and subject to review or termination (see Section 8).
@@ -130,7 +135,7 @@ The following practices are not mandatory but are strongly encouraged to maximiz
 
 ReFi DAO aims to embody principles of **mutual support, transparency, and regenerative economics**. As such, we invite all Local Nodes to engage in a spirit of **reciprocal contribution**, recognizing that a strong, resourced ReFi DAO Global benefits the entire network — and vice versa.
 
-This section outlines **voluntary and suggested practices** for contributing back to the network in a way that is **symbiotic, transparent, and aligned with each Local Node’s capacity and success**.
+This section outlines **voluntary and suggested practices** for contributing back to the network in a way that is **symbiotic, transparent, and aligned with each Local Node's capacity and success**.
 
 ### **5.1 Mutual Reciprocity in a Regenerative Network**
 
@@ -167,7 +172,7 @@ These arrangements are meant to foster **win-win outcomes**, not extractive rela
 All funds contributed by Local Nodes to ReFi DAO Global will be:
 
 - **Fully transparent and traceable**, with reporting on how funds are allocated and which initiatives they support;
-- **Delegated to community-governed systems**, such as [ReFi DAO’s Gardens.xyz](https://gardens.xyz/) or other collective funding platforms;
+- **Delegated to community-governed systems**, such as [ReFi DAO's Gardens.xyz](https://gardens.xyz/) or other collective funding platforms;
 - **Influenced by Local Node Leaders**, who may participate in **budgeting, proposal voting, and strategic decisions** regarding the use of shared resources.
 
 This ensures that Local Nodes not only **support the network**, but also **shape it**, helping to allocate resources in line with the values, needs, and opportunities emerging across the ecosystem.
@@ -200,7 +205,7 @@ ReFi DAO is committed to the **creation of open-source tools, knowledge, and tem
 - Share improvements or customizations in a way that supports other nodes and global innovation
 - License co-created public goods under Creative Commons or similarly open terms, where possible
 
-This practice fosters **collective intelligence** and accelerates the movement’s impact globally.
+This practice fosters **collective intelligence** and accelerates the movement's impact globally.
 
 ### **6.3 Brand Governance & IP Stewardship**
 
@@ -222,7 +227,7 @@ Upon formalization:
 - All reasonable efforts will be made to ensure **continuity and fairness**, respecting the rights and responsibilities already granted to Local Nodes
 - Any material changes will be shared transparently with Local Nodes in advance
 
-Until then, this agreement serves as a **good-faith brand license** under ReFi DAO’s decentralized governance framework.
+Until then, this agreement serves as a **good-faith brand license** under ReFi DAO's decentralized governance framework.
 
 ### **6.5 Network Initiatives & Brand Extension Proposals**
 
@@ -277,13 +282,13 @@ A Local Node Leader may choose to **voluntarily end** their membership at any ti
 
 ### **7.4 Revocation for Misalignment or Harm**
 
-In rare but serious cases, ReFi DAO Global reserves the right to **immediately revoke** a Local Node’s membership, brand license, and network access if the node:
+In rare but serious cases, ReFi DAO Global reserves the right to **immediately revoke** a Local Node's membership, brand license, and network access if the node:
 
 - Engages in clear **misuse of the ReFi DAO brand** or misrepresentation of the network
 - Violates the [ReFi DAO Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1) or acts in a manner that causes harm to individuals, communities, or the ecosystem
 - Commits fraud, misuses funds, or breaches basic ethical standards
 
-Such action is considered a last resort. **Whenever possible, ReFi DAO Global will first seek resolution through the mechanisms outlined in Section 10: Dispute Resolution**. This ensures that concerns are addressed fairly, transparently, and in alignment with the network’s regenerative principles.
+Such action is considered a last resort. **Whenever possible, ReFi DAO Global will first seek resolution through the mechanisms outlined in Section 10: Dispute Resolution**. This ensures that concerns are addressed fairly, transparently, and in alignment with the network's regenerative principles.
 
 > The intention of revocation is not to protect the integrity and well-being of the broader network — while honoring the possibility for learning, repair, and eventual re-engagement where appropriate.
 > 
@@ -323,6 +328,7 @@ Disputes or concerns — whether operational, ethical, or interpersonal — will
     
     In cases where misalignment or harm persists after good-faith attempts at resolution, formal actions such as **membership composting**, **brand license revocation**, or **suspension from ReFi DAO platforms** may be taken in alignment with Section 9.
     
+    
 
 ### **10.3 Transparency & Confidentiality**
 
@@ -337,7 +343,7 @@ Any decision made by ReFi DAO Global regarding revocation, mediation outcome, or
 
 ## **9. Evolution of This Agreement**
 
-This Membership Agreement is a **living document**, designed to evolve as ReFi DAO’s ecosystem matures. Amendments may be proposed by ReFi DAO Global or the Local Node community, and will be made transparently, with fair notice and in alignment with the spirit of collaboration.
+This Membership Agreement is a **living document**, designed to evolve as ReFi DAO's ecosystem matures. Amendments may be proposed by ReFi DAO Global or the Local Node community, and will be made transparently, with fair notice and in alignment with the spirit of collaboration.
 
 Local Nodes will be informed of any proposed changes, and where material adjustments are required (e.g., changes to brand governance, IP custodianship, or funding flows), updated terms will be presented for re-signing or co-approval.
 
@@ -346,7 +352,7 @@ Local Nodes will be informed of any proposed changes, and where material adjustm
 By signing this agreement onchain, the Local Node Leader affirms that they:
 
 - Have read and understood the terms outlined in this Membership Agreement;
-- Acknowledge alignment with the [ReFi DAO Charter](https://www.notion.so/201bf304370a8038a898e7ba76319fc1?pvs=21) and [Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1);
+- Acknowledge alignment with the [ReFi DAO Charter](https://www.notion.so/ReFi-DAO-Local-Node-Membership-Agreement-v1-201bf304370a8038a898e7ba76319fc1?pvs=21) and [Community Covenant](https://claim.hatsprotocol.xyz/42220/13.3.1);
 - Intend to uphold the responsibilities, ethical standards, and coordination commitments of an Official ReFi DAO Local Node;
 - Agree to the shared principles of mutual reciprocity, brand stewardship, and regenerative network participation;
 - Recognize that this agreement is part of a broader and evolving ecosystem of tools, relationships, and governance frameworks.
@@ -355,6 +361,7 @@ This onchain signature serves as a public affirmation of intent and accountabili
 
 ## **Final Words**
 
-As an Official Local Node, you are part of a growing global movement to regenerate Earth’s economies and ecosystems through decentralized, community-driven action. Together, we are building a network society capable of meeting the challenges of our time — rooted in local leadership, guided by regenerative values, and made powerful through collective action.
+As an Official Local Node, you are part of a growing global movement to regenerate Earth's economies and ecosystems through decentralized, community-driven action. Together, we are building a network society capable of meeting the challenges of our time — rooted in local leadership, guided by regenerative values, and made powerful through collective action.
 
-Welcome to the ReFi DAO Local Node Network. Let’s grow 🌱
+Welcome to the ReFi DAO Local Node Network. Let's grow 🌱
+
