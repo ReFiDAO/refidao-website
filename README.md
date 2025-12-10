@@ -63,6 +63,7 @@ The site is automatically deployed via GitHub Actions when changes are pushed to
 
 - **GitHub Pages:** https://refidao.com
 - **Repository:** https://github.com/ReFiDAO/ReFi-DAO-Website
+- **Docs publishing (current approach):** Content is maintained in this repo for planning/review, then published to Notion via the ReFi DAO workspace: https://www.notion.so/refi-dao/ReFi-DAO-Network-Resources-2aebf304370a8199b779f7fcff610fc3. Treat this repo as staging; final canonical docs live in Notion.
 
 ## Migration Status
 
