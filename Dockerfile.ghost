@@ -1,0 +1,30 @@
+# Ghost Dockerfile with Cloudinary Storage Adapter
+# 
+# This Dockerfile extends the official Ghost image and adds
+# the Cloudinary storage adapter for external image storage.
+#
+# Usage in Railway:
+# 1. Connect Railway to this GitHub repository
+# 2. Set Dockerfile path to: Dockerfile.ghost
+# 3. Set environment variables in Railway dashboard
+# 4. Redeploy the service
+
+FROM ghost:latest
+
+# Install Cloudinary storage adapter
+# This allows Ghost to store images in Cloudinary instead of local storage
+RUN npm install ghost-storage-cloudinary --save
+
+# Note: Storage configuration is done via environment variables:
+# - storage__active=cloudinary
+# - storage__cloudinary__cloud_name=dvrjmfhzw
+# - storage__cloudinary__api_key=416117346651538
+# - storage__cloudinary__api_secret=REDACTED_CLOUDINARY_API_SECRET
+#
+# These should be set in Railway dashboard → Variables
+
+# Expose Ghost port (default: 2368)
+EXPOSE 2368
+
+# Use Ghost's default entrypoint
+CMD ["node", "current/index.js"]
