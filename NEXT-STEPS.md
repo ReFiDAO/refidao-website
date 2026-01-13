@@ -345,4 +345,3 @@ If you encounter issues:
 - [Current State](docs/refi-dao-3.0/current-state.md)
 - [Closure Checklist](docs/refi-dao-3.0/closure-checklist.md)
 - [Vision & Strategic Models](docs/refi-dao-3.0/vision-strategic-models.md)
-

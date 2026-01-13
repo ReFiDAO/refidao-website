@@ -1,0 +1,17 @@
+# Railway Environment Variables for Cloudinary Storage
+# 
+# Copy these variables to Railway dashboard → Variables
+# Replace the placeholder values with your actual Cloudinary credentials
+
+storage__active=cloudinary
+storage__cloudinary__cloud_name=YOUR_CLOUD_NAME_HERE
+storage__cloudinary__api_key=YOUR_API_KEY_HERE
+storage__cloudinary__api_secret=YOUR_API_SECRET_HERE
+
+# Instructions:
+# 1. Get credentials from https://cloudinary.com/console
+# 2. Replace YOUR_CLOUD_NAME_HERE with your Cloud Name
+# 3. Replace YOUR_API_KEY_HERE with your API Key
+# 4. Replace YOUR_API_SECRET_HERE with your API Secret
+# 5. Copy all 4 lines to Railway Variables (one per line)
+# 6. Save and redeploy

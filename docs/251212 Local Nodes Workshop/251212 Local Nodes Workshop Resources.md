@@ -2,7 +2,7 @@
 
 **Created:** November 2025  
 **Purpose:** Comprehensive resource document for workshop participants  
-**Last Updated:** November 2025
+**Last Updated:** December 2025
 
 ---
 
@@ -14,15 +14,17 @@
 - [Membership Agreement](https://www.notion.so/ReFi-DAO-Local-Node-Membership-Agreement-v1-201bf304370a8038a898e7ba76319fc1) - Review before applying
 - [Strategy Call Booking](https://calendly.com/luizfernando_) - Book with Luizfernando
 
-### Funding Opportunities
-- [Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48) - Up to 500 USDGLO
-- [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986) - Up to 3,000 USDGLO
+### Funding Pools
+- [Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48) - Up to 500 USDGLO (primary validation path)
+- [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986) - Up to 3,000 USDGLO (collaborative projects)
 
 ---
 
-## Onboarding Process
+## Onboarding & Funding Process
 
-### Phase 1: Initial Steps
+The formal process to become a recognized Local Node is through submitting a proposal on Gardens.
+
+### Phase 1: Application
 
 1. **Join ReFi DAO's Garden**
    - Link: [Gardens Platform](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
@@ -35,7 +37,12 @@
    - Understand commitments and benefits
    - Book strategy call: [Calendly](https://calendly.com/luizfernando_)
 
-3. **Submit Proposal on Gardens**
+3. **Submit Proposal on Forum**
+   - Link: [Regen Coordination Hub](https://hub.regencoordination.xyz/c/refi-dao/21)
+   - Introduce your Local Node proposal
+   - Get community feedback before submitting on-chain
+
+4. **Submit Proposal on Gardens**
    - Link: [Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)
    - Can request up to 500 USDGLO
    - Include in proposal:
@@ -44,6 +51,20 @@
      - Timeframe for completion
      - Relevant links, demos, or resources
    - Proposal template available in resources
+
+### Funding Pools
+
+**Local Node Kickstarter Pool**
+- **Amount:** Up to 500 USDGLO
+- **Purpose:** Initial activities for new nodes - primary validation path
+- **Use cases:** Events, workshops, community-building initiatives
+- **Link:** [Submit Proposal](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)
+
+**Network Initiatives Pool**
+- **Amount:** Up to 3,000 USDGLO
+- **Purpose:** Collaborative initiatives and developed case studies benefiting the network
+- **Use cases:** Cross-node collaborations, tool development, research projects
+- **Link:** [Submit Proposal](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
 
 ### Phase 2: After Approval
 
@@ -54,13 +75,13 @@
    - Claim Local Node Agreement Signer Hat
    - Await manual assignment of Local Node Lead 2025 Hat
 
-2. **Join Gated Channels**
-   - Link: [Guild.xyz - Local Node Onboarding](https://guild.xyz/refidao/onboarding-and-roles)
-   - Go through process to mint Local Node Leader Hat
-   - Access gated resources and channels (requires Local Node Lead 2025 Hat)
+2. **Access Local Node Leaders Channels**
+   - Join Local Node Leaders Telegram group
+   - Access coordination resources and channels
+   - Contact @luizfernando for access
 
 3. **Set Up Branding & Social Channels**
-   - Access brand assets (see Brand Assets section below)
+   - Access brand assets (see Develop Your Local Node section below)
    - Essential: Community Telegram Group (add @refidaoglobal as Admin)
    - Recommended: Twitter/X, Farcaster
    - Optional: LinkedIn, WhatsApp, Bluesky, Instagram, Mastodon
@@ -81,9 +102,13 @@
 
 ---
 
-## Brand Assets & Design Resources
+## Develop Your Local Node
 
-### Official Brand Assets
+Resources and tools to help you plan, brand, and build your Local Node.
+
+### Brand Assets & Design Resources
+
+**Official Brand Assets**
 - **Link:** [ReFi Brand Assets (Google Drive)](https://drive.google.com/drive/folders/1k5zEQT7fBUA-Z1IQxFw60f8wE-H6amF1)
 - **Contents:**
   - ReFi DAO logos in various formats (PNG, SVG)
@@ -91,7 +116,7 @@
   - Color palette and brand standards
   - Social media templates
 
-### Local Node Brand Kits
+**Local Node Brand Kits**
 - **Link:** [Local Node Brand Kits (Google Drive)](https://drive.google.com/drive/folders/1EjexyIkorsbV_hVLxBF5JwG63PeShIuv)
 - **Contents:**
   - Location-specific logo variations
@@ -99,13 +124,57 @@
   - Social media assets and profile images
   - Event materials and promotional content
 
-### Event & Website Graphics
+**Event & Website Graphics**
 - **Link:** [ReFi DAO Events Graphics (Figma)](https://www.figma.com/design/g9OFvnMoZqa72gsYdVu5Ml/ReFi-DAO-Event-and-Website-Graphics?node-id=845-4335&p=f&t=8IyFGqqHqQlVMMoC-0)
 - **Contents:**
   - Event banner templates
   - Website graphics and UI elements
   - Social media story templates
   - Presentation templates
+
+### Strategic Planning Tools
+
+**Local Node Canvas**
+- **Link:** [Local Node Canvas (Figma)](https://www.figma.com/community/file/1234567890)
+- **Purpose:** Deconstruct and develop your Local Node hypothesis
+- **Features:**
+  - Map stakeholders, resources, activities, and value propositions
+  - Collaborative planning tool for founding teams
+  - Visual framework for node strategy
+
+**Local Node Toolkit**
+- **Link:** [Local Node Toolkit v1.5](https://www.notion.so/refi-dao/Local-Node-Toolkit-v1-5-2aebf304370a81c5ba33d3794285d322)
+- **Contents:**
+  - Implementation guides and best practices
+  - Case studies from existing nodes
+  - Event planning resources
+  - Operational templates
+
+### Website Template (Alpha)
+
+**Quartz ReFi Template**
+- **Link:** [GitHub Repository](https://github.com/ReFiDAO/quartz-refi-template)
+- **Purpose:** Free, self-hosted website solution for Local Nodes
+- **Features:**
+  - Built on [Quartz](https://quartz.jzhao.xyz/) static site generator
+  - Multi-language support
+  - Customizable themes and colors
+  - Easy content management with Markdown
+  - GitHub Pages deployment (free hosting)
+
+**Current Implementations:**
+- [ReFi Barcelona](https://refibcn.cat/) - Live
+- [Regenerant Catalunya](https://regenerant.cat/) - Live
+
+**In Testing:**
+- ReFi DAO Website
+- ReFi Mediterranean
+- ReFi Provence
+
+**Get Started:**
+- Currently in alpha stage
+- Express interest to get prototype assistance
+- Contact: @luizfernando on Telegram or [book a strategy call](https://calendly.com/luizfernando_)
 
 ### Brand Guidelines & Best Practices
 
@@ -132,22 +201,13 @@
 ## Platform Access & Accounts
 
 ### Gardens Platform
-- **Purpose:** Decentralized funding and governance
+- **Purpose:** Decentralized funding and governance - formal validation for Local Nodes
 - **Link:** [ReFi DAO Garden](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
 - **Features:**
   - Join community and sign covenant
   - Submit funding proposals
   - Participate in conviction voting
   - Track proposals and funding pools
-
-### Guild.xyz
-- **Purpose:** Gated access to resources and channels
-- **Link:** [Local Node Onboarding](https://guild.xyz/refidao/onboarding-and-roles)
-- **Features:**
-  - Mint Local Node Leader Hat
-  - Access gated Telegram channels
-  - Access private resource folders
-  - Verify membership status
 
 ### KarmaGAP
 - **Purpose:** Project tracking and impact documentation
@@ -180,7 +240,7 @@
 ## Communication Channels
 
 ### Local Node Leaders Telegram
-- **Access:** Via Guild.xyz (requires Local Node Lead 2025 Hat)
+- **Access:** Contact @luizfernando after proposal approval
 - **Purpose:** Private group for coordination and support
 - **Usage:** Strategy discussions, resource sharing, updates
 
@@ -221,38 +281,10 @@
 
 ### Toolkits & Guides
 - **Local Node Toolkit:** Implementation guides and best practices
+- **Local Node Canvas:** Strategic planning framework
 - **Brand Guidelines:** Visual identity and communication standards
 - **Event Planning:** Resources for organizing local events
-
----
-
-## Funding & Support
-
-### Funding Pools
-
-**Local Node Kickstarter Pool**
-- **Amount:** Up to 500 USDGLO
-- **Purpose:** Initial activities for new nodes
-- **Use cases:** Events, workshops, community-building initiatives
-- **Link:** [Submit Proposal](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)
-
-**Network Initiatives Pool**
-- **Amount:** Up to 3,000 USDGLO
-- **Purpose:** Larger initiatives and collaborations
-- **Use cases:** Network-wide projects, tool development, research
-- **Link:** [Submit Proposal](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986)
-
-### Support Programs
-
-**Mentorship Program**
-- Connect with experienced Local Node leaders
-- Learn from established nodes
-- Get guidance on challenges
-
-**Technical Support**
-- Access to technical resources
-- Guidance on tool implementation
-- Integration support
+- **Website Template:** Quartz-based self-hosted website solution
 
 ---
 
@@ -305,12 +337,27 @@
 ### Support Channels
 - **Telegram Support:** [Questions Channel](https://t.me/+9SqORyW9gIw2Y2E0)
 - **Forum:** [Regen Coordination Hub](https://hub.regencoordination.xyz/c/refi-dao/21/none)
-- **Local Node Leaders Telegram:** Via Guild.xyz access
+- **Local Node Leaders Telegram:** Contact @luizfernando for access
 
 ### Common Questions
 - **Wallet/Hat changes:** Use [form](https://tally.so/r/mZZR0B) or contact @luizfernando
 - **Access issues:** Contact through Telegram or forum
 - **Proposal questions:** Book strategy call or post in forum
+
+---
+
+## End-of-Year Asks
+
+### 2025 Retrospective & 2026 Vision
+
+1. **Fill out the Form**
+   - Share your node's 2025 achievements and challenges
+   - Outline your vision and plans for 2026
+   - Link: [Form TBD]
+
+2. **Share on Forum Threads**
+   - **Public thread:** Share openly with the network - [Link TBD]
+   - **Private feedback:** For sensitive or confidential feedback - [Link TBD]
 
 ---
 
@@ -338,12 +385,26 @@
 
 5. **Set up your Local Node**
    - Access brand assets
+   - Explore strategic planning tools
    - Set up social channels
    - Create KarmaGAP profile
+   - Consider website template
    - Plan first activities
 
 ---
 
 *This document is regularly updated. Bookmark for easy reference!*  
-*Last updated: November 2025*
+*Last updated: December 2025*
+
+
+
+
+
+
+
+
+
+
+
+
 

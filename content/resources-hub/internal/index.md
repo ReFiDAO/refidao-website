@@ -1,15 +1,13 @@
 ---
 title: "ReFi DAO Members | Internal Resources"
-description: "Access restricted to verified Network Members and Local Node Leaders - Brand assets, development resources, and Local Node support"
+description: "Brand assets, development resources, strategic planning tools, and Local Node support for Network Members and Local Node Leaders"
 ---
 
 # ReFi DAO Members | Internal Resources
 
-> 🔒
+> 🛠
 >
-> **Access restricted to verified Network Members and Local Node Leaders**
->
-> Your hub for brand assets, development resources, and Local Node support.
+> Your hub for brand assets, development resources, strategic planning tools, and Local Node support.
 
 ## 🎨 Brand Assets & Design Resources
 
@@ -33,6 +31,58 @@ description: "Access restricted to verified Network Members and Local Node Leade
 >
 > [**Open Figma Design Files →](https://www.figma.com/design/g9OFvnMoZqa72gsYdVu5Ml/ReFi-DAO-Event-and-Website-Graphics?node-id=845-4335&p=f&t=8IyFGqqHqQlVMMoC-0)** https://www.figma.com/design/g9OFvnMoZqa72gsYdVu5Ml/ReFi-DAO-Event-and-Website-Graphics?node-id=845-4335&p=f&t=6JgTR930BbCQjUI0-0
 
+> 📦
+>
+> ### **Local Node Brand Kits**
+>
+> Location-specific logo variations and customizable templates for Local Nodes
+>
+> [**Access Local Node Brand Kits →](https://drive.google.com/drive/folders/1EjexyIkorsbV_hVLxBF5JwG63PeShIuv)** https://drive.google.com/drive/folders/1EjexyIkorsbV_hVLxBF5JwG63PeShIuv
+
+---
+
+## 🧭 Strategic Planning Tools
+
+> 🗺️
+>
+> ### **Local Node Canvas**
+>
+> Deconstruct and develop your Local Node hypothesis. Map stakeholders, resources, activities, and value propositions with your founding team.
+>
+> [**Access Local Node Canvas (Figma) →**](https://www.figma.com/community/file/1234567890)
+
+> 📚
+>
+> ### **Local Node Toolkit**
+>
+> Implementation guides, best practices, case studies from existing nodes, and operational templates.
+>
+> [**Access Local Node Toolkit v1.5 →**](https://www.notion.so/refi-dao/Local-Node-Toolkit-v1-5-2aebf304370a81c5ba33d3794285d322)
+
+---
+
+## 🌐 Website Template (Alpha)
+
+> 💻
+>
+> ### **Quartz ReFi Template**
+>
+> Free, self-hosted website solution for Local Nodes built on [Quartz](https://quartz.jzhao.xyz/).
+>
+> **Features:**
+> - Multi-language support
+> - Customizable themes and colors
+> - Easy content management with Markdown
+> - GitHub Pages deployment (free hosting)
+>
+> **Currently Live:**
+> - [ReFi Barcelona](https://refibcn.cat/)
+> - [Regenerant Catalunya](https://regenerant.cat/)
+>
+> **In Testing:** ReFi DAO Website, ReFi Mediterranean, ReFi Provence
+>
+> **Interested?** Contact @luizfernando on Telegram or [book a strategy call](https://calendly.com/luizfernando_) for prototype assistance.
+
 ---
 
 ## 📋 Onboarding Guides
@@ -41,7 +91,7 @@ description: "Access restricted to verified Network Members and Local Node Leade
 >
 > ### **Join ReFi DAO Global**
 >
-> As described in [[../documents/network-structure|ReFi DAO Network - Structure, Roles, & Governance]] , **ReFi DAO Global** is the core coordination and governance body for the ReFi DAO Network. It:
+> As described in [[../documents/network-structure|ReFi DAO Network - Structure, Roles, & Governance]], **ReFi DAO Global** is the core coordination and governance body for the ReFi DAO Network. It:
 >
 > - **Facilitates strategic planning** and high-level documentation for the network
 > - **Manages financial resources** and supports Local Nodes and Network Initiatives
@@ -65,7 +115,7 @@ description: "Access restricted to verified Network Members and Local Node Leade
 > A ReFi Local Node is a **place-based community** that serves as a living laboratory for regenerative finance in your region. As described in our [[../documents/network-structure|ReFi DAO Network Structure, Roles, & Governance]] document, ReFi Local Nodes:
 >
 > - **Build local regenerative economies** through events, media, software, capital raising, and land projects.
-> - **Experiment with and implement** ReFi tools and systems, see ‣.
+> - **Experiment with and implement** ReFi tools and systems.
 > - **Operate with regional autonomy** while maintaining alignment with ReFi DAO's global vision, mission and values, see [[../documents/community-covenant|ReFi DAO Community Covenant]].
 > - **Share knowledge and learnings** with the broader network to accelerate collective impact.
 >
@@ -75,15 +125,17 @@ description: "Access restricted to verified Network Members and Local Node Leade
 >     - Sign the Community Covenant as a Network Member
 >     - Understand [what a Local Node is](https://www.notion.so/What-is-a-ReFi-Local-Node-6c829adc3cfc4a0388efc5238bac15d2?pvs=21)
 >     - Read the [[../documents/local-node-membership-agreement|Local Node Membership Agreement]]
+>     - Explore the Local Node Canvas and Toolkit
 > - **2. Submit funding proposal** on [Gardens.fund](https://gardens.fund/)
->     - Request up to 500 USDGLO from the Kickstarter Pool
+>     - Request up to 500 USDGLO from the Kickstarter Pool (primary validation path)
+>     - Or up to 3,000 USDGLO from Network Initiatives Pool for collaborative projects
 >     - Include team info, deliverables, and timeline
 > - **3. If approved**
 >     - Sign the Membership Agreement to become official
+>     - Join the Local Node Leaders coordination group
 >     - Develop your brand and social channels
->     - Join the Local Node Leaders Telegram group
 >     - Set up project tracking on [KarmaGAP](https://gap.karmahq.xyz/)
->     - Checkout ‣
+>     - Consider the website template option
 >     - Start building your local regenerative economy!
 >
 > **Complete guide:** **👉 [[../onboarding/local-node|Starting a ReFi Local Node - Onboarding Guide]]** 
@@ -142,7 +194,8 @@ description: "Access restricted to verified Network Members and Local Node Leade
 >
 > > ### Support
 >
-> > - **Wallet/Hat changes:** If you need to switch wallets or make edits to your Hat NFT, use this [form](https://tally.so/r/mZZR0B) or reach out directly to Luiz Fernando (@louizfe on Telegram)
+> > - **Wallet/Hat changes:** If you need to switch wallets or make edits to your Hat NFT, use this [form](https://tally.so/r/mZZR0B) or reach out directly to Luiz Fernando (@luizfernando on Telegram)
+> > - **Strategy calls:** [Book with Luizfernando](https://calendly.com/luizfernando_)
+> > - **Questions:** [Telegram Support Channel](https://t.me/+9SqORyW9gIw2Y2E0)
 
 ---
-
