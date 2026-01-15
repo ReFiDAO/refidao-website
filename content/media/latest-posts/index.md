@@ -7,7 +7,15 @@ description: "Latest posts from ReFi DAO blog"
 
 > Automatically updated from [blog.refidao.com](https://blog.refidao.com)
 
-## 1. [[01-|<![CDATA[Bread Cooperative <> Regen Coordination: Celebrating Evolution and Alignment]]>]]
+## 1. [[01-|<![CDATA[Coming Back to Build: AI, Regeneration, and a Regen Builders Cohort? 👷🧱]]>]]
+
+
+
+[Read more →](https://blog.refidao.com/coming-back-to-build-ai-regeneration-and-a-regen-builders-cohort/)
+
+---
+
+## 2. [[02-|<![CDATA[Bread Cooperative <> Regen Coordination: Celebrating Evolution and Alignment]]>]]
 
 
 
@@ -15,7 +23,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ---
 
-## 2. [[02-|<![CDATA[Introducing Localism Fund: Building Place-Based Power with Ethereum]]>]]
+## 3. [[03-|<![CDATA[Introducing Localism Fund: Building Place-Based Power with Ethereum]]>]]
 
 
 
@@ -23,7 +31,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ---
 
-## 3. [[03-|<![CDATA[🌿 Regen Haus Residency at Edge City Patagonia - Join Us!]]>]]
+## 4. [[04-|<![CDATA[🌿 Regen Haus Residency at Edge City Patagonia - Join Us!]]>]]
 
 
 
@@ -31,7 +39,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ---
 
-## 4. [[04-|<![CDATA[Prosperity Pass: ReFi DAO’s New Era of Onchain Reputation & Rewards — Claim Yours Today!]]>]]
+## 5. [[05-|<![CDATA[Prosperity Pass: ReFi DAO’s New Era of Onchain Reputation & Rewards — Claim Yours Today!]]>]]
 
 
 
@@ -39,7 +47,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ---
 
-## 5. [[05-|<![CDATA[Ethereum Localism x Regen Coordination: Powering Regenerative Local Economies with Web3]]>]]
+## 6. [[06-|<![CDATA[Ethereum Localism x Regen Coordination: Powering Regenerative Local Economies with Web3]]>]]
 
 
 
@@ -47,7 +55,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ---
 
-## 6. [[06-|<![CDATA[Reflecting on Regeneration Nexus with Maya Dentzel and Tereza Bízková │ S4 Bonus 🌐🎧]]>]]
+## 7. [[07-|<![CDATA[Reflecting on Regeneration Nexus with Maya Dentzel and Tereza Bízková │ S4 Bonus 🌐🎧]]>]]
 
 What stood out, what still lingers, and what&#x2019;s next for ReFi?In the final episode of Season 4: The Regeneration Nexus of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xED;zkov&#xE1; take a
 
@@ -55,7 +63,7 @@ What stood out, what still lingers, and what&#x2019;s next for ReFi?In the final
 
 ---
 
-## 7. [[07-|<![CDATA[From Green Rush to ReFi Realism with David Fortson and Sandra Ponce de Leon │ S4 Bonus 🌿🎧]]>]]
+## 8. [[08-|<![CDATA[From Green Rush to ReFi Realism with David Fortson and Sandra Ponce de Leon │ S4 Bonus 🌿🎧]]>]]
 
 What does it take to build regenerative projects that actually sustain themselves?In this special bonus episode of the Season 4 of the ReFi Podcast, Regeneration Nexus, host Maya Dentzel sits down wit
 
@@ -63,7 +71,7 @@ What does it take to build regenerative projects that actually sustain themselve
 
 ---
 
-## 8. [[08-|<![CDATA[Incubating New Societies: The Rise of Pop-Up Cities with Timour Kosters │ S4 Bonus 🏙️🎧]]>]]
+## 9. [[09-|<![CDATA[Incubating New Societies: The Rise of Pop-Up Cities with Timour Kosters │ S4 Bonus 🏙️🎧]]>]]
 
 Can temporary pop-up cities incubate the future of society?In this Bonus Episode of Season 4, The Regeneration Nexus, of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xED;zkov&#xE1; welcome Timou
 
@@ -71,7 +79,7 @@ Can temporary pop-up cities incubate the future of society?In this Bonus Episode
 
 ---
 
-## 9. [[09-|<![CDATA[The Regenaissance | ReFi Recap 02/10]]>]]
+## 10. [[10-|<![CDATA[The Regenaissance | ReFi Recap 02/10]]>]]
 
 
 
@@ -79,16 +87,8 @@ Can temporary pop-up cities incubate the future of society?In this Bonus Episode
 
 ---
 
-## 10. [[10-|<![CDATA[Reflections on the Third ReFi Podcast S4 Miniseries: Tools to Scale Impact 🛠️🎙️]]>]]
-
-After taking a short break over the New Year, we&#x2019;re back with reflections from the final miniseries of Season 4 on The Tools: How can technological advances enhance and scale regenerative visio
-
-[Read more →](https://blog.refidao.com/reflections-on-the-third-refi-podcast-s4-miniseries-tools-to-scale-impact-2/)
-
 ---
 
----
-
-*Last updated: 2026-01-15T12:22:49.960Z*
+*Last updated: 2026-01-15T18:22:39.270Z*
 
 [View all posts →](https://blog.refidao.com)
