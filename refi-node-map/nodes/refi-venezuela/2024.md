@@ -1,0 +1,1 @@
+![image.png](nodes/refi-venezuela/images/cover.png)

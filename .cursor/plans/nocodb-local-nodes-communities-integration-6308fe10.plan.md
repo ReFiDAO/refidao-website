@@ -1,4 +1,3 @@
-<!-- 6308fe10-f257-458a-a65d-bb057d0c6ce0 31147dba-7e03-4fae-ad0f-b07f9bf3e2d4 -->
 # NocoDB Integration Plan - Local Nodes & Communities
 
 ## Goal
@@ -7,13 +6,7 @@ Integrate NocoDB database to manage Local Nodes and Communities (Network Initiat
 
 ## Overview
 
-**Status:** Planning
-
-**Integration:** NocoDB API → Quartz Static Site Generator
-
-**Timeline:** 2-3 weeks
-
-**Integration Point:** Part of Airtable Migration Plan Phase 1
+**Status:** Planning**Integration:** NocoDB API → Quartz Static Site Generator**Timeline:** 2-3 weeks**Integration Point:** Part of Airtable Migration Plan Phase 1
 
 ### Current State
 
@@ -32,9 +25,11 @@ Integrate NocoDB database to manage Local Nodes and Communities (Network Initiat
 
 ### Data Flow
 
-```
+```javascript
 NocoDB Database → Build Script → JSON/Markdown Files → Quartz Build → Static Site
 ```
+
+
 
 ### Approach
 
@@ -109,9 +104,7 @@ NocoDB Database → Build Script → JSON/Markdown Files → Quartz Build → St
 
 #### 2.1 Create NocoDB Fetch Script
 
-**File:** `scripts/fetch-nocodb.js`
-
-**Functionality:**
+**File:** `scripts/fetch-nocodb.js`**Functionality:**
 
 - Fetch Local Nodes data from NocoDB API
 - Fetch Network Initiatives data from NocoDB API
@@ -195,9 +188,7 @@ NOCODB_NETWORK_INITIATIVES_TABLE_ID=table_id
 
 #### 3.3 GitHub Actions Integration (Optional)
 
-**File:** `.github/workflows/fetch-nocodb.yml`
-
-**Functionality:**
+**File:** `.github/workflows/fetch-nocodb.yml`**Functionality:**
 
 - Scheduled runs (daily/weekly)
 - Manual trigger support
@@ -216,9 +207,7 @@ NOCODB_NETWORK_INITIATIVES_TABLE_ID=table_id
 
 #### 4.1 Import Existing Data
 
-**Source:** `content/community/local-nodes.json`
-
-**Tasks:**
+**Source:** `content/community/local-nodes.json`**Tasks:**
 
 - [ ] Export current JSON data
 - [ ] Transform to NocoDB format
@@ -266,11 +255,9 @@ NOCODB_NETWORK_INITIATIVES_TABLE_ID=table_id
 
 ### NocoDB API Usage
 
-**Base URL:** `https://your-nocodb-instance.com/api/v1/db`
+**Base URL:** `https://your-nocodb-instance.com/api/v1/db`**Authentication:**
 
-**Authentication:**
-
-```
+```javascript
 Headers:
 X-NocoDB-API-Token: <api-token>
 ```
@@ -464,17 +451,3 @@ This enhances Website Migration Phase 4:
 
 - **Airtable Migration Plan:** `docs/ReFi-DAO-Infrastructure-Migration/airtable-migration/airtable-migration.plan.md`
 - **NocoDB Migration Guide:** `docs/ReFi-DAO-Infrastructure-Migration/airtable-migration/nocodb-migration-guide.md`
-- **Website Migration Plan:** `docs/ReFi-DAO-Infrastructure-Migration/website-migration/website-migration.plan.md`
-- **Main Migration README:** `docs/ReFi-DAO-Infrastructure-Migration/README.md`
-
-### To-dos
-
-- [ ] Deploy NocoDB instance on Railway/Render (can share with Airtable migration)
-- [ ] Design database schema for Local Nodes and Network Initiatives tables
-- [ ] Import existing local-nodes.json data into NocoDB
-- [ ] Create scripts/fetch-nocodb.js to fetch data from NocoDB API
-- [ ] Integrate NocoDB fetch into build process (update package.json)
-- [ ] Update content/community markdown files to use fetched JSON data
-- [ ] Create GitHub Actions workflow for scheduled NocoDB updates (optional)
-- [ ] Create integration guide and admin documentation
-- [ ] Train content managers on NocoDB admin interface

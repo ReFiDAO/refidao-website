@@ -1,0 +1,72 @@
+# Deploy Documentation Site (Quartz) to GitHub Pages
+# This workflow builds and deploys the docs.refidao.com subdomain
+
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+      - 'quartz/**'
+      - 'quartz.config.ts'
+      - 'quartz.layout.ts'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+# Sets permissions of the GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "docs-pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Quartz Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for git info
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Quartz site
+        run: npx quartz build
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    name: Deploy to GitHub Pages (docs subdomain)
+    needs: build
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: docs-github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

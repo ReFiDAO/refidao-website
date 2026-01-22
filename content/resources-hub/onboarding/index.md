@@ -23,7 +23,7 @@ Join as a Core Contributor, Core Steward, or Advisor to help coordinate the glob
 
 [[local-node|Starting a ReFi Local Node - Onboarding Guide]]
 
-Start a place-based community to catalyze regenerative economies in your region.
+Start a place-based community to catalyze regenerative economies in your region. Our streamlined process gets you from interest form to funded node with full support along the way.
 
 ## 🌿 Network Initiative
 

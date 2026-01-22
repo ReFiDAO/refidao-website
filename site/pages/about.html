@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - ReFi DAO</title>
+  <meta name="description" content="Learn about ReFi DAO's mission, vision, and how we're building a network society to regenerate the earth.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About ReFi DAO">
+  <meta property="og:description" content="ReFi DAO is a network society focused on developing strategic services and public goods for the Regenerative Finance ecosystem.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://refidao.com/about">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="is-loading">
+  <div class="bg-noise"></div>
+  
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="" class="nav__logo-img">
+        <span class="nav__logo-text">ReFi DAO</span>
+      </a>
+      
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="about.html" class="nav__link is-active">
+            About
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="about.html" class="nav__dropdown-link">Mission & Vision</a>
+            <a href="/about#network-structure" class="nav__dropdown-link">Network Structure</a>
+            <a href="/about#team" class="nav__dropdown-link">Team</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="local-nodes.html" class="nav__link">Local Nodes</a>
+        </li>
+        <li class="nav__item">
+          <a href="community.html" class="nav__link">
+            Community
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="/community/network-initiatives" class="nav__dropdown-link">Network Initiatives</a>
+            <div class="nav__dropdown-divider"></div>
+            <a href="/community/regen-coordination" class="nav__dropdown-link">Regen Coordination</a>
+            <a href="/community/refi-mediterranean" class="nav__dropdown-link">ReFi Mediterranean</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            Media
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="https://blog.refidao.com" target="_blank" class="nav__dropdown-link nav__dropdown-link--external">ReFi Blog</a>
+            <a href="https://podcast.refidao.com" target="_blank" class="nav__dropdown-link nav__dropdown-link--external">ReFi Podcast</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="resources-hub.html" class="nav__link">Resources</a>
+        </li>
+        <li class="nav__item">
+          <a href="https://forum.refidao.com" target="_blank" class="nav__link nav__link--external">Forum</a>
+        </li>
+      </ul>
+      
+      <div class="nav__actions">
+        <a href="/resources-hub/onboarding/network-member" class="btn btn-primary btn-sm">Join the Network</a>
+      </div>
+      
+      <button class="nav__toggle" aria-label="Open menu">
+        <svg class="nav__toggle-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="nav__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="" class="nav__logo-img">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="local-nodes.html" class="mobile-menu__link">Local Nodes</a>
+      <a href="community.html" class="mobile-menu__link">Community</a>
+      <a href="https://blog.refidao.com" target="_blank" class="mobile-menu__link">Media ↗</a>
+      <a href="resources-hub.html" class="mobile-menu__link">Resources</a>
+      <a href="https://forum.refidao.com" target="_blank" class="mobile-menu__link">Forum ↗</a>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a href="/resources-hub/onboarding/network-member" class="btn btn-primary">Join the Network</a>
+    </div>
+  </div>
+  
+  <!-- ABOUT HERO -->
+  <header class="about-hero section section-lg" style="background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-deep));">
+    <div class="container">
+      <span class="pill-badge fade-in-up">About Us</span>
+      <h1 class="about-hero__title fade-in-up fade-in-delay-1">
+        A Network Society to<br class="desktop-only">
+        <span class="gradient-text">Regenerate the Earth</span>
+      </h1>
+      <p class="about-hero__subtitle fade-in-up fade-in-delay-2">
+        ReFi DAO is a network society focused on developing strategic services and public goods 
+        for the Regenerative Finance ecosystem.
+      </p>
+    </div>
+  </header>
+  
+  <!-- MISSION SECTION -->
+  <section class="section section-lg" style="background: var(--color-bg-deep);">
+    <div class="container">
+      <div class="section-header section-header--left" data-animate>
+        <span class="pill-badge pill-badge--green section-header__badge">Our Mission</span>
+        <h2 class="section-header__title">Connecting Regenerative Movements Globally</h2>
+      </div>
+      
+      <div class="prose" data-animate data-animate-delay="100" style="max-width: 800px;">
+        <p>
+          We connect regenerative movements globally, empowering communities to co-create a future 
+          rooted in social equity, economic opportunity, and ecological restoration.
+        </p>
+        <p>
+          ReFi DAO serves as a hub where regenerative finance meets collective action. By weaving 
+          connections between projects, technologies, and communities, we cultivate the infrastructure 
+          that makes systemic change possible.
+        </p>
+        <p>
+          Our network supports local communities in adopting regenerative practices while connecting 
+          them to a global movement of changemakers, builders, and visionaries working towards a 
+          more sustainable future.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- NETWORK STRUCTURE SECTION -->
+  <section id="network-structure" class="section section-lg" style="background: var(--color-bg-deeper);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="pill-badge section-header__badge">Structure</span>
+        <h2 class="section-header__title">Network Structure</h2>
+        <p class="section-header__subtitle">
+          ReFi DAO operates as a multi-layered network balancing decentralized autonomy with coordinated alignment.
+        </p>
+      </div>
+      
+      <div class="card-grid">
+        <div class="glass-card feature-card" data-animate>
+          <div class="feature-card__icon">🌐</div>
+          <h3 class="feature-card__title">ReFi DAO Global</h3>
+          <p class="feature-card__description">
+            The operational and governance layer supporting strategic planning, treasury management, 
+            and coordination across the network. Global provides shared services, resources, and 
+            alignment for the entire ecosystem.
+          </p>
+        </div>
+        
+        <div class="glass-card feature-card" data-animate data-animate-delay="100">
+          <div class="feature-card__icon">📍</div>
+          <h3 class="feature-card__title">Local Nodes</h3>
+          <p class="feature-card__description">
+            Place-based communities experimenting with regenerative finance in their local contexts. 
+            Each node is autonomous yet connected to the global network, sharing learnings and 
+            resources while addressing local needs.
+          </p>
+        </div>
+        
+        <div class="glass-card feature-card" data-animate data-animate-delay="200">
+          <div class="feature-card__icon">⚡</div>
+          <h3 class="feature-card__title">Network Initiatives</h3>
+          <p class="feature-card__description">
+            Autonomous working groups aligned with ReFi DAO's mission and values. These initiatives 
+            tackle specific challenges, from education to tooling, operating with independence 
+            while contributing to the broader ecosystem.
+          </p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12" data-animate data-animate-delay="300">
+        <a href="/resources-hub/documents/network-structure" class="btn btn-primary">Learn More About Our Structure</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- VALUES SECTION -->
+  <section class="section section-lg" style="background: var(--color-bg-deep);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="pill-badge pill-badge--green section-header__badge">Principles</span>
+        <h2 class="section-header__title">Our Values</h2>
+      </div>
+      
+      <div class="card-grid card-grid--4">
+        <div class="glass-card stat-card" data-animate>
+          <div class="stat-card__value">🌱</div>
+          <div class="stat-card__label">Regeneration</div>
+        </div>
+        <div class="glass-card stat-card" data-animate data-animate-delay="100">
+          <div class="stat-card__value">🤝</div>
+          <div class="stat-card__label">Collaboration</div>
+        </div>
+        <div class="glass-card stat-card" data-animate data-animate-delay="200">
+          <div class="stat-card__value">🔓</div>
+          <div class="stat-card__label">Transparency</div>
+        </div>
+        <div class="glass-card stat-card" data-animate data-animate-delay="300">
+          <div class="stat-card__value">🌍</div>
+          <div class="stat-card__label">Inclusivity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TEAM SECTION -->
+  <section id="team" class="section section-lg" style="background: var(--color-bg-deeper);">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="pill-badge section-header__badge">Team</span>
+        <h2 class="section-header__title">Core Contributors</h2>
+        <p class="section-header__subtitle">
+          The humans behind ReFi DAO Global, working to coordinate and support the network.
+        </p>
+      </div>
+      
+      <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
+        <div class="glass-card" style="padding: var(--space-6); text-align: center;" data-animate>
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--glass-bg); margin: 0 auto var(--space-4); display: grid; place-items: center; font-size: 2rem;">
+            👤
+          </div>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Monty Merlin</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">Lead Coordinator</p>
+        </div>
+        
+        <div class="glass-card" style="padding: var(--space-6); text-align: center;" data-animate data-animate-delay="100">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--glass-bg); margin: 0 auto var(--space-4); display: grid; place-items: center; font-size: 2rem;">
+            👤
+          </div>
+          <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Network Contributors</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">Distributed Team</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12" data-animate>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-4);">
+          Want to contribute to ReFi DAO?
+        </p>
+        <a href="/resources-hub/onboarding/network-member" class="btn btn-primary">Join Our Team</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA SECTION -->
+  <section class="cta-section" style="background: var(--color-bg-deep);">
+    <div class="cta-section__glow"></div>
+    <div class="cta-section__content container">
+      <h2 class="cta-section__title" data-animate>Ready to Get Involved?</h2>
+      <p class="cta-section__text" data-animate data-animate-delay="100">
+        Join the movement for regenerative finance and help us build a better future.
+      </p>
+      <div class="hero__actions" data-animate data-animate-delay="200">
+        <a href="local-nodes.html" class="btn btn-primary">Find a Local Node</a>
+        <a href="community.html" class="btn btn-ghost">Explore Community</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="ReFi DAO" class="footer__logo-img">
+      </div>
+      <p class="footer__tagline">A network society to regenerate the earth</p>
+      
+      <nav class="footer__links">
+        <a href="about.html" class="footer__link">About</a>
+        <a href="local-nodes.html" class="footer__link">Local Nodes</a>
+        <a href="community.html" class="footer__link">Community</a>
+        <a href="resources-hub.html" class="footer__link">Resources</a>
+        <a href="https://blog.refidao.com" target="_blank" class="footer__link">Blog</a>
+        <a href="https://docs.refidao.com" target="_blank" class="footer__link">Docs</a>
+      </nav>
+      
+      <p class="footer__copyright">© 2026 ReFi DAO. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script type="module" src="../scripts/main.js"></script>
+</body>
+</html>

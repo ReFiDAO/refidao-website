@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Nodes - ReFi DAO</title>
+  <meta name="description" content="Explore the global network of place-based Regenerative Finance communities. Find a ReFi node near you or start one in your local area.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ReFi Local Nodes - Global Network Map">
+  <meta property="og:description" content="Explore the network of place-based Regenerative Finance communities around the world.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://refidao.com/local-nodes">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../../refi-node-map/style.css">
+  
+  <style>
+    /* Page-specific overrides for embedded map */
+    .nodes-page .hero {
+      min-height: 100vh;
+      padding-bottom: 0;
+    }
+    
+    .nodes-page .hero-map {
+      margin-top: var(--space-12);
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    .nodes-page .map-frame {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+    }
+    
+    .nodes-page .scroll-indicator {
+      display: none;
+    }
+    
+    /* Override node-map hero styles when embedded */
+    .nodes-page .hero-ring-container {
+      width: 700px;
+      height: 700px;
+      opacity: 0.1;
+    }
+    
+    @media (min-width: 768px) {
+      .nodes-page .hero-ring-container {
+        width: 1000px;
+        height: 1000px;
+      }
+    }
+  </style>
+</head>
+<body class="nodes-page is-loading">
+  <div class="bg-noise"></div>
+  
+  <!-- NAVIGATION (same as index) -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="" class="nav__logo-img">
+        <span class="nav__logo-text">ReFi DAO</span>
+      </a>
+      
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="about.html" class="nav__link">
+            About
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="about.html" class="nav__dropdown-link">Mission & Vision</a>
+            <a href="/about#network-structure" class="nav__dropdown-link">Network Structure</a>
+            <a href="/about#team" class="nav__dropdown-link">Team</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="local-nodes.html" class="nav__link is-active">Local Nodes</a>
+        </li>
+        <li class="nav__item">
+          <a href="community.html" class="nav__link">
+            Community
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="/community/network-initiatives" class="nav__dropdown-link">Network Initiatives</a>
+            <div class="nav__dropdown-divider"></div>
+            <a href="/community/regen-coordination" class="nav__dropdown-link">Regen Coordination</a>
+            <a href="/community/refi-mediterranean" class="nav__dropdown-link">ReFi Mediterranean</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            Media
+            <svg class="nav__link-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="https://blog.refidao.com" target="_blank" class="nav__dropdown-link nav__dropdown-link--external">ReFi Blog</a>
+            <a href="https://podcast.refidao.com" target="_blank" class="nav__dropdown-link nav__dropdown-link--external">ReFi Podcast</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="resources-hub.html" class="nav__link">Resources</a>
+        </li>
+        <li class="nav__item">
+          <a href="https://forum.refidao.com" target="_blank" class="nav__link nav__link--external">Forum</a>
+        </li>
+      </ul>
+      
+      <div class="nav__actions">
+        <a href="/resources-hub/onboarding/network-member" class="btn btn-primary btn-sm">Join the Network</a>
+      </div>
+      
+      <button class="nav__toggle" aria-label="Open menu">
+        <svg class="nav__toggle-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="nav__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="" class="nav__logo-img">
+      </a>
+      <button class="mobile-menu__close" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="local-nodes.html" class="mobile-menu__link">Local Nodes</a>
+      <a href="community.html" class="mobile-menu__link">Community</a>
+      <a href="https://blog.refidao.com" target="_blank" class="mobile-menu__link">Media ↗</a>
+      <a href="resources-hub.html" class="mobile-menu__link">Resources</a>
+      <a href="https://forum.refidao.com" target="_blank" class="mobile-menu__link">Forum ↗</a>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a href="/resources-hub/onboarding/network-member" class="btn btn-primary">Join the Network</a>
+    </div>
+  </div>
+  
+  <!-- HERO SECTION WITH EMBEDDED MAP -->
+  <header class="hero">
+    <div class="hero__ring-container">
+      <img src="../assets/refi-dao-ring.png" alt="" class="hero__ring">
+    </div>
+    <div class="hero__ring-mask"></div>
+    
+    <div class="hero__content">
+      <div class="hero__glow"></div>
+      
+      <div class="fade-in-up">
+        <span class="pill-badge">ReFi DAO</span>
+        <h1 class="hero__title">
+          ReFi <span class="gradient-text">Local Nodes</span>
+        </h1>
+        <p class="hero__subtitle">
+          Explore the network of place-based Regenerative Finance communities around the world.
+        </p>
+      </div>
+      
+      <!-- Embedded Map from refi-node-map -->
+      <div class="hero-map fade-in-up fade-in-delay-1">
+        <div class="map-frame">
+          <img src="../../refi-node-map/assets/dot-map.png" alt="World map" class="map-image">
+          
+          <div class="tour-layer" id="tourLayer" aria-hidden="true">
+            <svg class="tour-layer__svg" id="tourSvg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path id="tourPath" d=""></path>
+            </svg>
+          </div>
+          
+          <div class="map-pins" id="mapPins" aria-label="Map pins"></div>
+          
+          <div class="map-hud admin-only" id="mapHud" aria-live="polite" hidden>
+            <div class="map-hud__title">Map coordinates</div>
+            <div class="map-hud__row">
+              <span class="map-hud__label">x</span>
+              <code class="map-hud__value" id="hudX">—</code>
+              <span class="map-hud__label">y</span>
+              <code class="map-hud__value" id="hudY">—</code>
+            </div>
+            <div class="map-hud__hint" id="hudStatus">Click the map to copy x/y%.</div>
+          </div>
+          
+          <div class="map-actions">
+            <button class="ghost-button" id="btnTour" type="button">Tour</button>
+            <button class="ghost-button admin-only" id="btnPickPin" type="button">Pick pin</button>
+          </div>
+          
+          <aside class="tour-panel" id="tourPanel" aria-label="Tour" hidden>
+            <div class="tour-panel__header">
+              <div class="tour-panel__kicker">Map mini-tour</div>
+              <button class="ghost-button" id="tourPanelEnd" type="button">End</button>
+            </div>
+            <div class="tour-panel__title" id="tourPanelTitle"></div>
+            <div class="tour-panel__meta" id="tourPanelMeta"></div>
+            <div class="tour-panel__text" id="tourPanelText"></div>
+            <div class="tour-panel__actions">
+              <button class="ghost-button" id="tourPanelPrev" type="button">Prev</button>
+              <button class="ghost-button" id="tourPanelNext" type="button">Next</button>
+              <button class="cta-button" id="tourPanelOpen" type="button">Open profile</button>
+            </div>
+            <div class="caption muted">Tip: the dotted line animates to the next node.</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- NODE LIST SECTION -->
+  <main class="map-section" id="mapSection">
+    <div class="map-bg-gradient"></div>
+    
+    <div class="map-container">
+      <section class="section-header compact">
+        <h2 class="section-header__title">All Local Nodes</h2>
+        <p class="section-header__subtitle">Browse and filter the complete directory of ReFi communities.</p>
+      </section>
+      
+      <section class="node-list">
+        <div class="node-controls">
+          <div class="node-filters" id="nodeFilters" aria-label="Filter nodes by continent"></div>
+          <label class="node-sort" for="nodeSort">
+            <select class="node-sort__select" id="nodeSort" aria-label="Sort nodes">
+              <option value="lastUpdateDesc" selected>Last update (newest)</option>
+              <option value="lastUpdateAsc">Last update (oldest)</option>
+              <option value="nameAsc">Name (A–Z)</option>
+              <option value="nameDesc">Name (Z–A)</option>
+              <option value="locationAsc">Location (A–Z)</option>
+              <option value="locationDesc">Location (Z–A)</option>
+            </select>
+          </label>
+        </div>
+        <div class="node-grid" id="nodeGrid"></div>
+      </section>
+      
+      <!-- Join CTA -->
+      <section class="join-inline">
+        <div class="join-inline__content">
+          <div class="join-inline__glow"></div>
+          <h2 class="join-inline__title">Join the Network</h2>
+          <p class="join-inline__text">Join or start a ReFi node near you!</p>
+          <a class="cta-button join-inline__button" href="/resources-hub/onboarding/local-node" role="button">Start a Local Node</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- NODE MODAL -->
+  <dialog class="modal node-modal" id="nodeModal">
+    <div class="modal-header node-modal__header">
+      <div class="node-modal__hero" id="modalHero" hidden>
+        <img class="node-modal__heroImg" id="modalHeroImg" alt="">
+      </div>
+      <div class="node-modal__identity">
+        <img class="node-modal__logo" id="modalLogo" alt="" hidden>
+        <div class="node-modal__titlegroup">
+          <div class="modal-title" id="modalTitle"></div>
+          <div class="modal-meta node-modal__meta" id="modalMeta"></div>
+          <div class="node-modal__years" id="modalYears" hidden>
+            <span class="node-modal__yearsLabel">Updates</span>
+            <div class="node-modal__yearTabs" id="modalYearTabs" aria-label="Select update year"></div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body node-modal__body">
+      <div class="prose node-modal__content" id="modalContent"></div>
+    </div>
+  </dialog>
+  
+  <!-- ADMIN MODAL -->
+  <dialog class="modal admin-modal" id="adminModal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Admin mode</div>
+        <div class="modal-meta">Lightweight tools for pin placement</div>
+      </div>
+      <button class="ghost-button" id="adminClose" type="button">Close</button>
+    </div>
+    <div class="modal-body">
+      <div class="prose">
+        <p>Admin mode is a lightweight overlay for refining node positions.</p>
+        <p><strong>Last picked:</strong> <span id="adminCoords">—</span></p>
+      </div>
+    </div>
+  </dialog>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__logo">
+        <img src="../assets/ReFi_DAO_Logo_White.svg" alt="ReFi DAO" class="footer__logo-img">
+      </div>
+      <p class="footer__tagline">A network society to regenerate the earth</p>
+      
+      <nav class="footer__links">
+        <a href="about.html" class="footer__link">About</a>
+        <a href="local-nodes.html" class="footer__link">Local Nodes</a>
+        <a href="community.html" class="footer__link">Community</a>
+        <a href="resources-hub.html" class="footer__link">Resources</a>
+        <a href="https://blog.refidao.com" target="_blank" class="footer__link">Blog</a>
+        <a href="https://docs.refidao.com" target="_blank" class="footer__link">Docs</a>
+      </nav>
+      
+      <p class="footer__copyright">© 2026 ReFi DAO. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Load node data and scripts -->
+  <script src="../../refi-node-map/nodes/nodes-data.js"></script>
+  <script src="../../refi-node-map/script.js"></script>
+  <script type="module" src="../scripts/navigation.js"></script>
+  <script>
+    // Remove loading state when ready
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-loaded');
+    });
+  </script>
+</body>
+</html>

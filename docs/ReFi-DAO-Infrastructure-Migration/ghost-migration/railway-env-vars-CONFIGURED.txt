@@ -1,0 +1,18 @@
+# Railway Environment Variables for Cloudinary Storage
+# 
+# ⚠️ SECURITY NOTE: This file contains sensitive credentials
+# Keep this file private and do not commit to public repositories
+# 
+# Add these to Railway dashboard → Variables tab
+
+storage__active=cloudinary
+storage__cloudinary__cloud_name=dvrjmfhzw
+storage__cloudinary__api_key=416117346651538
+storage__cloudinary__api_secret=REDACTED_CLOUDINARY_API_SECRET
+
+# Instructions:
+# 1. Go to Railway dashboard: https://railway.app
+# 2. Select Ghost project: e826dec7-c9e6-44cf-bc0c-77df53289e97
+# 3. Go to Variables tab
+# 4. Add each line above as a separate variable (copy exactly as shown)
+# 5. Save and redeploy

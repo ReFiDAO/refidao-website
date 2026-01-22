@@ -20,7 +20,12 @@
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "fetch-rss": "node scripts/fetch-rss.js",
     "export-airtable": "node scripts/airtable-export.js",
-    "build": "npm run fetch-rss && npx quartz build"
+    "build": "npm run fetch-rss && npx quartz build",
+    "build:docs": "npx quartz build",
+    "build:main": "node scripts/build-main.js",
+    "serve:main": "npx serve site -l 3000",
+    "serve:docs": "npx quartz build --serve",
+    "dev": "npx serve . -l 3000"
   },
   "engines": {
     "npm": ">=10.9.2",

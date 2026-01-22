@@ -1,0 +1,1 @@
+![IMG_1160.JPG](nodes/refi-cape-town/images/cover.jpg)

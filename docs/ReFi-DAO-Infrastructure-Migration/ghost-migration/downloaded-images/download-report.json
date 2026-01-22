@@ -1,0 +1,309 @@
+{
+  "timestamp": "2026-01-12T13:44:52.729Z",
+  "total": 1838,
+  "downloaded": [],
+  "failed": [
+    {
+      "url": "__GHOST_URL__/content/images/2022/01/ReFi-DAO_Twitter-Cover_2.jpg",
+      "filename": "ReFi-DAO_Twitter-Cover_2.jpg",
+      "error": "Invalid URL"
+    },
+    {
+      "url": "https://s.gitcoin.co/static/v2/images/favicon.ico/apple-touch-icon.486115005c66.png",
+      "filename": "apple-touch-icon.486115005c66.png",
+      "error": "getaddrinfo ENOTFOUND s.gitcoin.co"
+    },
+    {
+      "url": "https://media-exp1.licdn.com/dms/image/C4E12AQG7-6WjaUHc4w/article-cover_image-shrink_600_2000/0/1644397256227?e&#x3D;1649894400&amp;v&#x3D;beta&amp;t&#x3D;H9Z-DJCnZSQLh49lXdHcBLy3uqqPenujnibF-SzsyJY",
+      "filename": "1644397256227",
+      "error": "HTTP 403"
+    },
+    {
+      "url": "https://www.reuters.com/resizer/ynKM0pbrrOa0-qggRBrvaszGXBU&#x3D;/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/PJIFAE3HGFOGNOBNWHV73EQQHI.jpg",
+      "filename": "ynKM0pbrrOa0-qggRBrvaszGXBU&",
+      "error": "HTTP 403"
+    },
+    {
+      "url": "https://cdn-static-1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg",
+      "filename": "Medium-Avatar-500x500.svg",
+      "error": "HTTP 403"
+    },
+    {
+      "url": "https://miro.medium.com/max/1200/1*mEDl-gYerXAcKCkmdWN_cA.png",
+      "filename": "1*mEDl-gYerXAcKCkmdWN_cA.png",
+      "error": "Invalid URL"
+    },
+    {
+      "url": "https://files.ambcrypto.com/wp-content/uploads/2022/03/04101204/solidworld-1000x600.jpg",
+      "filename": "solidworld-1000x600.jpg",
+      "error": "getaddrinfo ENOTFOUND files.ambcrypto.com"
+    },
+    {
+      "url": "https://s.gitcoin.co/static/v2/images/twitter_cards/default_grants.86b84fbbc298.png",
+      "filename": "default_grants.86b84fbbc298.png",
+      "error": "getaddrinfo ENOTFOUND s.gitcoin.co"
+    },
+    {
+      "url": "https://miro.medium.com/max/1200/1*cWKsusbIPsozFOsy32VDiQ.png",
+      "filename": "1*cWKsusbIPsozFOsy32VDiQ.png",
+      "error": "Invalid URL"
+    },
+    {
+      "url": "https://miro.medium.com/max/1200/1*JtOjJcGOfIOGNML-v_l_aA.png",
+      "filename": "1*JtOjJcGOfIOGNML-v_l_aA.png",
+      "error": "Invalid URL"
+    },
+    {
+      "url": "https://apnews.com/branding/favicon/256.png",
+      "filename": "256.png",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://biomarketinsights.com/wp-content/uploads/2021/06/cropped-BioMarketInsights_Icon-270x270.png",
+      "filename": "cropped-BioMarketInsights_Icon-270x270.png",
+      "error": "certificate has expired"
+    },
+    {
+      "url": "https://biomarketinsights.com/wp-content/uploads/2022/01/LIQUID-3.jpeg",
+      "filename": "LIQUID-3.jpeg",
+      "error": "certificate has expired"
+    },
+    {
+      "url": "https://celoconnect.com/wp-content/uploads/2022/02/cropped-symbol-270x270.png",
+      "filename": "cropped-symbol-270x270.png",
+      "error": "getaddrinfo ENOTFOUND celoconnect.com"
+    },
+    {
+      "url": "https://celoconnect.com/wp-content/uploads/2022/02/twittercard_web.jpg",
+      "filename": "twittercard_web.jpg",
+      "error": "getaddrinfo ENOTFOUND celoconnect.com"
+    },
+    {
+      "url": "https://greenpill.party/image/twitter.png",
+      "filename": "twitter.png",
+      "error": "HTTP 404"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/Screenshot-2022-01-19-at-19.49.40.png",
+      "filename": "Screenshot-2022-01-19-at-19.49.40.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/reFiDao-banner@2x.png",
+      "filename": "reFiDao-banner@2x.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/Screenshot-2022-01-19-at-20.19.07.png",
+      "filename": "Screenshot-2022-01-19-at-20.19.07.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/regen-roundup.png",
+      "filename": "regen-roundup.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/image.png",
+      "filename": "image.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/podcast.png",
+      "filename": "podcast.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/phoney.png",
+      "filename": "phoney.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/01/image-1.png",
+      "filename": "image-1.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/favicon.png",
+      "filename": "favicon.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/02/tw-cover-2b@2x.png",
+      "filename": "tw-cover-2b@2x.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://assets.website-files.com/61ec549da752fa82c4ad5d5e/61ec8bc293b6f2aa646a1ab9_favicon-32x32.png",
+      "filename": "61ec8bc293b6f2aa646a1ab9_favicon-32x32.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://assets.website-files.com/61ec549da752fa82c4ad5d5e/61edc8771139886515f1443b_61ec550773e364613056d092_bg.png",
+      "filename": "61edc8771139886515f1443b_61ec550773e364613056d092_bg.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.reuters.com/pf/resources/icons/favicon.ico?d&#x3D;70",
+      "filename": "favicon.ico",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/02/Twitter_Image.jpg",
+      "filename": "Twitter_Image.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.climatechangenews.com/assets/img/favicon.png",
+      "filename": "favicon.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.climatechangenews.com/files/2022/02/02172503/panda.jpg",
+      "filename": "panda.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://techcrunch.com/wp-content/uploads/2015/02/cropped-cropped-favicon-gradient.png?w&#x3D;192",
+      "filename": "cropped-cropped-favicon-gradient.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://techcrunch.com/wp-content/uploads/2022/02/Kristjan-Luha-Margus-Niitsoo-Robin-Saluoks-Marget-Miil-Stenver-Jerkku.jpg?w&#x3D;600",
+      "filename": "Kristjan-Luha-Margus-Niitsoo-Robin-Saluoks-Marget-Miil-Stenver-Jerkku.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
+      "filename": "al2o9zrvru7aqj8e1x2rzsrca",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.klimadao.finance/apple-touch-icon.png",
+      "filename": "apple-touch-icon.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.sanity.io/images/dk34t4vc/production/8ef0225d2403216611c4b312a18027320bca7537-1400x700.png",
+      "filename": "8ef0225d2403216611c4b312a18027320bca7537-1400x700.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://s.yimg.com/rz/l/favicon.ico",
+      "filename": "favicon.ico",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://s.yimg.com/uu/api/res/1.2/FLrz66Wf0K7.mWUY2q3oTQ--~B/aD0xNjt3PTE2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/8971905ea079c1ea21da1b16efbfff89",
+      "filename": "8971905ea079c1ea21da1b16efbfff89",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.sanity.io/images/dk34t4vc/production/9adb073f3bbf0fd7381d40f9c9d96ea327981213-1200x300.png",
+      "filename": "9adb073f3bbf0fd7381d40f9c9d96ea327981213-1200x300.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.nytimes.com/vi-assets/static-assets/ios-ipad-144x144-28865b72953380a40aa43318108876cb.png",
+      "filename": "ios-ipad-144x144-28865b72953380a40aa43318108876cb.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://static01.nyt.com/images/2022/02/06/world/06CLIMATETHERAPY-promo-01/06CLIMATETHERAPY-promo-01-facebookJumbo.jpg",
+      "filename": "06CLIMATETHERAPY-promo-01-facebookJumbo.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://mirror.xyz/icon/favicon-32x32.png",
+      "filename": "favicon-32x32.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://images.mirror-media.xyz/nft/REqViQkOh5M9obaZ-eYCN.png",
+      "filename": "REqViQkOh5M9obaZ-eYCN.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://images.mirror-media.xyz/nft/h_Wk1KaXKZUKAKT_Pmoc3.jpg",
+      "filename": "h_Wk1KaXKZUKAKT_Pmoc3.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.sanity.io/images/dk34t4vc/production/0ab02d925be4ae19fdd974797285aa47f098761c-1920x1080.png",
+      "filename": "0ab02d925be4ae19fdd974797285aa47f098761c-1920x1080.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://techcrunch.com/wp-content/uploads/2022/02/Untitled-3.jpg?w&#x3D;764",
+      "filename": "Untitled-3.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://blog.toucan.earth/content/images/2022/03/1.3_partner_gitcoin.jpg",
+      "filename": "1.3_partner_gitcoin.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://u.today/img/favicon/apple-touch-icon.png",
+      "filename": "apple-touch-icon.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://u.today/sites/default/files/styles/1200x900/public/2022-03/13163%20(2).jpg",
+      "filename": "13163%20(2).jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.southpole.com/images/favicon-96x96.png",
+      "filename": "favicon-96x96.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://www.southpole.com/uploads/thumbs/blockchain-carbon-blog-south-pole-banner-v2_800w.png",
+      "filename": "blockchain-carbon-blog-south-pole-banner-v2_800w.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://files.ambcrypto.com/wp-content/uploads/2020/12/09185314/favicon.png",
+      "filename": "favicon.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://storage.googleapis.com/afs-prod/media/41f0ae836a5d496f979cf01e4bd02cdb/2744.jpeg",
+      "filename": "2744.jpeg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6155af7da5675116403c9136/b5e5a88f-af97-4f7d-a637-db625f46228d/favicon.ico?format&#x3D;100w",
+      "filename": "favicon.ico",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.substack.com/image/fetch/w_1200,h_600,c_limit,f_jpg,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F799f16dc-262b-4a1a-bf36-092a228fc1b9_1800x650.png",
+      "filename": "https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F799f16dc-262b-4a1a-bf36-092a228fc1b9_1800x650.png",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://storage.googleapis.com/afs-prod/media/844049bb122c46948d2a996f82109f66/3000.jpeg",
+      "filename": "3000.jpeg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://spring.refidao.com/favicon.ico",
+      "filename": "favicon.ico",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://cdn.oasa.co/photo/624475e2588b55482e9f108e-place-lg.jpg",
+      "filename": "624475e2588b55482e9f108e-place-lg.jpg",
+      "reason": "Already exists"
+    },
+    {
+      "url": "https://mirror-media.imgix.net/nft/1gaHzeY27HCLcSY9WPSjP.png?h&#x3D;null&amp;w&#x3D;null&amp;auto&#x3D;compress",
+      "filename": "1gaHzeY27HCLcSY9WPSjP.png",
+      "reason": "Already exists"
+    }
+  ]
+}

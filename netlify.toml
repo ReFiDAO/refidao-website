@@ -1,0 +1,88 @@
+# Netlify Configuration for ReFi DAO Main Site
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Directory to deploy
+  publish = "dist/"
+  
+  # Build command
+  command = """
+    npm ci && \
+    mkdir -p dist && \
+    cp -r site/pages/* dist/ && \
+    cp -r site/styles dist/ && \
+    cp -r site/js dist/ 2>/dev/null || true && \
+    cp -r site/assets dist/ && \
+    mkdir -p dist/refi-node-map && \
+    cp -r refi-node-map/assets dist/refi-node-map/ && \
+    cp -r refi-node-map/nodes dist/refi-node-map/ && \
+    cp refi-node-map/style.css dist/refi-node-map/ && \
+    cp refi-node-map/script.js dist/refi-node-map/
+  """
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects for clean URLs
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/local-nodes"
+  to = "/local-nodes.html"
+  status = 200
+
+[[redirects]]
+  from = "/community"
+  to = "/community.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources-hub"
+  to = "/resources-hub.html"
+  status = 200
+
+# SPA fallback (optional, for future client-side routing)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Custom headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/refi-node-map/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Preview deploys for branches
+[context.deploy-preview]
+  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
+
+# Branch deploys
+[context.branch-deploy]
+  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
