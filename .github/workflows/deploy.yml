@@ -1,5 +1,6 @@
 # Deploy ReFi DAO Main Site to GitHub Pages
-# This replaces the default Quartz deployment
+# This workflow deploys the modern main site (NOT Quartz)
+# Last updated: 2026-01-22
 
 name: Deploy to GitHub Pages
 
