@@ -1,58 +1,135 @@
-name: Deploy Quartz site to GitHub Pages
+# Deploy ReFi DAO Main Site to GitHub Pages
+# This replaces the default Quartz deployment
+
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: '20'
+
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    name: Build Site
+    runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0 # Fetch all history for git info
-      
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      
-      - name: Install Dependencies
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
         run: npm ci
-      
-      - name: Fetch RSS Feed (if available)
-        env:
-          GHOST_RSS_URL: ${{ secrets.GHOST_RSS_URL || 'https://blog.refidao.com/rss/' }}
+
+      - name: Build main site
         run: |
-          node scripts/fetch-rss.js || echo "RSS feed not available yet, continuing build"
-        continue-on-error: true
-      
-      - name: Build Quartz
-        run: npx quartz build
-      
+          # Create production build directory
+          mkdir -p dist
+          
+          # Copy main site files
+          cp -r site/pages/* dist/
+          cp -r site/styles dist/
+          cp -r site/scripts dist/ 2>/dev/null || true
+          cp -r site/assets dist/
+          
+          # Copy refi-node-map assets
+          mkdir -p dist/refi-node-map
+          cp -r refi-node-map/assets dist/refi-node-map/
+          cp -r refi-node-map/nodes dist/refi-node-map/
+          cp refi-node-map/style.css dist/refi-node-map/
+          cp refi-node-map/script.js dist/refi-node-map/
+
+      - name: Fix paths for production
+        run: |
+          # Update relative paths to work from dist root
+          find dist -name "*.html" -exec sed -i 's|../styles/|./styles/|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|../assets/|./assets/|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|../../refi-node-map/|./refi-node-map/|g' {} \;
+          
+          # Update internal navigation links for GitHub Pages (with base path)
+          find dist -name "*.html" -exec sed -i 's|href="index.html"|href="/ReFi-DAO-Website/"|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|href="about.html"|href="/ReFi-DAO-Website/about.html"|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|href="local-nodes.html"|href="/ReFi-DAO-Website/local-nodes.html"|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|href="community.html"|href="/ReFi-DAO-Website/community.html"|g' {} \;
+          find dist -name "*.html" -exec sed -i 's|href="resources-hub.html"|href="/ReFi-DAO-Website/resources-hub.html"|g' {} \;
+          
+          # Fix anchor links
+          find dist -name "*.html" -exec sed -i 's|href="about.html#|href="/ReFi-DAO-Website/about.html#|g' {} \;
+
+      - name: Create 404 page
+        run: |
+          cat > dist/404.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Page Not Found - ReFi DAO</title>
+            <link rel="icon" href="/ReFi-DAO-Website/assets/favicon.png" type="image/png">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="/ReFi-DAO-Website/styles/main.css">
+            <style>
+              .error-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+              .error-code { font-family: 'Space Grotesk', sans-serif; font-size: clamp(6rem, 15vw, 12rem); font-weight: 700; line-height: 1; opacity: 0.15; margin-bottom: 1rem; }
+              .error-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; }
+              .error-message { color: rgba(241, 240, 255, 0.6); margin-bottom: 2rem; max-width: 400px; }
+              .btn { display: inline-flex; padding: 0.75rem 1.5rem; background: #4571E1; color: white; text-decoration: none; border-radius: 9999px; font-weight: 500; }
+            </style>
+          </head>
+          <body>
+            <main class="error-page">
+              <div class="error-code">404</div>
+              <h1 class="error-title">Page Not Found</h1>
+              <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
+              <a href="/ReFi-DAO-Website/" class="btn">Back to Home</a>
+            </main>
+          </body>
+          </html>
+          EOF
+
+      - name: Create .nojekyll file
+        run: touch dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: dist/
 
   deploy:
+    name: Deploy to GitHub Pages
     needs: build
+    runs-on: ubuntu-latest
+    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-

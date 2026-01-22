@@ -55,6 +55,10 @@
   width: auto;
 }
 
+.nav__logo-img--wordmark {
+  height: 28px;
+}
+
 .nav__logo-text {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
