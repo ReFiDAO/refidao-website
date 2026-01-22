@@ -1,0 +1,61 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "refidao-website",
+  "version": 2,
+  "public": true,
+  
+  "buildCommand": "npm run build:main",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci",
+  
+  "framework": null,
+  
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/local-nodes", "destination": "/local-nodes.html" },
+    { "source": "/community", "destination": "/community.html" },
+    { "source": "/resources-hub", "destination": "/resources-hub.html" }
+  ],
+  
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/styles/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/refi-node-map/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ],
+  
+  "regions": ["iad1"],
+  
+  "env": {
+    "NODE_VERSION": "20"
+  }
+}

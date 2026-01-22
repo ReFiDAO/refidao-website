@@ -1,0 +1,386 @@
+/**
+ * ReFi DAO Design System - Navigation Component
+ * Modern glassmorphism topbar with dropdown support
+ */
+
+/* ========================================
+   NAVIGATION CONTAINER
+   ======================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-4) var(--space-6);
+  transition: background var(--duration-normal) var(--ease-out);
+}
+
+.nav--scrolled {
+  background: rgba(17, 24, 29, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+}
+
+/* ========================================
+   LOGO
+   ======================================== */
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.nav__logo:hover {
+  opacity: 0.8;
+  color: var(--color-text);
+}
+
+.nav__logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.nav__logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* ========================================
+   DESKTOP NAVIGATION
+   ======================================== */
+
+.nav__menu {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+@media (min-width: 1024px) {
+  .nav__menu {
+    display: flex;
+  }
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: 
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--color-text);
+  background: var(--glass-bg);
+}
+
+.nav__link.is-active {
+  color: var(--color-text);
+}
+
+.nav__link-icon {
+  width: 12px;
+  height: 12px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.nav__item:hover .nav__link-icon,
+.nav__item:focus-within .nav__link-icon {
+  transform: rotate(180deg);
+}
+
+/* External link indicator */
+.nav__link--external::after {
+  content: "↗";
+  font-size: var(--text-xs);
+  margin-left: var(--space-1);
+  opacity: 0.5;
+}
+
+/* ========================================
+   DROPDOWN MENU
+   ======================================== */
+
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 220px;
+  padding: var(--space-2);
+  background: rgba(17, 24, 29, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    opacity var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring),
+    visibility var(--duration-fast);
+}
+
+.nav__item:hover .nav__dropdown,
+.nav__item:focus-within .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav__dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: 
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.nav__dropdown-link:hover,
+.nav__dropdown-link:focus-visible {
+  color: var(--color-text);
+  background: var(--glass-bg);
+}
+
+.nav__dropdown-link--external::after {
+  content: "↗";
+  font-size: var(--text-xs);
+  margin-left: auto;
+  opacity: 0.5;
+}
+
+.nav__dropdown-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+.nav__dropdown-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: var(--space-2) var(--space-4);
+}
+
+/* ========================================
+   NAVIGATION ACTIONS (CTA)
+   ======================================== */
+
+.nav__actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .nav__actions {
+    display: flex;
+  }
+}
+
+/* ========================================
+   MOBILE MENU TOGGLE
+   ======================================== */
+
+.nav__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.nav__toggle:hover {
+  background: var(--glass-bg);
+}
+
+@media (min-width: 1024px) {
+  .nav__toggle {
+    display: none;
+  }
+}
+
+.nav__toggle-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: var(--color-bg);
+  padding: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: 
+    opacity var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-spring),
+    visibility var(--duration-normal);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: var(--space-6);
+}
+
+.mobile-menu__close {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--color-text);
+  font-size: var(--text-xl);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mobile-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.mobile-menu__link:hover {
+  background: var(--glass-bg);
+}
+
+.mobile-menu__submenu {
+  padding-left: var(--space-4);
+  display: none;
+}
+
+.mobile-menu__submenu.is-open {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mobile-menu__sublink {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: 
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.mobile-menu__sublink:hover {
+  color: var(--color-text);
+  background: var(--glass-bg);
+}
+
+.mobile-menu__cta {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mobile-menu__cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ========================================
+   FOOTER NAVIGATION
+   ======================================== */
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  justify-content: center;
+}
+
+.footer-nav__link {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer-nav__link:hover {
+  color: var(--color-text);
+}

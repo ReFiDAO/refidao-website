@@ -1,0 +1,1 @@
+![image.png](nodes/refi-red-hook/images/cover.png)

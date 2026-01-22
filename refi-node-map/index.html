@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFi Local Nodes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+
+<body>
+    <div class="bg-noise"></div>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-ring-container">
+            <img src="assets/refi-dao-ring.png" alt="" class="hero-ring">
+        </div>
+
+        <div class="hero-ring-mask"></div>
+
+        <div class="hero-content">
+            <div class="hero-glow"></div>
+            <div class="fade-in-up">
+                <span class="pill-badge">ReFi DAO</span>
+                <h1 class="hero-title">
+                    <i>ReFi&nbsp;</i> <span class="gradient-text">Local Nodes</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Explore the network of place-based Regenerative Finance communities around the world. <br class="desktop-br">
+                </p>
+            </div>
+
+            <div class="hero-map">
+                <div class="map-frame">
+                    <img src="assets/dot-map.png" alt="World map" class="map-image">
+
+                    <div class="tour-layer" id="tourLayer" aria-hidden="true">
+                        <svg class="tour-layer__svg" id="tourSvg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path id="tourPath" d=""></path>
+                        </svg>
+                    </div>
+
+                    <div class="map-pins" id="mapPins" aria-label="Map pins"></div>
+
+                    <div class="map-hud admin-only" id="mapHud" aria-live="polite" hidden>
+                        <div class="map-hud__title">Map coordinates</div>
+                        <div class="map-hud__row">
+                            <span class="map-hud__label">x</span>
+                            <code class="map-hud__value" id="hudX">—</code>
+                            <span class="map-hud__label">y</span>
+                            <code class="map-hud__value" id="hudY">—</code>
+                        </div>
+                        <div class="map-hud__hint" id="hudStatus">Click the map to copy x/y%.</div>
+                    </div>
+
+                    <div class="map-actions">
+                        <button class="ghost-button" id="btnTour" type="button">Tour</button>
+                        <button class="ghost-button admin-only" id="btnPickPin" type="button">Pick pin</button>
+                    </div>
+
+                    <aside class="tour-panel" id="tourPanel" aria-label="Tour" hidden>
+                        <div class="tour-panel__header">
+                            <div class="tour-panel__kicker">Map mini-tour</div>
+                            <button class="ghost-button" id="tourPanelEnd" type="button">End</button>
+                        </div>
+                        <div class="tour-panel__title" id="tourPanelTitle"></div>
+                        <div class="tour-panel__meta" id="tourPanelMeta"></div>
+                        <div class="tour-panel__text" id="tourPanelText"></div>
+                        <div class="tour-panel__actions">
+                            <button class="ghost-button" id="tourPanelPrev" type="button">Prev</button>
+                            <button class="ghost-button" id="tourPanelNext" type="button">Next</button>
+                            <button class="cta-button" id="tourPanelOpen" type="button">Open profile</button>
+                        </div>
+                        <div class="caption muted">Tip: the dotted line animates to the next node.</div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator fade-in-delay" id="scrollIndicator">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-line">
+                <div class="scroll-bead"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NODE LIST -->
+    <main class="map-section" id="mapSection">
+        <div class="map-bg-gradient"></div>
+
+        <div class="map-container">
+            <section class="node-list">
+                <div class="node-controls">
+                    <div class="node-filters" id="nodeFilters" aria-label="Filter nodes by continent"></div>
+                    <label class="node-sort" for="nodeSort">
+                        <select class="node-sort__select" id="nodeSort" aria-label="Sort nodes">
+                            <option value="lastUpdateDesc" selected>Last update (newest)</option>
+                            <option value="lastUpdateAsc">Last update (oldest)</option>
+                            <option value="nameAsc">Name (A–Z)</option>
+                            <option value="nameDesc">Name (Z–A)</option>
+                            <option value="locationAsc">Location (A–Z)</option>
+                            <option value="locationDesc">Location (Z–A)</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="node-grid" id="nodeGrid"></div>
+            </section>
+
+            <section class="join-inline">
+                <div class="join-inline__content">
+                    <div class="join-inline__glow"></div>
+                    <h2 class="join-inline__title">Join the Network</h2>
+                    <p class="join-inline__text">Join or start a refi node near you!</p>
+                    <a class="cta-button join-inline__button" href="#" role="button">Join the Network</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="footer-content">
+            <p>© 2026 ReFi DAO. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://refidao.com" target="_blank">refidao.com</a>
+                <a href="https://blog.refidao.com" target="_blank">Latest updates</a>
+                <button class="footer-admin-button" id="btnAdmin" type="button">Admin</button>
+            </div>
+        </div>
+    </footer>
+
+    <dialog class="modal node-modal" id="nodeModal">
+        <div class="modal-header node-modal__header">
+            <div class="node-modal__hero" id="modalHero" hidden>
+                <img class="node-modal__heroImg" id="modalHeroImg" alt="">
+            </div>
+            <div class="node-modal__identity">
+                <img class="node-modal__logo" id="modalLogo" alt="" hidden>
+                <div class="node-modal__titlegroup">
+                    <div class="modal-title" id="modalTitle"></div>
+                    <div class="modal-meta node-modal__meta" id="modalMeta"></div>
+                        <div class="node-modal__years" id="modalYears" hidden>
+                            <span class="node-modal__yearsLabel">Updates</span>
+                            <div class="node-modal__yearTabs" id="modalYearTabs" aria-label="Select update year"></div>
+                        </div>
+                </div>
+            </div>
+            <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+        </div>
+        <div class="modal-body node-modal__body">
+            <div class="prose node-modal__content" id="modalContent"></div>
+        </div>
+    </dialog>
+
+    <dialog class="modal admin-modal" id="adminModal">
+        <div class="modal-header">
+            <div>
+                <div class="modal-title">Admin mode</div>
+                <div class="modal-meta">Lightweight tools for pin placement (stub)</div>
+            </div>
+            <button class="ghost-button" id="adminClose" type="button">Close</button>
+        </div>
+        <div class="modal-body">
+            <div class="prose">
+                <p>Admin mode is a lightweight overlay for refining node positions. Use the map HUD and
+                    the <strong>Pick pin</strong> button to grab coordinates.</p>
+                <p><strong>Last picked:</strong> <span id="adminCoords">—</span></p>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="nodes/nodes-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
