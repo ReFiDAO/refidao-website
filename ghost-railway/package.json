@@ -1,0 +1,8 @@
+{
+  "name": "ghost-cloudinary",
+  "version": "1.0.0",
+  "description": "Ghost with Cloudinary storage adapter",
+  "dependencies": {
+    "ghost-storage-cloudinary": "^2.2.0"
+  }
+}
