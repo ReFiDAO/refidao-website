@@ -2,114 +2,186 @@
 
 Official website for ReFi DAO - A network society to regenerate the earth.
 
-Built with [Quartz](https://quartz.jzhao.xyz/) static site generator.
+🌐 **Live Site:** https://refidao.github.io/ReFi-DAO-Website/
 
-## About
+## Architecture Overview
 
-ReFi DAO is a network society focused on developing strategic services and public goods for the Regenerative Finance ecosystem. Our services include sense-making, education, opportunity development, fundraising support, onboarding and empowerment.
+The ReFi DAO website uses a **dual architecture**:
 
-## Development
-
-### Prerequisites
-
-- Node.js v22+ (see `.node-version` for the specific version)
-- npm v10.9.2+
-
-### Setup
-
-1. Install dependencies:
-```bash
-npm install
+```
+refidao.com (Main Site)
+├── Modern interactive pages (HTML/CSS/JS)
+│   ├── Homepage (hero + animated ring + glassmorphism)
+│   ├── About (mission, network structure)
+│   ├── Local Nodes (integrated refi-node-map)
+│   ├── Community (initiatives, Regen Coordination, ReFi Med)
+│   └── Resources Hub (landing page)
+│
+└── docs.refidao.com (Future)
+    └── Quartz-based documentation site
 ```
 
-2. Start the development server:
-```bash
-npx quartz build --serve
-```
+### Design System
 
-The site will be available at `http://localhost:8080`
+The site uses a cohesive design system extracted from `refi-node-map`:
 
-### Build for Production
-
-```bash
-npx quartz build
-```
+- **Colors:** Dark theme (`#172027`), accent blues/greens (`#4571E1`, `#71E3BA`)
+- **Typography:** Inter (body), Space Grotesk (headings)
+- **Effects:** Glassmorphism, gradient text, noise texture overlays
+- **Components:** Glass cards, animated buttons, responsive navigation
 
 ## Project Structure
 
 ```
 ReFi-DAO-Website/
-├── content/                    # Markdown content files
-│   ├── index.md               # Homepage
-│   ├── about/                 # About ReFi DAO
-│   ├── resources-hub/        # Resources Hub (migrated from regencoordination.xyz/refidao)
-│   ├── community/
-│   │   ├── local-nodes.md    # Interactive map of local nodes
-│   │   ├── guilds/           # Online guilds
-│   │   └── working-groups/   # Working groups
-│   ├── media/                # Media hub
-│   └── nodes/                # Links to federated local node repos
-├── assets/                    # Static assets
-│   ├── images/               # Images
-│   └── media/                # Media files
-├── quartz/                    # Quartz framework files
-├── quartz.config.ts          # Quartz configuration
-└── package.json              # Dependencies
+├── site/                      # Main site source
+│   ├── pages/                 # HTML pages
+│   │   ├── index.html        # Homepage
+│   │   ├── about.html        # About page
+│   │   ├── local-nodes.html  # Interactive node map
+│   │   ├── community.html    # Community page
+│   │   └── resources-hub.html
+│   ├── styles/               # CSS architecture
+│   │   ├── design-tokens.css # Colors, typography, spacing
+│   │   ├── base.css          # Reset, base styles
+│   │   ├── components.css    # Reusable components
+│   │   ├── navigation.css    # Topbar & mobile menu
+│   │   └── utilities.css     # Utility classes
+│   ├── scripts/              # JavaScript
+│   │   ├── main.js
+│   │   └── navigation.js
+│   └── assets/               # Images, logos
+├── refi-node-map/            # Integrated node map component
+│   ├── nodes/                # Node data and profiles
+│   ├── assets/               # Map assets
+│   ├── script.js             # Map functionality
+│   └── style.css             # Map styles
+├── content/                  # Quartz documentation content
+├── quartz/                   # Quartz framework
+├── docs/                     # Project documentation
+│   └── WEBSITE-DEVELOPMENT-PLAN.md
+├── .github/workflows/        # CI/CD
+│   └── deploy.yml           # GitHub Pages deployment
+├── ARCHITECTURE.md           # Site architecture reference
+├── DEPLOYMENT.md             # Deployment guide
+├── netlify.toml              # Netlify configuration
+└── vercel.json               # Vercel configuration
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js v20+ (v22 recommended)
+- npm v10.9.2+
+
+### Local Development
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start the main site locally:**
+   ```bash
+   # Using Python (simple)
+   cd . && python3 -m http.server 8080
+   # Then visit: http://localhost:8080/site/pages/index.html
+   
+   # Or using npm serve
+   npm run dev
+   ```
+
+3. **Start Quartz docs (for content editing):**
+   ```bash
+   npx quartz build --serve
+   ```
+
+### Build for Production
+
+```bash
+# Build main site
+npm run build:main
+
+# Build Quartz docs
+npm run build:docs
 ```
 
 ## Deployment
 
-The site is automatically deployed via GitHub Actions when changes are pushed to the `main` branch.
+### GitHub Pages (Current)
 
-- **GitHub Pages:** https://refidao.com
-- **Repository:** https://github.com/ReFiDAO/ReFi-DAO-Website
-- **Docs publishing (current approach):** Content is maintained in this repo for planning/review, then published to Notion via the ReFi DAO workspace: https://www.notion.so/refi-dao/ReFi-DAO-Network-Resources-2aebf304370a8199b779f7fcff610fc3. Treat this repo as staging; final canonical docs live in Notion.
+The site automatically deploys to GitHub Pages via GitHub Actions:
+
+- **Trigger:** Push to `main` branch
+- **Workflow:** `.github/workflows/deploy.yml`
+- **URL:** https://refidao.github.io/ReFi-DAO-Website/
+
+### Alternative Deployment Options
+
+| Platform | Configuration | Command |
+|----------|--------------|---------|
+| Netlify | `netlify.toml` | Connect repo, auto-detects |
+| Vercel | `vercel.json` | Connect repo, auto-detects |
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+## Key Features
+
+### Interactive Node Map
+
+The Local Nodes page integrates `refi-node-map` with:
+- Interactive dot-map visualization
+- Tour mode for exploring nodes
+- Node filtering and sorting
+- Profile modals with rich content
+
+### Responsive Design
+
+- Mobile-first approach
+- Hamburger menu for mobile navigation
+- Touch-friendly interactions
+- Optimized for all screen sizes
+
+### Accessibility
+
+- ARIA labels and roles
+- Keyboard navigation support
+- Screen reader compatible
+- High contrast mode support
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Site structure, components, design decisions |
+| [DEPLOYMENT.md](DEPLOYMENT.md) | Deployment guides for all platforms |
+| [docs/WEBSITE-DEVELOPMENT-PLAN.md](docs/WEBSITE-DEVELOPMENT-PLAN.md) | Master development plan and roadmap |
 
 ## Migration Status
 
-- ✅ Phase 0: Current Website Documentation
-- ✅ Phase 0.5: Repository Setup & Organization
-- ✅ Phase 1: Webflow Fix (Complete)
-- 🚧 Phase 2: Content Extraction & Organization (In Progress)
-- ⏳ Phase 3: Feature Implementation (RSS, Newsletter)
-- ⏳ Phase 4: Design & Styling
-- ⏳ Phase 5: Deployment
-- ⏳ Phase 6: Content Migration
-- ⏳ Phase 7: SEO & Performance
+- ✅ Main site architecture (site/)
+- ✅ Design system implementation
+- ✅ Navigation with glassmorphism
+- ✅ Homepage with animated ring
+- ✅ Local Nodes with refi-node-map
+- ✅ About, Community, Resources Hub pages
+- ✅ GitHub Pages deployment
+- 🚧 docs.refidao.com subdomain setup
+- ⏳ Custom domain configuration
 
-## Infrastructure Migrations
+## Related Repositories
 
-This repository includes comprehensive migration guides and documentation for ReFi DAO's infrastructure consolidation:
-
-- **Website Migration:** Softr/Webflow → Quartz (in progress)
-- **Ghost Migration:** Managed → Railway/Render (guides ready)
-- **Airtable Migration:** Paid → NocoDB (guides and scripts ready)
-- **Notion Migration:** Regen Coordination → ReFi DAO workspace ✅ Complete
-
-See `docs/ReFi-DAO-Infrastructure-Migration/` for complete migration guides and `MIGRATION-STATUS.md` for progress tracking.
-
-## ReFi DAO 3.0 Planning
-
-**Status:** In Progress  
-**Location:** `docs/refi-dao-3.0/`
-
-Comprehensive planning and documentation for ReFi DAO's transition from 2.0 to 3.0, including:
-
-- **Current State Assessment:** Complete status of ReFi DAO 2.0 achievements and infrastructure
-- **Closure Checklist:** Tasks needed to complete ReFi DAO 2.0 transition
-- **Vision & Strategic Models:** Five alternative strategic models for network validation
-- **Implementation Plan:** Step-by-step roadmap with network validation process
-
-**Key Documents:**
-- [Planning Overview](docs/refi-dao-3.0/README.md)
-- [Current State](docs/refi-dao-3.0/current-state.md)
-- [Closure Checklist](docs/refi-dao-3.0/closure-checklist.md)
-- [Vision & Strategic Models](docs/refi-dao-3.0/vision-strategic-models.md)
-- [Implementation Plan](docs/refi-dao-3.0/implementation-plan.md)
+- **refi-node-map:** Integrated into this repository
+- **Quartz:** Documentation framework (upstream)
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this project.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test locally
+5. Submit a pull request
 
 ## License
 
@@ -117,4 +189,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this pr
 
 ## Contact
 
-For questions or contributions, contact us at [community@refidao.com](mailto:community@refidao.com)
+- **Website:** https://refidao.com
+- **Email:** community@refidao.com
+- **Twitter:** [@ReFiDAOist](https://twitter.com/ReFiDAOist)
+- **Discord:** [ReFi DAO Discord](https://discord.gg/refidao)
