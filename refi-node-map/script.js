@@ -1,7 +1,7 @@
-function el(id) {
+function el(id, required = true) {
     const node = document.getElementById(id);
-    if (!node) {
-        throw new Error(`Missing element: #${id}`);
+    if (!node && required) {
+        throw new Error(`Missing required element: #${id}`);
     }
     return node;
 }
@@ -93,9 +93,46 @@ function normalizeYears(years) {
         .sort((a, b) => b - a);
 }
 
+function getBasePath() {
+    // Try to find the current script element
+    const scripts = document.getElementsByTagName('script');
+    let currentScript = null;
+    
+    // Find the script that's currently executing (usually the last one)
+    for (let i = scripts.length - 1; i >= 0; i--) {
+        const script = scripts[i];
+        if (script.src && script.src.includes('refi-node-map/script.js')) {
+            currentScript = script;
+            break;
+        }
+    }
+    
+    // If found, extract base path
+    if (currentScript && currentScript.src) {
+        const match = currentScript.src.match(/(.*\/)refi-node-map\/script\.js/);
+        if (match) {
+            return match[1] + 'refi-node-map/';
+        }
+    }
+    
+    // Fallback: check if we're in standalone mode (no path segments before refi-node-map)
+    // or embedded mode (has ../../refi-node-map/)
+    const baseUrl = window.location.href;
+    if (baseUrl.includes('/refi-node-map/')) {
+        const match = baseUrl.match(/(.*\/)refi-node-map\//);
+        if (match) {
+            return match[1] + 'refi-node-map/';
+        }
+    }
+    
+    return ''; // Standalone mode - files are in root relative to HTML
+}
+
+const BASE_PATH = getBasePath();
+
 function nodeYearPath(node, year) {
     const slug = node.slug || node.id || "";
-    return `nodes/${slug}/${year}.md`;
+    return `${BASE_PATH}nodes/${slug}/${year}.md`;
 }
 
 function getYearCandidates(baseYear) {
@@ -281,7 +318,7 @@ function setModalLogo(modalLogo, node) {
         modalLogo.removeAttribute("src");
         return;
     }
-    const base = `nodes/${nodeId}/images/logo`;
+    const base = `${BASE_PATH}nodes/${nodeId}/images/logo`;
     const extensions = ["png", "jpg", "jpeg", "webp", "gif", "svg"];
     let idx = 0;
 
@@ -311,7 +348,7 @@ function setCoverImage(targetImg, node) {
     if (!nodeId || !targetImg) {
         return false;
     }
-    const base = `nodes/${nodeId}/images/cover`;
+    const base = `${BASE_PATH}nodes/${nodeId}/images/cover`;
     const extensions = ["png", "jpg", "jpeg", "webp", "gif", "svg"];
     let idx = 0;
 
@@ -1057,4 +1094,27 @@ function nodePoint(node) {
     updateTourUI();
 }
 
-document.addEventListener("DOMContentLoaded", main);
+function initMap() {
+    if (typeof window.__NODE_DATA__ !== 'undefined') {
+        main();
+    } else {
+        // Wait for nodes-data.js to load
+        setTimeout(() => {
+            if (typeof window.__NODE_DATA__ !== 'undefined') {
+                main();
+            } else {
+                console.error('Failed to load node data. Make sure nodes-data.js is loaded before script.js');
+                const mapPins = document.getElementById('mapPins');
+                if (mapPins) {
+                    mapPins.innerHTML = '<div style="padding: 2rem; text-align: center; color: rgba(241, 240, 255, 0.6);">Unable to load node data. Please refresh the page.</div>';
+                }
+            }
+        }, 100);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+} else {
+    initMap();
+}
