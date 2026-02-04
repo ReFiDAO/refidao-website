@@ -403,7 +403,7 @@ function main() {
     const scrollIndicator = document.getElementById("scrollIndicator");
     const mapSection = document.getElementById("mapSection");
     const nodeSort = el("nodeSort");
-    const btnTour = el("btnTour");
+    const btnTour = el("btnTour", false);
     const btnAdmin = document.getElementById("btnAdmin"); // Optional - only in standalone version
     const btnPickPin = el("btnPickPin");
     const tourPanel = el("tourPanel");
@@ -1049,10 +1049,12 @@ function nodePoint(node) {
     });
 
 
-    btnTour.addEventListener("click", () => {
-        if (tour.active) endTour();
-        else startTour();
-    });
+    if (btnTour) {
+        btnTour.addEventListener("click", () => {
+            if (tour.active) endTour();
+            else startTour();
+        });
+    }
     tourPanelEnd.addEventListener("click", endTour);
     tourPanelPrev.addEventListener("click", () => {
         const fromId = tour.ids[tour.idx];

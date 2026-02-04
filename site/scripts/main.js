@@ -240,7 +240,6 @@ class ParallaxEffect {
 
 class PageTransitions {
   constructor() {
-    this.links = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"], a[href$=".html"]');
     this.init();
   }
   
@@ -250,26 +249,28 @@ class PageTransitions {
       return;
     }
     
-    this.links.forEach(link => {
-      // Skip external links, anchors, and special links
-      const href = link.getAttribute('href');
-      if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-        return;
-      }
-      
-      link.addEventListener('click', (e) => {
-        // Don't intercept if modifier keys are pressed
-        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) {
-          return;
-        }
-        
-        // Add fade-out effect
+    // Smooth fade-in on page load using CSS transitions
+    // The body already has opacity transition defined in CSS
+    // Just ensure smooth initialization
+    this.fadeIn();
+  }
+  
+  fadeIn() {
+    // Use requestAnimationFrame for smooth initialization
+    requestAnimationFrame(() => {
+      if (document.body.classList.contains('is-loading')) {
         document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.2s ease-out';
-        
-        // Allow navigation to proceed
-        // The fade-in will happen on the new page load
-      });
+        requestAnimationFrame(() => {
+          // Small delay for smoother transition
+          setTimeout(() => {
+            document.body.classList.remove('is-loading');
+            document.body.classList.add('is-loaded');
+          }, 10);
+        });
+      } else {
+        // If not loading, ensure smooth appearance
+        document.body.classList.add('is-loaded');
+      }
     });
   }
 }
@@ -295,14 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Parallax (if not reduced motion)
   new ParallaxEffect();
   
-  // Page transitions
+  // Page transitions (handles fade-in)
   new PageTransitions();
-  
-  // Remove loading state with fade-in
-  setTimeout(() => {
-    document.body.classList.remove('is-loading');
-    document.body.classList.add('is-loaded');
-  }, 50);
 });
 
 // Export for module usage
