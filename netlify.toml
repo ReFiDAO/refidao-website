@@ -79,3 +79,11 @@
 # Branch deploys
 [context.branch-deploy]
   command = "npm ci && npm run build:main"
+
+# Dev branch deploys
+[context.dev]
+  command = "npm ci && npm run build:main"
+  
+  # Optional: Add dev-specific environment variables if needed
+  # [context.dev.environment]
+  #   NODE_ENV = "development"
