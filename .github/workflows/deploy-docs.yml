@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
 
 # Sets permissions of the GITHUB_TOKEN
 permissions:
@@ -45,6 +45,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+
+      - name: Upgrade npm
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         run: npm ci
