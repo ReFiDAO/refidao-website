@@ -26,6 +26,9 @@
 
 .glass-card--interactive {
   cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
 }
 
 .glass-card--interactive:hover {
@@ -353,6 +356,7 @@
   display: grid;
   gap: var(--space-6);
   grid-template-columns: repeat(1, 1fr);
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
@@ -456,6 +460,9 @@
 
 .feature-card {
   padding: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card__icon {
@@ -476,6 +483,7 @@
   color: var(--color-text-muted);
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
+  flex-grow: 1;
 }
 
 /* ========================================

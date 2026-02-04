@@ -41,6 +41,7 @@
 
 .nav--scrolled {
   background: rgba(17, 24, 29, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav--scrolled::after {

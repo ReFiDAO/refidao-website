@@ -34,6 +34,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "rlig" 1, "calt" 1;
   min-height: 100vh;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+body.is-loading {
+  opacity: 0;
+}
+
+body.is-loaded {
+  opacity: 1;
 }
 
 body.is-modal-open {
