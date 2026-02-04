@@ -11,7 +11,7 @@
     mkdir -p dist && \
     cp -r site/pages/* dist/ && \
     cp -r site/styles dist/ && \
-    cp -r site/js dist/ 2>/dev/null || true && \
+    cp -r site/scripts dist/ && \
     cp -r site/assets dist/ && \
     mkdir -p dist/refi-node-map && \
     cp -r refi-node-map/assets dist/refi-node-map/ && \
@@ -70,6 +70,11 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/scripts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/refi-node-map/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
@@ -81,8 +86,8 @@
 
 # Preview deploys for branches
 [context.deploy-preview]
-  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
+  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/scripts dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
 
 # Branch deploys
 [context.branch-deploy]
-  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
+  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/scripts dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
