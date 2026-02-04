@@ -17,9 +17,11 @@
   background: rgba(17, 24, 29, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
   transition:
     background var(--duration-normal) var(--ease-out),
-    backdrop-filter var(--duration-normal) var(--ease-out);
+    backdrop-filter var(--duration-normal) var(--ease-out),
+    border-bottom-color var(--duration-normal) var(--ease-out);
 }
 
 .nav::after {
@@ -41,7 +43,7 @@
 
 .nav--scrolled {
   background: rgba(17, 24, 29, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav--scrolled::after {
