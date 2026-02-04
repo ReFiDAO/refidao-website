@@ -5,20 +5,8 @@
   # Directory to deploy
   publish = "dist/"
   
-  # Build command
-  command = """
-    npm ci && \
-    mkdir -p dist && \
-    cp -r site/pages/* dist/ && \
-    cp -r site/styles dist/ && \
-    cp -r site/scripts dist/ && \
-    cp -r site/assets dist/ && \
-    mkdir -p dist/refi-node-map && \
-    cp -r refi-node-map/assets dist/refi-node-map/ && \
-    cp -r refi-node-map/nodes dist/refi-node-map/ && \
-    cp refi-node-map/style.css dist/refi-node-map/ && \
-    cp refi-node-map/script.js dist/refi-node-map/
-  """
+  # Build command - use build script for proper path rewriting
+  command = "npm ci && npm run build:main"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -86,8 +74,8 @@
 
 # Preview deploys for branches
 [context.deploy-preview]
-  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/scripts dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
+  command = "npm ci && npm run build:main"
 
 # Branch deploys
 [context.branch-deploy]
-  command = "npm ci && mkdir -p dist && cp -r site/pages/* dist/ && cp -r site/styles dist/ && cp -r site/scripts dist/ && cp -r site/assets dist/ && mkdir -p dist/refi-node-map && cp -r refi-node-map/assets dist/refi-node-map/ && cp -r refi-node-map/nodes dist/refi-node-map/ && cp refi-node-map/style.css dist/refi-node-map/ && cp refi-node-map/script.js dist/refi-node-map/"
+  command = "npm ci && npm run build:main"
