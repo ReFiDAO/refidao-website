@@ -252,61 +252,6 @@
   margin: 0 auto;
 }
 
-.timeline {
-  position: relative;
-  padding-left: var(--space-8);
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-green),
-    var(--color-blue),
-    var(--color-pink)
-  );
-}
-
-.timeline__item {
-  position: relative;
-  padding-bottom: var(--space-8);
-}
-
-.timeline__item::before {
-  content: '';
-  position: absolute;
-  left: calc(-1 * var(--space-8) - 5px);
-  top: 0;
-  width: 12px;
-  height: 12px;
-  border-radius: var(--radius-full);
-  background: var(--color-green);
-  border: 2px solid var(--color-bg);
-}
-
-.timeline__date {
-  font-size: var(--text-sm);
-  color: var(--color-green);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wider);
-  margin-bottom: var(--space-2);
-}
-
-.timeline__title {
-  font-size: var(--text-xl);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
-}
-
-.timeline__description {
-  color: var(--color-text-muted);
-}
-
 /* ========================================
    COMMUNITY PAGE
    ======================================== */

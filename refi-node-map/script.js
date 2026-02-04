@@ -94,37 +94,42 @@ function normalizeYears(years) {
 }
 
 function getBasePath() {
-    // Try to find the current script element
-    const scripts = document.getElementsByTagName('script');
-    let currentScript = null;
+    // Try document.currentScript first (more reliable)
+    if (document.currentScript && document.currentScript.src) {
+        const match = document.currentScript.src.match(/(.*\/)refi-node-map\/script\.js/);
+        if (match) {
+            const path = match[1] + 'refi-node-map/';
+            console.log('[refi-node-map] BASE_PATH detected (currentScript):', path);
+            return path;
+        }
+    }
     
-    // Find the script that's currently executing (usually the last one)
+    // Fallback: search all scripts
+    const scripts = document.getElementsByTagName('script');
     for (let i = scripts.length - 1; i >= 0; i--) {
         const script = scripts[i];
         if (script.src && script.src.includes('refi-node-map/script.js')) {
-            currentScript = script;
-            break;
+            const match = script.src.match(/(.*\/)refi-node-map\/script\.js/);
+            if (match) {
+                const path = match[1] + 'refi-node-map/';
+                console.log('[refi-node-map] BASE_PATH detected (fallback):', path);
+                return path;
+            }
         }
     }
     
-    // If found, extract base path
-    if (currentScript && currentScript.src) {
-        const match = currentScript.src.match(/(.*\/)refi-node-map\/script\.js/);
-        if (match) {
-            return match[1] + 'refi-node-map/';
-        }
-    }
-    
-    // Fallback: check if we're in standalone mode (no path segments before refi-node-map)
-    // or embedded mode (has ../../refi-node-map/)
+    // Fallback: check URL
     const baseUrl = window.location.href;
     if (baseUrl.includes('/refi-node-map/')) {
         const match = baseUrl.match(/(.*\/)refi-node-map\//);
         if (match) {
-            return match[1] + 'refi-node-map/';
+            const path = match[1] + 'refi-node-map/';
+            console.log('[refi-node-map] BASE_PATH detected (URL):', path);
+            return path;
         }
     }
     
+    console.log('[refi-node-map] BASE_PATH: standalone mode');
     return ''; // Standalone mode - files are in root relative to HTML
 }
 
@@ -377,9 +382,12 @@ function setCoverImage(targetImg, node) {
 }
 
 function main() {
-    const nodes = Array.isArray(window.__NODE_DATA__) ? window.__NODE_DATA__ : [];
+    try {
+        console.log('[refi-node-map] Initializing...');
+        const nodes = Array.isArray(window.__NODE_DATA__) ? window.__NODE_DATA__ : [];
+        console.log('[refi-node-map] Loaded', nodes.length, 'nodes');
 
-    const mapPins = el("mapPins");
+        const mapPins = el("mapPins");
     const nodeGrid = el("nodeGrid");
     const nodeFilters = el("nodeFilters");
     const modal = el("nodeModal");
@@ -396,7 +404,7 @@ function main() {
     const mapSection = document.getElementById("mapSection");
     const nodeSort = el("nodeSort");
     const btnTour = el("btnTour");
-    const btnAdmin = el("btnAdmin");
+    const btnAdmin = document.getElementById("btnAdmin"); // Optional - only in standalone version
     const btnPickPin = el("btnPickPin");
     const tourPanel = el("tourPanel");
     const tourPanelTitle = el("tourPanelTitle");
@@ -528,7 +536,9 @@ function main() {
     function setAdminMode(on) {
         isAdmin = !!on;
         document.body.classList.toggle("is-admin", isAdmin);
-        btnAdmin.textContent = isAdmin ? "Admin (on)" : "Admin";
+        if (btnAdmin) {
+            btnAdmin.textContent = isAdmin ? "Admin (on)" : "Admin";
+        }
         if (!isAdmin) {
             mapHud.hidden = true;
             setPickMode(false);
@@ -1057,10 +1067,12 @@ function nodePoint(node) {
         openNode(tour.ids[tour.idx]);
     });
 
-    btnAdmin.addEventListener("click", () => {
-        setAdminMode(!isAdmin);
-        if (isAdmin && !adminModal.open) adminModal.showModal();
-    });
+    if (btnAdmin) {
+        btnAdmin.addEventListener("click", () => {
+            setAdminMode(!isAdmin);
+            if (isAdmin && !adminModal.open) adminModal.showModal();
+        });
+    }
 
     adminClose.addEventListener("click", () => {
         if (adminModal.open) adminModal.close();
@@ -1085,13 +1097,22 @@ function nodePoint(node) {
         scrollIndicator.style.cursor = "pointer";
     }
 
-    renderPins();
-    renderFilters();
-    renderNodeGrid();
-    observeNodeCards();
-    hydrateCoverImages();
-    setAdminMode(false);
-    updateTourUI();
+        renderPins();
+        console.log('[refi-node-map] Pins rendered');
+        renderFilters();
+        renderNodeGrid();
+        observeNodeCards();
+        hydrateCoverImages();
+        setAdminMode(false);
+        updateTourUI();
+        console.log('[refi-node-map] Initialization complete');
+    } catch (error) {
+        console.error('[refi-node-map] Error during initialization:', error);
+        const mapPins = document.getElementById('mapPins');
+        if (mapPins) {
+            mapPins.innerHTML = '<div style="padding: 2rem; text-align: center; color: rgba(241, 240, 255, 0.6);">Error loading map. Please check console for details.</div>';
+        }
+    }
 }
 
 function initMap() {

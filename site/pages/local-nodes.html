@@ -38,6 +38,7 @@
     }
     
     .nodes-page .map-frame {
+      position: relative !important;
       border-radius: var(--radius-2xl);
       overflow: hidden;
       border: 1px solid var(--glass-border);
@@ -59,6 +60,26 @@
         width: 1000px;
         height: 1000px;
       }
+    }
+    
+    /* Ensure map pins display correctly */
+    .nodes-page .map-pins {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 10 !important;
+      pointer-events: auto !important;
+    }
+    
+    .nodes-page .pin {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: absolute !important;
+    }
+    
+    .nodes-page .pin__dot {
+      display: inline-block !important;
+      visibility: visible !important;
     }
   </style>
 </head>
