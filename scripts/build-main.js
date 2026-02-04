@@ -45,11 +45,11 @@ if (existsSync(siteAssetsDir)) {
   cpSync(siteAssetsDir, join(DIST, 'assets'), { recursive: true });
 }
 
-// Copy site JS if exists
-const siteJsDir = join(ROOT, 'site', 'js');
-if (existsSync(siteJsDir)) {
+// Copy site scripts if exists
+const siteScriptsDir = join(ROOT, 'site', 'scripts');
+if (existsSync(siteScriptsDir)) {
   console.log('📜 Copying JavaScript...');
-  cpSync(siteJsDir, join(DIST, 'js'), { recursive: true });
+  cpSync(siteScriptsDir, join(DIST, 'scripts'), { recursive: true });
 }
 
 // Copy refi-node-map files
