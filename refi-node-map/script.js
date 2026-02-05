@@ -1,7 +1,7 @@
-function el(id, required = true) {
+function el(id) {
     const node = document.getElementById(id);
-    if (!node && required) {
-        throw new Error(`Missing required element: #${id}`);
+    if (!node) {
+        throw new Error(`Missing element: #${id}`);
     }
     return node;
 }
@@ -403,7 +403,7 @@ function main() {
     const scrollIndicator = document.getElementById("scrollIndicator");
     const mapSection = document.getElementById("mapSection");
     const nodeSort = el("nodeSort");
-    const btnTour = el("btnTour", false);
+    const btnTour = el("btnTour");
     const btnAdmin = document.getElementById("btnAdmin"); // Optional - only in standalone version
     const btnPickPin = el("btnPickPin");
     const tourPanel = el("tourPanel");
@@ -1049,12 +1049,10 @@ function nodePoint(node) {
     });
 
 
-    if (btnTour) {
-        btnTour.addEventListener("click", () => {
-            if (tour.active) endTour();
-            else startTour();
-        });
-    }
+    btnTour.addEventListener("click", () => {
+        if (tour.active) endTour();
+        else startTour();
+    });
     tourPanelEnd.addEventListener("click", endTour);
     tourPanelPrev.addEventListener("click", () => {
         const fromId = tour.ids[tour.idx];
