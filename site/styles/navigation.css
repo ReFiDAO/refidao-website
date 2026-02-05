@@ -17,7 +17,7 @@
   background: rgba(17, 24, 29, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition:
     background var(--duration-normal) var(--ease-out),
     backdrop-filter var(--duration-normal) var(--ease-out),
