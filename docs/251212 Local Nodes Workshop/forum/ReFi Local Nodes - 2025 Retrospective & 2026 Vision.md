@@ -100,15 +100,23 @@ Over the past months, we've been working to make the Local Node experience more 
 
 **Quick start (from the workshop) 📋**
 
-**→ 1) Starting a Local Node 🌱**  
-- [Read the onboarding guide](https://refi-dao.notion.site/local-node-onboarding) | [Apply here](https://tally.so/r/jaZYM4) | [Share on forum](https://hub.regencoordination.xyz/c/refi-dao/refi-local-nodes/22)
+**→ 1) Starting a Local Node 🌱**
 
-**→ 2) Resources 🛠️**  
-- [Local Node Toolkit v1.5](https://www.notion.so/refi-dao/Local-Node-Toolkit-v1-5-2aebf304370a81c5ba33d3794285d322) | [Local Node Canvas](https://www.figma.com/community/file/1220731037056160873) | [Quartz website template](https://github.com/ReFiDAO/quartz-refi-template)
+- **(a)** [Read the full onboarding guide](https://www.notion.so/refi-dao/Starting-a-ReFi-Local-Node-Onboarding-Guide-2aebf304370a81a1be92e4ba70114c4f#2aebf304370a8133ba39fa5c32c04c8b) *(step-by-step)*  
+- **(b)** [Apply to start a Local Node](https://tally.so/r/jaZYM4)  
+- **(c)** [Share your proposal on the forum](https://hub.regencoordination.xyz/c/refi-dao/refi-local-nodes/22) *(get early feedback)*  
 
-**→ 3) Funding 💰**  
-- **Local Node Kickstarter Pool** → up to **500 USDGLO**  
-- [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/49) for collaborative initiatives
+**→ 2) For Local Nodes in formation 🛠️**
+
+- **(a) Brand + graphics**: duplicate the templates to build your node’s version (ping me for access to the new Local Node logo template)
+- **(b) Required setup (for validation)**: set up your KarmaGAP profile + socials, and make sure you’re properly connected to ReFi DAO’s network channels
+- **(c) Further resources**: the [Local Node Toolkit v1.5](https://www.notion.so/Local-Node-Toolkit-v1-5-2aebf304370a81c5ba33d3794285d322?pvs=21), the [Local Node Canvas](https://www.figma.com/community/file/1220731037056160873), and the [Quartz website template (open source)](https://github.com/ReFiDAO/quartz-refi-template)
+
+**→ 3) Funding (when you’re ready) 💰**
+
+- **(a)** **[Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)** → up to **500 USDGLO** for new nodes to kickstart initial activities (events, workshops, community-building).  
+- **(b)** For collaborative initiatives and case studies that benefit the whole network, additional funding may be available via the [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/49).  
+
 
 ~~~
 
@@ -118,16 +126,13 @@ Over the past months, we've been working to make the Local Node experience more 
 
 ~~~
 
-**Share your reflections 🌠**
+**Share your reflections in the forum thread 🌠**
 
-We'd love to hear your 2025 highlights, challenges, and 2026 visions → [Forum thread](https://hub.regencoordination.xyz/c/refi-dao/21)
-
-Your input will directly shape how we co-develop the network in 2026!
+We'd love to hear your 2025 highlights, challenges, and 2026 visions → [Forum thread](https://hub.regencoordination.xyz/c/refi-dao/21) — your input will directly shape how we co-develop the network in 2026!
 
 ~~~
 
 wish you all some good holidays! 💫
-
 
 ## Previous version
 
@@ -164,9 +169,9 @@ Over the past months, we’ve been working to make the Local Node experience mor
 
 **→ 3) Funding (when you’re ready) 💰**
 
-- **(a)** **Local Node Kickstarter Pool** → up to **500 USDGLO** for new nodes to kickstart initial activities (events, workshops, community-building).  
-- **(b)** For collaborative initiatives and case studies that benefit the network, additional funding may be available via the [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/49).  
-- **Note:** You don’t need to submit a funding proposal immediately after approval — do it once you’re ready with a clear plan + deliverables.
+- **(a)** **[Local Node Kickstarter Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/48)** → up to **500 USDGLO** for new nodes to kickstart initial activities (events, workshops, community-building).  
+- **(b)** For collaborative initiatives and case studies that benefit the whole network, additional funding may be available via the [Network Initiatives Pool](https://app.gardens.fund/gardens/42220/0x4f604735c1cf31399c6e711d5962b2b3e0225ad3/0x13e71c56c5b048e9b8b6a9dbb4a4f346b5dab986/49).  
+
 
 ~~~
 

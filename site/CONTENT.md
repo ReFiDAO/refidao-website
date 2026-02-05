@@ -6,25 +6,94 @@ Complete content from all pages of the ReFi DAO website, organized for easy edit
 
 ---
 
+## Page Meta Information
+
+### Homepage (index.html)
+- **Page Title:** ReFi DAO - A Network Society to Regenerate the Earth
+- **Meta Description:** ReFi DAO is a network society focused on developing strategic services and public goods for the Regenerative Finance ecosystem.
+- **OG Title:** ReFi DAO - A Network Society to Regenerate the Earth
+- **OG Description:** Connecting regenerative movements globally, empowering communities to co-create a future rooted in social equity, economic opportunity, and ecological restoration.
+
+### About Page (about.html)
+- **Page Title:** About - ReFi DAO
+- **Meta Description:** Learn about ReFi DAO's mission, vision, and how we're building a network society to regenerate the earth.
+- **OG Title:** About ReFi DAO
+- **OG Description:** ReFi DAO is a network society focused on developing strategic services and public goods for the Regenerative Finance ecosystem.
+
+### Community Page (community.html)
+- **Page Title:** Community - ReFi DAO
+- **Meta Description:** Explore the ReFi DAO community: Network Initiatives, Regen Coordination, ReFi Mediterranean, and more.
+- **OG Title:** ReFi DAO Community
+- **OG Description:** Connect with regenerative finance communities, explore network initiatives, and join the movement.
+
+### Local Nodes Page (local-nodes.html)
+- **Page Title:** Local Nodes - ReFi DAO
+- **Meta Description:** Explore the global network of place-based Regenerative Finance communities. Find a ReFi node near you or start one in your local area.
+- **OG Title:** ReFi Local Nodes - Global Network Map
+- **OG Description:** Explore the network of place-based Regenerative Finance communities around the world.
+
+### Resources Hub Page (resources-hub.html)
+- **Page Title:** Resources Hub - ReFi DAO
+- **Meta Description:** Comprehensive documentation, guides, and tools for understanding and participating in ReFi DAO.
+- **OG Title:** ReFi DAO Resources Hub
+- **OG Description:** Documentation, onboarding guides, governance frameworks, and resources for the ReFi DAO ecosystem.
+
+### Join the Network Page (join-the-network.html)
+- **Page Title:** Join the Network - ReFi DAO
+- **Meta Description:** Join ReFi DAO and become part of a global network society working to regenerate the earth.
+- **OG Title:** Join the Network - ReFi DAO
+- **OG Description:** Join ReFi DAO and become part of a global network society working to regenerate the earth.
+
+---
+
 ## Navigation Structure
 
+### Topbar / Navigation Bar
+
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│  [Logo]  About  Local Nodes  Community  Resources  Media▼  Forum  │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────┐
+│  [ReFi DAO Logo]  About  Local Nodes  Community  Resources  Media ▼  Forum ↗  │
+│                                                                                     │
+│                                                                      [Join Network] │
+└─────────────────────────────────────────────────────────────────────────────────────┘
                                                       │
                                                       ├─ ReFi Blog ↗
                                                       └─ ReFi Podcast ↗
 ```
+
+### Desktop Navigation
+- Logo: ReFi DAO (links to index.html)
+- About
+- Local Nodes
+- Community
+- Resources
+- Media (dropdown)
+  - ReFi Blog ↗ (https://blog.refidao.com)
+  - ReFi Podcast ↗ (https://podcast.refidao.com)
+- Forum ↗ (https://forum.refidao.com)
+- Join the Network (button, right side)
+
+### Mobile Navigation
+- About
+- Local Nodes
+- Community
+- Resources
+- Media ↗ (https://blog.refidao.com)
+- Forum ↗ (https://forum.refidao.com)
+- Join the Network (button)
 
 **Footer Links:**
 - About
 - Local Nodes
 - Community
 - Resources
-- Blog ↗
+- Blog ↗ (https://blog.refidao.com)
 - Podcast ↗ (https://www.youtube.com/@refidao/)
-- Forum ↗
+- Forum ↗ (https://forum.refidao.com)
+
+**Footer Tagline:** A network society to regenerate the earth
+
+**Footer Copyright:** © 2026 ReFi DAO. All rights reserved.
 
 **Social Links:**
 - Twitter: https://twitter.com/ReFiDAOist
@@ -45,8 +114,8 @@ Complete content from all pages of the ReFi DAO website, organized for easy edit
 Connecting regenerative movements globally, empowering communities to co-create a future rooted in social equity, economic opportunity, and ecological restoration.
 
 **CTAs:**
-- Explore the Network (scrolls to map section)
-- Learn More (links to About page)
+- Explore the Network (scrolls to map section #explore)
+- Learn More (links to about.html)
 
 **Scroll Indicator:** Scroll to explore
 
@@ -61,7 +130,7 @@ Connecting regenerative movements globally, empowering communities to co-create 
 **Subtitle:**
 Explore the network of place-based Regenerative Finance communities around the world.
 
-**CTA:** Explore Full Map
+**CTA:** Explore Full Map (links to local-nodes.html)
 
 ---
 
@@ -115,10 +184,12 @@ Discover our resources, connect with communities, and learn how to get involved.
 1. **Resources Hub**
    Comprehensive documentation, guides, and tools for understanding and participating in ReFi DAO.
    CTA: Explore Resources ↗
+   Link: resources-hub.html
 
 2. **Community**
    Find local nodes, explore network initiatives, and connect with regenerative finance communities.
    CTA: Find Communities ↗
+   Link: community.html
 
 3. **Media**
    Articles, podcasts, videos, and stories from the regenerative finance movement.
@@ -135,8 +206,8 @@ Discover our resources, connect with communities, and learn how to get involved.
 Ready to get involved? Join the ReFi DAO community and start contributing to regenerative finance.
 
 **CTAs:**
-- Join the Network
-- Find Local Nodes
+- Join the Network (links to join-the-network.html)
+- Find Local Nodes (links to local-nodes.html)
 
 ---
 
@@ -229,6 +300,8 @@ The humans behind ReFi DAO Global, working to coordinate and support the network
 3. **Network Contributors**
    Distributed Team
 
+**Question:** Want to contribute to ReFi DAO?
+
 **CTA:** Join ReFi DAO Global
 Link: join-the-network.html
 
@@ -302,8 +375,8 @@ As we look towards 2026 and beyond, we invite you to be an active part of this m
 Join the movement for regenerative finance and help us build a better future.
 
 **CTAs:**
-- Join the Network
-- Find a Local Node
+- Join the Network (links to join-the-network.html)
+- Find a Local Node (links to local-nodes.html)
 
 ---
 
@@ -426,7 +499,7 @@ Place-based communities building regenerative economies around the world.
 - **6** Continents
 - **120+** Members
 
-**CTA:** Explore the Node Map
+**CTA:** Explore the Node Map (links to local-nodes.html)
 
 ---
 
@@ -437,7 +510,7 @@ Place-based communities building regenerative economies around the world.
 **Text:**
 Whether you want to join a local node, start an initiative, or just connect with like-minded people—there's a place for you.
 
-**CTA:** Join the Network
+**CTA:** Join the Network (links to join-the-network.html)
 
 ---
 
@@ -451,6 +524,11 @@ Whether you want to join a local node, start an initiative, or just connect with
 Explore the network of place-based Regenerative Finance communities around the world.
 
 **Map:** Interactive map embedded with all nodes
+
+**Map Features:**
+- Tour button
+- Map pins with node information
+- Admin mode for pin placement
 
 ---
 
@@ -470,6 +548,16 @@ Browse and filter the complete directory of ReFi communities.
 - Name (Z–A)
 - Location (A–Z)
 - Location (Z–A)
+
+**Node Modal Features:**
+- Node title and metadata
+- Location, stage, last update
+- Year tabs for multiple updates
+- Node content/description
+
+**Admin Modal:**
+- Admin mode: Lightweight tools for pin placement
+- Last picked coordinates display
 
 ---
 
@@ -697,6 +785,35 @@ Join the movement for regenerative finance and help us build a better future.
 
 ---
 
+## Accessibility & UI Text
+
+### Navigation
+- **Main navigation aria-label:** Main navigation
+- **Mobile menu aria-label:** Navigation menu
+- **Menu toggle aria-label:** Open menu
+- **Menu close aria-label:** Close menu
+
+### Map Features (Local Nodes Page)
+- **Map pins aria-label:** Map pins
+- **Tour panel aria-label:** Tour
+- **Tour panel kicker:** Map mini-tour
+- **Tour panel tip:** Tip: the dotted line animates to the next node.
+- **Node filters aria-label:** Filter nodes by continent
+- **Node sort aria-label:** Sort nodes
+- **Select update year aria-label:** Select update year
+- **Modal close aria-label:** Close
+- **Map coordinates hud title:** Map coordinates
+- **Map coordinates hint:** Click the map to copy x/y%.
+- **Admin mode title:** Admin mode
+- **Admin mode description:** Admin mode is a lightweight overlay for refining node positions.
+- **Last picked label:** Last picked:
+
+### Footer
+- **Tagline:** A network society to regenerate the earth
+- **Copyright:** © 2026 ReFi DAO. All rights reserved.
+
+---
+
 ## External Resources
 
 ### Notion Guides
@@ -774,3 +891,5 @@ Join the movement for regenerative finance and help us build a better future.
 - Podcast link updated to YouTube: https://www.youtube.com/@refidao/
 - Discord links removed from all pages
 - Footer "Docs" link removed (same as Resources)
+- Hero CTA changed from "Find Local Nodes" to "Learn More" (points to About page)
+- Team section CTA changed from "Join Our Team" to "Join ReFi DAO Global"

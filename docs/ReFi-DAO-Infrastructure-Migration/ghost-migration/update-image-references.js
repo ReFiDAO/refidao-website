@@ -16,11 +16,43 @@ import jwt from 'jsonwebtoken';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const GHOST_URL = process.env.GHOST_URL || process.argv[2] || 'https://ghost-production-616f.up.railway.app';
-const GHOST_ADMIN_KEY = process.env.GHOST_ADMIN_KEY || process.argv[3] || '6929c401a0ccca000169ed2c:5952e13e963f181604f119deec1fbfc2cbded159ce96473aef92a5d3b8e0c39f';
-const OLD_URL = process.argv[4] || 'https://blog.refidao.com';
-const UPLOAD_REPORT = process.argv[5] || join(__dirname, 'downloaded-images', 'upload-report.json');
-const DRY_RUN = process.argv.includes('--dry-run');
+// Parse command-line arguments
+function parseArgs() {
+    const args = {
+        url: process.env.GHOST_URL,
+        'admin-key': process.env.GHOST_ADMIN_KEY,
+        'old-url': 'https://blog.refidao.com',
+        'new-url': null, // Cloudinary base URL if needed
+        inventory: join(__dirname, 'downloaded-images', 'upload-report.json'),
+        'dry-run': false,
+    };
+
+    for (let i = 2; i < process.argv.length; i++) {
+        if (process.argv[i].startsWith('--')) {
+            const key = process.argv[i].replace('--', '').replace(/-/g, '-');
+            const value = process.argv[i + 1];
+            if (value && !value.startsWith('--')) {
+                args[key] = value;
+                i++;
+            } else {
+                args[key] = true;
+            }
+        } else if (i === 2) {
+            args.url = process.argv[i];
+        } else if (i === 3) {
+            args['admin-key'] = process.argv[i];
+        }
+    }
+    return args;
+}
+
+const cliArgs = parseArgs();
+const GHOST_URL = cliArgs.url || 'https://ghost-production-616f.up.railway.app';
+const GHOST_ADMIN_KEY = cliArgs['admin-key'] || '6929c401a0ccca000169ed2c:5952e13e963f181604f119deec1fbfc2cbded159ce96473aef92a5d3b8e0c39f';
+const OLD_URL = cliArgs['old-url'] || 'https://blog.refidao.com';
+const NEW_URL_BASE = cliArgs['new-url']; // Optional: Cloudinary base URL
+const UPLOAD_REPORT = cliArgs.inventory || join(__dirname, 'downloaded-images', 'upload-report.json');
+const DRY_RUN = cliArgs['dry-run'] || false;
 
 class GhostAPI {
     constructor(url, adminKey) {
@@ -91,7 +123,7 @@ class GhostAPI {
     async updatePost(postId, postData) {
         return this.request(`/posts/${postId}/`, {
             method: 'PUT',
-            body: postData,
+            body: { posts: [postData] },
         });
     }
 
@@ -135,29 +167,62 @@ function buildUrlMapping(uploadReport) {
     if (uploadReport.uploaded) {
         uploadReport.uploaded.forEach(item => {
             const filename = normalizeFilename(item.filename);
-            mapping.set(filename, item.url);
-            // Also map by original filename variations
-            mapping.set(normalizeFilename(extractFilenameFromUrl(item.url)), item.url);
+            const url = item.url;
+            
+            // Map by filename
+            mapping.set(filename, url);
+            
+            // Map by URL filename (in case filename differs)
+            const urlFilename = normalizeFilename(extractFilenameFromUrl(url));
+            if (urlFilename !== filename) {
+                mapping.set(urlFilename, url);
+            }
+            
+            // Map by original URL if different
+            if (item.originalUrl) {
+                const originalFilename = normalizeFilename(extractFilenameFromUrl(item.originalUrl));
+                mapping.set(originalFilename, url);
+            }
         });
     }
 
     return mapping;
 }
 
-function replaceImageUrls(html, urlMapping, oldBaseUrl) {
+function replaceImageUrls(html, urlMapping, oldBaseUrls) {
     if (!html) return html;
     
     let updated = html;
+    const oldUrls = Array.isArray(oldBaseUrls) ? oldBaseUrls : [oldBaseUrls];
     
-    // Replace old domain URLs
-    updated = updated.replace(
-        new RegExp(oldBaseUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/content/images/[^"\'\\s]+', 'gi'),
-        (match) => {
-            const filename = normalizeFilename(extractFilenameFromUrl(match));
-            const newUrl = urlMapping.get(filename);
-            return newUrl || match;
-        }
-    );
+    // Replace old domain URLs (blog.refidao.com, old Railway domains, etc.)
+    oldUrls.forEach(oldBaseUrl => {
+        // Full URLs with old domain
+        updated = updated.replace(
+            new RegExp(oldBaseUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/content/images/[^"\'\\s<>]+', 'gi'),
+            (match) => {
+                // Skip if already Cloudinary URL
+                if (match.includes('res.cloudinary.com')) return match;
+                
+                const filename = normalizeFilename(extractFilenameFromUrl(match));
+                const newUrl = urlMapping.get(filename);
+                return newUrl || match;
+            }
+        );
+        
+        // Also handle Railway domains
+        updated = updated.replace(
+            /https?:\/\/[^\/]+\.up\.railway\.app\/content\/images\/[^"\'\\s<>]+/gi,
+            (match) => {
+                // Skip if already Cloudinary URL
+                if (match.includes('res.cloudinary.com')) return match;
+                
+                const filename = normalizeFilename(extractFilenameFromUrl(match));
+                const newUrl = urlMapping.get(filename);
+                return newUrl || match;
+            }
+        );
+    });
 
     // Replace relative paths
     updated = updated.replace(
@@ -170,6 +235,53 @@ function replaceImageUrls(html, urlMapping, oldBaseUrl) {
     );
 
     return updated;
+}
+
+function updateMobiledocImages(mobiledoc, urlMapping, oldBaseUrls) {
+    if (!mobiledoc) return mobiledoc;
+    
+    try {
+        const doc = typeof mobiledoc === 'string' ? JSON.parse(mobiledoc) : mobiledoc;
+        if (!doc.cards || !Array.isArray(doc.cards)) return mobiledoc;
+        
+        let updated = false;
+        const oldUrls = Array.isArray(oldBaseUrls) ? oldBaseUrls : [oldBaseUrls];
+        
+        doc.cards.forEach(card => {
+            if (card && Array.isArray(card)) {
+                const [cardName, cardData] = card;
+                
+                // Handle image cards
+                if (cardName === 'image' && cardData && cardData.src) {
+                    const src = cardData.src;
+                    
+                    // Skip if already Cloudinary URL
+                    if (src.includes('res.cloudinary.com')) return;
+                    
+                    // Check if URL needs updating
+                    const needsUpdate = oldUrls.some(oldUrl => 
+                        src.includes(oldUrl) || 
+                        src.startsWith('/content/images/') ||
+                        src.includes('.up.railway.app/content/images/')
+                    );
+                    
+                    if (needsUpdate) {
+                        const filename = normalizeFilename(extractFilenameFromUrl(src));
+                        const newUrl = urlMapping.get(filename);
+                        if (newUrl) {
+                            cardData.src = newUrl;
+                            updated = true;
+                        }
+                    }
+                }
+            }
+        });
+        
+        return updated ? JSON.stringify(doc) : mobiledoc;
+    } catch (e) {
+        // If mobiledoc parsing fails, return as-is
+        return mobiledoc;
+    }
 }
 
 async function updateImageReferences() {
@@ -198,26 +310,45 @@ async function updateImageReferences() {
         failed: [],
     };
 
+    // Build list of old URLs to replace
+    const oldUrls = [
+        OLD_URL,
+        'https://ghost-production-d773.up.railway.app',
+        'https://ghost-production-616f.up.railway.app',
+    ].filter(Boolean);
+
     for (const post of posts) {
         let needsUpdate = false;
         const updates = {};
 
         // Check feature image
         if (post.feature_image) {
-            const filename = normalizeFilename(extractFilenameFromUrl(post.feature_image));
-            const newUrl = urlMapping.get(filename);
-            
-            if (newUrl && post.feature_image !== newUrl) {
-                updates.feature_image = newUrl;
-                needsUpdate = true;
+            // Skip if already Cloudinary URL
+            if (!post.feature_image.includes('res.cloudinary.com')) {
+                const filename = normalizeFilename(extractFilenameFromUrl(post.feature_image));
+                const newUrl = urlMapping.get(filename);
+                
+                if (newUrl && post.feature_image !== newUrl) {
+                    updates.feature_image = newUrl;
+                    needsUpdate = true;
+                }
             }
         }
 
         // Check HTML content
         if (post.html) {
-            const updatedHtml = replaceImageUrls(post.html, urlMapping, OLD_URL);
+            const updatedHtml = replaceImageUrls(post.html, urlMapping, oldUrls);
             if (updatedHtml !== post.html) {
                 updates.html = updatedHtml;
+                needsUpdate = true;
+            }
+        }
+
+        // Check mobiledoc content
+        if (post.mobiledoc) {
+            const updatedMobiledoc = updateMobiledocImages(post.mobiledoc, urlMapping, oldUrls);
+            if (updatedMobiledoc !== post.mobiledoc) {
+                updates.mobiledoc = updatedMobiledoc;
                 needsUpdate = true;
             }
         }

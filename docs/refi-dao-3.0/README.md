@@ -57,6 +57,6 @@ This directory contains all planning and documentation for ReFi DAO 3.0, the nex
 
 - [ReFi DAO 2.0 Progress Report](../../../251001%20ReFi%20DAO/ReFi%20DAO%202.0%20Progress%20Report%20-%20H2%202025%20Update.md)
 - [H2 2025 Strategic Plan](../../../251001%20ReFi%20DAO/ReFi%20DAO%20H2%202025%20Biannual%20Retrospective%20%26%20Strategic%20Plan.md)
-- [Migration Status](../../MIGRATION-STATUS.md)
+- [Migration Status](../MIGRATION-STATUS.md)
 - [Infrastructure Migration](../../ReFi-DAO-Infrastructure-Migration/README.md)
 

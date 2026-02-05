@@ -9,8 +9,31 @@
 import https from 'https';
 import jwt from 'jsonwebtoken';
 
-const GHOST_URL = process.env.GHOST_URL || process.argv[2] || 'https://ghost-production-616f.up.railway.app';
-const GHOST_ADMIN_KEY = process.env.GHOST_ADMIN_KEY || process.argv[3] || '6929c401a0ccca000169ed2c:5952e13e963f181604f119deec1fbfc2cbded159ce96473aef92a5d3b8e0c39f';
+// Parse command-line arguments
+function parseArgs() {
+    const args = {};
+    for (let i = 2; i < process.argv.length; i++) {
+        if (process.argv[i].startsWith('--')) {
+            const key = process.argv[i].replace('--', '');
+            const value = process.argv[i + 1];
+            if (value && !value.startsWith('--')) {
+                args[key] = value;
+                i++;
+            } else {
+                args[key] = true;
+            }
+        } else if (i === 2) {
+            args.url = process.argv[i];
+        } else if (i === 3) {
+            args['admin-key'] = process.argv[i];
+        }
+    }
+    return args;
+}
+
+const cliArgs = parseArgs();
+const GHOST_URL = process.env.GHOST_URL || cliArgs.url || 'https://ghost-production-616f.up.railway.app';
+const GHOST_ADMIN_KEY = process.env.GHOST_ADMIN_KEY || cliArgs['admin-key'] || '6929c401a0ccca000169ed2c:5952e13e963f181604f119deec1fbfc2cbded159ce96473aef92a5d3b8e0c39f';
 
 class GhostAPI {
     constructor(url, adminKey) {

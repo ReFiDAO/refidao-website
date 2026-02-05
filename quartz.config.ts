@@ -2,22 +2,25 @@ import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
 /**
- * Quartz 4 Configuration for ReFi DAO Website
+ * Quartz 4 Configuration for ReFi DAO Documentation Site
+ * 
+ * This configuration is for the docs subdomain (docs.refidao.com).
+ * The main site (refidao.com) is built separately using the site/ directory.
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "ReFi DAO",
-    pageTitleSuffix: " - A network society to regenerate the earth",
+    pageTitle: "ReFi DAO Docs",
+    pageTitleSuffix: " - Documentation",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "refidao.com",
-    ignorePatterns: ["private", "templates", ".obsidian", "node_modules", "public"],
+    baseUrl: "docs.refidao.com",
+    ignorePatterns: ["private", "templates", ".obsidian", "node_modules", "public", "site"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
