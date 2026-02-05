@@ -1,1 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+public/
+
+# Build cache
+quartz/.quartz-cache/
+
+# System files
+.DS_Store
+
+# Archives (keeping locally, not tracking)
+airtable-archive/
+
+# Existing custom ignore
 site/styles/navigation extra.css
