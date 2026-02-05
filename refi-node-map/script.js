@@ -928,6 +928,14 @@ function nodePoint(node) {
         }
     }
 
+    function openNodeFromHash() {
+        const hash = window.location.hash || "";
+        const match = hash.match(/^#node-([A-Za-z0-9-_]+)$/);
+        if (!match) return;
+        const nodeId = decodeURIComponent(match[1]);
+        if (nodeId) openNode(nodeId);
+    }
+
     mapPins.addEventListener("click", async (e) => {
         const pin = e.target.closest(".pin[data-node-id]");
         if (pin) {
@@ -1047,6 +1055,9 @@ function nodePoint(node) {
         if (Number.isNaN(year) || year === state.activeYearByNodeId[node.id]) return;
         loadNodeYear(node, year, years);
     });
+
+    openNodeFromHash();
+    window.addEventListener("hashchange", openNodeFromHash);
 
 
     btnTour.addEventListener("click", () => {
