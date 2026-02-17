@@ -57,6 +57,20 @@
   .what-is-refi__grid {
     grid-template-columns: 1.1fr 0.9fr;
   }
+  .what-is-refi__grid--reversed {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  .what-is-refi__grid--reversed .what-is-refi__content {
+    text-align: right;
+  }
+  .what-is-refi__grid--reversed .what-is-refi__content .pill-badge {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.what-is-refi__grid + .what-is-refi__grid {
+  margin-top: var(--space-16);
 }
 
 /* What we do grid */

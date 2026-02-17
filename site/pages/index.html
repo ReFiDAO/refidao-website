@@ -45,7 +45,7 @@
           <a href="about.html" class="nav__link">About</a>
         </li>
         <li class="nav__item">
-          <a href="local-nodes.html" class="nav__link">Network</a>
+          <a href="network.html" class="nav__link">Network</a>
         </li>
         <li class="nav__item">
           <a href="media.html" class="nav__link">Media</a>
@@ -78,7 +78,7 @@
     
     <nav class="mobile-menu__nav">
       <a href="about.html" class="mobile-menu__link">About</a>
-      <a href="local-nodes.html" class="mobile-menu__link">Network</a>
+      <a href="network.html" class="mobile-menu__link">Network</a>
       <a href="media.html" class="mobile-menu__link">Media</a>
       <a href="resources-hub.html" class="mobile-menu__link">Resources</a>
     </nav>
@@ -140,6 +140,20 @@
   <!-- WHAT IS REFI SECTION -->
   <section class="section section-lg what-is-refi">
     <div class="container">
+      <div class="what-is-refi__grid what-is-refi__grid--reversed">
+        <div class="what-is-refi__media" data-animate>
+          <img src="../assets/What%20is%20ReFi%20-%20Regeneration.png" alt="Regeneration" class="what-is-refi__image">
+        </div>
+        <div class="what-is-refi__content" data-animate data-animate-delay="150">
+          <span class="pill-badge pill-badge--green">What is Regeneration?</span>
+          <h2 class="what-is-refi__title">Beyond Sustainability</h2>
+          <p class="what-is-refi__text">
+            Regeneration is an approach that works with living systems rather than 
+            against them—restoring ecosystems, strengthening communities, and redesigning 
+            economies so they support rather than deplete the conditions for life to thrive.
+          </p>
+        </div>
+      </div>
       <div class="what-is-refi__grid">
         <div class="what-is-refi__content" data-animate>
           <span class="pill-badge pill-badge--green">What is ReFi?</span>
@@ -370,7 +384,7 @@
       <nav class="footer__links">
         <a href="about.html" class="footer__link">About</a>
         <a href="local-nodes.html" class="footer__link">Local Nodes</a>
-        <a href="community.html" class="footer__link">Community</a>
+        <a href="initiatives.html" class="footer__link">Initiatives</a>
         <a href="resources-hub.html" class="footer__link">Resources</a>
         <a href="https://blog.refidao.com" target="_blank" class="footer__link">Blog</a>
         <a href="https://forum.refidao.com" target="_blank" class="footer__link">Forum</a>
@@ -437,16 +451,7 @@
         // Use the same functions from script.js but with landing page IDs
         // We'll use a simplified version that reuses the main script functions
         // For now, just render pins and handle clicks
-        const BASE_PATH = (function() {
-          const scripts = document.getElementsByTagName('script');
-          for (let script of scripts) {
-            if (script.src && script.src.includes('refi-node-map/script.js')) {
-              const match = script.src.match(/(.*\/)refi-node-map\/script\.js/);
-              if (match) return match[1] + 'refi-node-map/';
-            }
-          }
-          return '';
-        })();
+        const BASE_PATH = '../../refi-node-map/';
         
         function escapeHtml(value) {
           return String(value || "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -488,6 +493,34 @@
           };
           return FLAG_BY_ID[node.id] || "🌍";
         }
+
+        function setCoverImage(targetImg, node) {
+          const nodeId = node && node.id ? String(node.id) : "";
+          if (!nodeId || !targetImg) return;
+          const base = `${BASE_PATH}nodes/${nodeId}/images/cover`;
+          const extensions = ["png", "jpg", "jpeg", "webp", "gif", "svg"];
+          let idx = 0;
+
+          const tryNext = () => {
+            if (idx >= extensions.length) {
+              targetImg.hidden = true;
+              targetImg.removeAttribute("src");
+              return;
+            }
+            const ext = extensions[idx++];
+            targetImg.src = `${base}.${ext}`;
+            targetImg.hidden = false;
+          };
+
+          targetImg.alt = `${node.name || "Node"} cover`;
+          targetImg.onload = () => {
+            targetImg.hidden = false;
+          };
+          targetImg.onerror = () => {
+            tryNext();
+          };
+          tryNext();
+        }
         
         // Render pins using the same structure as the main map
         mapPins.innerHTML = nodes.map((node) => {
@@ -500,6 +533,7 @@
             <button class="pin" type="button" data-node-id="${escapeHtml(node.id)}" style="left:${xPct}%; top:${yPct}%;">
               <span class="pin__dot" aria-hidden="true"></span>
               <div class="pin__bubble" aria-hidden="true">
+                <img class="pin__cover" alt="" loading="lazy" hidden />
                 <div class="pin__title">
                   <span class="pin__flag" aria-hidden="true">${escapeHtml(flag)}</span>
                   <span class="pin__label">${escapeHtml(node.name)}</span>
@@ -522,6 +556,15 @@
             </button>
           `;
         }).join("");
+
+        mapPins.querySelectorAll(".pin").forEach((pin) => {
+          const nodeId = pin.dataset.nodeId;
+          const node = nodes.find((item) => item.id === nodeId);
+          const img = pin.querySelector(".pin__cover");
+          if (node && img) {
+            setCoverImage(img, node);
+          }
+        });
         
         // Hover effects are handled by CSS, no need for JavaScript
         
