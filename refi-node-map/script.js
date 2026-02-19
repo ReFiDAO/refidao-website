@@ -667,6 +667,7 @@ function nodePoint(node) {
                     <button class="pin" type="button" data-node-id="${escapeHtml(node.id)}" style="left:${xPct}%; top:${yPct}%;">
                         <span class="pin__dot" aria-hidden="true"></span>
                         <div class="pin__bubble" aria-hidden="true">
+                            <img class="pin__cover" alt="" loading="lazy" hidden />
                             <div class="pin__title">
                                 <span class="pin__flag" aria-hidden="true">${escapeHtml(flag)}</span>
                                 <span class="pin__label">${escapeHtml(node.name)}</span>
@@ -690,6 +691,14 @@ function nodePoint(node) {
                 `;
             })
             .join("");
+        mapPins.querySelectorAll(".pin").forEach((pin) => {
+            const nodeId = pin.dataset.nodeId;
+            const node = nodes.find((item) => item.id === nodeId);
+            const img = pin.querySelector(".pin__cover");
+            if (node && img) {
+                setCoverImage(img, node);
+            }
+        });
     }
 
     function sortNodes(list) {
@@ -928,6 +937,14 @@ function nodePoint(node) {
         }
     }
 
+    function openNodeFromHash() {
+        const hash = window.location.hash || "";
+        const match = hash.match(/^#node-([A-Za-z0-9-_]+)$/);
+        if (!match) return;
+        const nodeId = decodeURIComponent(match[1]);
+        if (nodeId) openNode(nodeId);
+    }
+
     mapPins.addEventListener("click", async (e) => {
         const pin = e.target.closest(".pin[data-node-id]");
         if (pin) {
@@ -1047,6 +1064,9 @@ function nodePoint(node) {
         if (Number.isNaN(year) || year === state.activeYearByNodeId[node.id]) return;
         loadNodeYear(node, year, years);
     });
+
+    openNodeFromHash();
+    window.addEventListener("hashchange", openNodeFromHash);
 
 
     btnTour.addEventListener("click", () => {
