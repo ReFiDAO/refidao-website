@@ -23,8 +23,23 @@
   status = 200
 
 [[redirects]]
+  from = "/network"
+  to = "/network.html"
+  status = 200
+
+[[redirects]]
+  from = "/media"
+  to = "/media.html"
+  status = 200
+
+[[redirects]]
+  from = "/initiatives"
+  to = "/initiatives.html"
+  status = 200
+
+[[redirects]]
   from = "/community"
-  to = "/community.html"
+  to = "/initiatives.html"
   status = 200
 
 [[redirects]]
