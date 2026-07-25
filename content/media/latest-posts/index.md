@@ -89,6 +89,6 @@ Can temporary pop-up cities incubate the future of society?In this Bonus Episode
 
 ---
 
-*Last updated: 2026-07-24T19:09:16.880Z*
+*Last updated: 2026-07-25T01:28:05.505Z*
 
 [View all posts →](https://blog.refidao.com)
