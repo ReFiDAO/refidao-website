@@ -57,7 +57,7 @@ description: "Latest posts from ReFi DAO blog"
 
 ## 7. [[07-|<![CDATA[Reflecting on Regeneration Nexus with Maya Dentzel and Tereza Bízková │ S4 Bonus 🌐🎧]]>]]
 
-What stood out, what still lingers, and what&#x2019;s next for ReFi?In the final episode of Season 4: The Regeneration Nexus of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xED;zkov&#xE1; take a
+What stood out, what still lingers, and what&#x2019;s next for ReFi?In the final episode of Season 4: The Regeneration Nexus of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xed;zkov&#xe1; take a
 
 [Read more →](https://blog.refidao.com/reflecting-on-regeneration-nexus-with-maya-dentzel-and-tereza-bizkova-s4-bonus/)
 
@@ -73,7 +73,7 @@ What does it take to build regenerative projects that actually sustain themselve
 
 ## 9. [[09-|<![CDATA[Incubating New Societies: The Rise of Pop-Up Cities with Timour Kosters │ S4 Bonus 🏙️🎧]]>]]
 
-Can temporary pop-up cities incubate the future of society?In this Bonus Episode of Season 4, The Regeneration Nexus, of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xED;zkov&#xE1; welcome Timou
+Can temporary pop-up cities incubate the future of society?In this Bonus Episode of Season 4, The Regeneration Nexus, of the ReFi Podcast, hosts Maya Dentzel and Tereza B&#xed;zkov&#xe1; welcome Timou
 
 [Read more →](https://blog.refidao.com/incubating-new-societies-the-rise-of-pop-up-cities-with-timour-kosters-s4-bonus-2/)
 
@@ -89,6 +89,6 @@ Can temporary pop-up cities incubate the future of society?In this Bonus Episode
 
 ---
 
-*Last updated: 2026-09-23T20:47:07.157Z*
+*Last updated: 2026-09-24T16:03:30.631Z*
 
 [View all posts →](https://blog.refidao.com)
