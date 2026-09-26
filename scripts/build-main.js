@@ -85,12 +85,16 @@ htmlFiles.forEach(file => {
   content = content.replace(/href="index\.html"/g, 'href="/"');
   content = content.replace(/href="about\.html"/g, 'href="/about"');
   content = content.replace(/href="local-nodes\.html"/g, 'href="/local-nodes"');
-  content = content.replace(/href="community\.html"/g, 'href="/community"');
+  content = content.replace(/href="network\.html"/g, 'href="/network"');
+  content = content.replace(/href="media\.html"/g, 'href="/media"');
+  content = content.replace(/href="initiatives\.html"/g, 'href="/initiatives"');
+  content = content.replace(/href="community\.html"/g, 'href="/initiatives"'); // backward compat
   content = content.replace(/href="resources-hub\.html"/g, 'href="/resources-hub"');
   
   // Fix anchor links with HTML extension
   content = content.replace(/href="about\.html#/g, 'href="/about#');
-  content = content.replace(/href="community\.html#/g, 'href="/community#');
+  content = content.replace(/href="initiatives\.html#/g, 'href="/initiatives#');
+  content = content.replace(/href="community\.html#/g, 'href="/initiatives#');
   
   writeFileSync(filePath, content);
 });
@@ -100,7 +104,10 @@ console.log('📝 Creating _redirects file...');
 const redirects = `# Clean URLs - serve HTML files without extension
 /about         /about.html         200
 /local-nodes   /local-nodes.html   200
-/community     /community.html     200
+/network       /network.html       200
+/media         /media.html         200
+/initiatives   /initiatives.html   200
+/community     /initiatives.html   200
 /resources-hub /resources-hub.html 200
 
 # SPA fallback (optional)

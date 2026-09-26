@@ -75,7 +75,7 @@
   --text-xl: 1.25rem;     /* 20px */
   --text-2xl: 1.5rem;     /* 24px */
   --text-3xl: 2rem;       /* 32px */
-  --text-4xl: 2.5rem;     /* 40px */
+  --text-4xl: 3rem;       /* 48px */
   --text-5xl: 3.5rem;     /* 56px */
   --text-6xl: 4.5rem;     /* 72px */
   --text-hero: clamp(3rem, 8vw, 6rem);
