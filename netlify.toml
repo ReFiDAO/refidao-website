@@ -47,6 +47,29 @@
   to = "/resources-hub.html"
   status = 200
 
+# Onboarding links: the site's buttons point at /resources-hub/onboarding/*,
+# which only exists as Quartz content (content/), never built into this site.
+# Send them to the live pages until the Council decides the onboarding route.
+[[redirects]]
+  from = "/resources-hub/onboarding/network-member"
+  to = "/join-the-network"
+  status = 302
+
+[[redirects]]
+  from = "/resources-hub/onboarding/local-node"
+  to = "https://refi-dao.notion.site/local-node-onboarding"
+  status = 302
+
+[[redirects]]
+  from = "/resources-hub/onboarding/network-initiative"
+  to = "https://refi-dao.notion.site/Starting-a-ReFi-Network-Initiative-Onboarding-Guide-2aebf304370a81bb8fb7d80ca2257044"
+  status = 302
+
+[[redirects]]
+  from = "/resources-hub/onboarding"
+  to = "/join-the-network"
+  status = 302
+
 # SPA fallback (optional, for future client-side routing)
 # [[redirects]]
 #   from = "/*"
