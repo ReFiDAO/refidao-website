@@ -116,6 +116,21 @@
   }
 }
 
+/* Three-card variant: last card spans the row on phones, three columns from tablet up */
+.stats-grid--3 > :last-child {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .stats-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-grid--3 > :last-child {
+    grid-column: auto;
+  }
+}
+
 /* Map Preview Section */
 .map-preview {
   position: relative;

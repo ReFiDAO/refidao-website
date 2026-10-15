@@ -279,7 +279,7 @@ ReFi-DAO-Website/
 │          Section header + Map image + CTA                   │
 ├─────────────────────────────────────────────────────────────┤
 │                    STATS GRID                               │
-│          [85+ Nodes] [45+ Countries] [5000+ Members]        │
+│          [29+ Nodes] [20+ Countries] [6 Initiatives]        │
 ├─────────────────────────────────────────────────────────────┤
 │                    WHAT WE DO                               │
 │          6x Feature cards (Sense-making, Education...)      │

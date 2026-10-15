@@ -136,10 +136,9 @@ Explore the network of place-based Regenerative Finance communities around the w
 
 ### Stats Section
 
-- **29+** Local Nodes
-- **22+** Countries
-- **120+** Community Members
-- **4+** Network Initiatives
+- **29+** Local Nodes (the node map)
+- **20+** Countries (the node map)
+- **6** Network Initiatives (the initiatives page)
 
 ---
 
